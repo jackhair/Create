@@ -12,3 +12,4 @@ because javac reports attribution errors only once symbol resolution succeeds.
 | 2026-10-05 | `2e7991f4b` | 928 | 265 | Capabilities on API Lookup + Transfer API bridges |
 | 2026-10-05 | `f3fcbe4f7` | 371 | 124 | Events, tags, model data, conditions, client extensions shimmed |
 | 2026-10-05 | `2e3d0ec4c` | 224 | 54 | Hooks, fake player, data maps, misc APIs shimmed |
+| 2026-10-05 | `6684bb2b8` | 60 | 39 | Registrate and shim layer compile; only Create sources left |
