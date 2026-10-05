@@ -46,14 +46,14 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.util.ObfuscationReflectionHelper;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientBlockExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 
 /**
  * A builder for blocks, allows for customization of the {@link Block.Properties}, creation of block items, and configuration of data associated with blocks (loot tables, recipes, etc.).

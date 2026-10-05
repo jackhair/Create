@@ -1,7 +1,7 @@
 package com.tterrag.registrate.util;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.loading.FMLEnvironment;
+import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.loading.FMLEnvironment;
 
 import java.util.function.Supplier;
 

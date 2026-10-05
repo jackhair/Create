@@ -78,8 +78,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.gui.map.RegisterMapDecorationRenderersEvent;
 import net.neoforged.neoforge.event.AddPackFindersEvent;
@@ -212,7 +212,7 @@ public class CommonEvents {
 		CapabilityMinecartController.attach(event);
 	}
 
-	@net.neoforged.bus.api.SubscribeEvent
+	@com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent
 	public static void onEntityLeaveLevel(EntityLeaveLevelEvent event) {
 		if (!event.getEntity()
 			.isAlive())
@@ -261,12 +261,12 @@ public class CommonEvents {
 			}
 		}
 
-		@net.neoforged.bus.api.SubscribeEvent
+		@com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent
 		public static void onRegisterMapDecorationRenderers(RegisterMapDecorationRenderersEvent event) {
 			event.register(AllMapDecorationTypes.STATION_MAP_DECORATION.value(), new StationMapDecorationRenderer());
 		}
 
-		@net.neoforged.bus.api.SubscribeEvent
+		@com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent
 		public static void registerCapabilities(RegisterCapabilitiesEvent event) {
 			ChuteBlockEntity.registerCapabilities(event);
 			SmartChuteBlockEntity.registerCapabilities(event);

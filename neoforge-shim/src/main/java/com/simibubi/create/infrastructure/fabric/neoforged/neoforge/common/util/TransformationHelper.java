@@ -182,7 +182,7 @@ public final class TransformationHelper {
             if (!elements.isEmpty()) throw new JsonParseException("TRSR: can either have single 'matrix' key, or a combination of 'translation', 'rotation' OR 'left_rotation', 'scale', 'post-rotation' (legacy) OR 'right_rotation', 'origin'. Found: " + String.join(", ", elements));
 
             Transformation matrix = new Transformation(translation, leftRot, scale, rightRot);
-            return matrix.applyOrigin(new Vector3f(origin));
+            return applyOrigin(matrix, new Vector3f(origin)); // fabric: ITransformationExtension#applyOrigin
         }
 
         private static Vector3f parseOrigin(JsonObject obj) {
@@ -317,5 +317,15 @@ public final class TransformationHelper {
             }
             return null;
         }
+    }
+
+    // fabric: from NeoForge's ITransformationExtension#applyOrigin, which patches vanilla Transformation
+    public static Transformation applyOrigin(Transformation transform, Vector3f origin) {
+        if (transform.equals(Transformation.identity()))
+            return transform;
+        Matrix4f result = new Matrix4f().translation(origin);
+        result.mul(transform.getMatrix());
+        result.translate(-origin.x(), -origin.y(), -origin.z());
+        return new Transformation(result);
     }
 }

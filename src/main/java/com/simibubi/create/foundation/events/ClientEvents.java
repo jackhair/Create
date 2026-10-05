@@ -95,12 +95,12 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.api.EnvType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.ModList;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModContainer;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModList;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;

@@ -3,7 +3,7 @@ package com.tterrag.registrate.util.entry;
 import com.tterrag.registrate.AbstractRegistrate;
 
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 
 public class ItemEntry<T extends Item> extends ItemProviderEntry<Item, T> {
 

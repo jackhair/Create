@@ -18,8 +18,8 @@ import top.theillusivec4.curios.api.CuriosCapability;
 import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
 import top.theillusivec4.curios.api.type.inventory.ICurioStacksHandler;
 
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
 public class Curios {
 

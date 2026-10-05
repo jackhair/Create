@@ -3,7 +3,7 @@ package com.simibubi.create.compat.inventorySorter;
 import com.simibubi.create.compat.Mods;
 import com.simibubi.create.content.logistics.redstoneRequester.RedstoneRequesterMenu.SorterProofSlot;
 
-import net.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.InterModComms;
 import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
 

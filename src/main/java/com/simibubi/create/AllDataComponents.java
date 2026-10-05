@@ -50,8 +50,8 @@ import net.minecraft.world.level.block.Mirror;
 import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredRegister;
 
 public class AllDataComponents {
 	private static final DeferredRegister.DataComponents DATA_COMPONENTS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, Create.ID);

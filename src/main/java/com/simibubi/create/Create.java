@@ -54,14 +54,14 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.Level;
 
-import net.neoforged.bus.api.EventPriority;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.ModLoadingContext;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModContainer;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModLoadingContext;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.Mod;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
-import net.neoforged.neoforge.registries.RegisterEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.RegisterEvent;
 
 @Mod(Create.ID)
 public class Create {

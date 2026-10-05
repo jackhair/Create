@@ -19,10 +19,10 @@ import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.Registries;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredRegister;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
 

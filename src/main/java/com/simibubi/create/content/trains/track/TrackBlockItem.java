@@ -31,10 +31,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.api.EnvType;
-import net.neoforged.api.distmarker.Dist;
+import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import net.fabricmc.api.Environment;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 @EventBusSubscriber(Dist.CLIENT)

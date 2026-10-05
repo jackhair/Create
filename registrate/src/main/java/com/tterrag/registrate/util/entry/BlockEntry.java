@@ -4,7 +4,7 @@ import com.tterrag.registrate.AbstractRegistrate;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.registries.DeferredHolder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 
 public class BlockEntry<T extends Block> extends ItemProviderEntry<Block, T> {
 

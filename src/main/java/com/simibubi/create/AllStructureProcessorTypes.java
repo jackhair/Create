@@ -4,9 +4,9 @@ import com.simibubi.create.content.schematics.SchematicProcessor;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredRegister;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
 

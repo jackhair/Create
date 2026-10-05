@@ -6,9 +6,9 @@ import org.jetbrains.annotations.ApiStatus.Internal;
 
 import com.simibubi.create.content.contraptions.minecart.capability.MinecartController;
 
-import net.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.attachment.AttachmentType;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class AllAttachmentTypes {

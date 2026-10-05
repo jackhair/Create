@@ -53,6 +53,11 @@ import org.joml.Vector3f;
  * @param <T> Self type, for simpler chaining of methods.
  */
 public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
+    // fabric: ItemTransform.Deserializer's defaults are protected in vanilla
+    private static final Vector3f DEFAULT_ROTATION = new Vector3f(0.0F, 0.0F, 0.0F);
+    private static final Vector3f DEFAULT_TRANSLATION = new Vector3f(0.0F, 0.0F, 0.0F);
+    private static final Vector3f DEFAULT_SCALE = new Vector3f(1.0F, 1.0F, 1.0F);
+
     @Nullable
     protected ModelFile parent;
     protected final Map<String, String> textures = new LinkedHashMap<>();
@@ -257,7 +262,7 @@ public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
         }
 
         if (this.guiLight != null) {
-            root.addProperty("gui_light", this.guiLight.getSerializedName());
+            root.addProperty("gui_light", this.guiLight == GuiLight.FRONT ? "front" : "side"); // fabric: GuiLight isn't StringRepresentable in vanilla
         }
 
         if (this.renderType != null) {
@@ -271,18 +276,15 @@ public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
                 JsonObject transform = new JsonObject();
                 ItemTransform vec = e.getValue();
                 if (vec.equals(ItemTransform.NO_TRANSFORM)) continue;
-                var hasRightRotation = !vec.rightRotation.equals(ItemTransform.Deserializer.DEFAULT_ROTATION);
-                if (!vec.translation.equals(ItemTransform.Deserializer.DEFAULT_TRANSLATION)) {
+                var hasRightRotation = false; // fabric: vanilla ItemTransform has no right rotation (NeoForge patch)
+                if (!vec.translation.equals(DEFAULT_TRANSLATION)) {
                     transform.add("translation", serializeVector3f(e.getValue().translation));
                 }
-                if (!vec.rotation.equals(ItemTransform.Deserializer.DEFAULT_ROTATION)) {
+                if (!vec.rotation.equals(DEFAULT_ROTATION)) {
                     transform.add(hasRightRotation ? "left_rotation" : "rotation", serializeVector3f(vec.rotation));
                 }
-                if (!vec.scale.equals(ItemTransform.Deserializer.DEFAULT_SCALE)) {
+                if (!vec.scale.equals(DEFAULT_SCALE)) {
                     transform.add("scale", serializeVector3f(e.getValue().scale));
-                }
-                if (hasRightRotation) {
-                    transform.add("right_rotation", serializeVector3f(vec.rightRotation));
                 }
                 display.add(e.getKey().getSerializedName(), transform);
             }
@@ -319,9 +321,7 @@ public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
                     partObj.addProperty("shade", part.shade);
                 }
 
-                if (!part.getFaceData().equals(ExtraFaceData.DEFAULT)) {
-                    partObj.add("neoforge_data", ExtraFaceData.CODEC.encodeStart(JsonOps.INSTANCE, part.getFaceData()).result().get());
-                }
+                // fabric: no "neoforge_data" output; vanilla BlockElement has no ExtraFaceData and Create's generated models don't use it
 
                 JsonObject faces = new JsonObject();
                 for (Direction dir : Direction.values()) {
@@ -341,9 +341,6 @@ public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
                     }
                     if (face.tintIndex() != -1) {
                         faceObj.addProperty("tintindex", face.tintIndex());
-                    }
-                    if (!face.faceData().equals(ExtraFaceData.DEFAULT)) {
-                        faceObj.add("neoforge_data", ExtraFaceData.CODEC.encodeStart(JsonOps.INSTANCE, face.faceData()).result().orElseThrow());
                     }
                     faces.add(dir.getSerializedName(), faceObj);
                 }
@@ -589,7 +586,7 @@ public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
                     .collect(Collectors.toMap(Map.Entry::getKey, e -> e.getValue().build(), (k1, k2) -> {
                         throw new IllegalArgumentException();
                     }, LinkedHashMap::new));
-            return new BlockElement(from, to, faces, rotation == null ? null : rotation.build(), shade, new ExtraFaceData(this.color, this.blockLight, this.skyLight, this.hasAmbientOcclusion));
+            return new BlockElement(from, to, faces, rotation == null ? null : rotation.build(), shade); // fabric: vanilla constructor, no ExtraFaceData
         }
 
         public T end() {
@@ -691,7 +688,7 @@ public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
                 if (this.texture == null) {
                     throw new IllegalStateException("A model face must have a texture");
                 }
-                return new BlockElementFace(cullface, tintindex, texture, new BlockFaceUV(uvs, rotation.rotation), new ExtraFaceData(this.color, this.blockLight, this.skyLight, this.hasAmbientOcclusion), new MutableObject<>());
+                return new BlockElementFace(cullface, tintindex, texture, new BlockFaceUV(uvs, rotation.rotation)); // fabric: vanilla constructor, no ExtraFaceData
             }
 
             public ElementBuilder end() {
@@ -789,10 +786,10 @@ public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
         }
 
         public class TransformVecBuilder {
-            private Vector3f rotation = new Vector3f(ItemTransform.Deserializer.DEFAULT_ROTATION);
-            private Vector3f translation = new Vector3f(ItemTransform.Deserializer.DEFAULT_TRANSLATION);
-            private Vector3f scale = new Vector3f(ItemTransform.Deserializer.DEFAULT_SCALE);
-            private Vector3f rightRotation = new Vector3f(ItemTransform.Deserializer.DEFAULT_ROTATION);
+            private Vector3f rotation = new Vector3f(DEFAULT_ROTATION);
+            private Vector3f translation = new Vector3f(DEFAULT_TRANSLATION);
+            private Vector3f scale = new Vector3f(DEFAULT_SCALE);
+            private Vector3f rightRotation = new Vector3f(DEFAULT_ROTATION);
 
             TransformVecBuilder(ItemDisplayContext type) {
                 // param unused for functional match
@@ -827,7 +824,10 @@ public class ModelBuilder<T extends ModelBuilder<T>> extends ModelFile {
             }
 
             ItemTransform build() {
-                return new ItemTransform(rotation, translation, scale, rightRotation);
+                // fabric: vanilla ItemTransform has no right rotation (NeoForge patch)
+                if (!rightRotation.equals(DEFAULT_ROTATION))
+                    throw new UnsupportedOperationException("Item transform right rotation isn't supported on Fabric");
+                return new ItemTransform(rotation, translation, scale);
             }
 
             public TransformsBuilder end() {

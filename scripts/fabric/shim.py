@@ -32,6 +32,23 @@ NEO_VERSION = "21.1.219"
 SOURCE_DIRS = [REPO / "src/main/java", REPO / "registrate/src/main/java", SHIM_ROOT]
 SOURCES_JAR_GLOB = f"~/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/{NEO_VERSION}/*/neoforge-{NEO_VERSION}-sources.jar"
 
+# NeoForge classes that a Fabric dependency already provides under their original names.
+CLASSPATH_JARS = ["~/.gradle/caches/modules-2/files-2.1/fuzs.forgeconfigapiport/forgeconfigapiport-fabric/*/*/forgeconfigapiport-fabric-*.jar"]
+
+
+def classpath_provided() -> set[str]:
+	import glob
+	found = set()
+	for pattern in CLASSPATH_JARS:
+		for jar in glob.glob(os.path.expanduser(pattern)):
+			if jar.endswith("-sources.jar"):
+				continue
+			for name in zipfile.ZipFile(jar).namelist():
+				if name.startswith("net/neoforged/") and name.endswith(".class") and "$" not in name:
+					found.add(name[:-6].replace("/", "."))
+	return found
+
+
 REF = re.compile(r"\bnet\.neoforged((?:\.[A-Za-z_$][\w$]*)+)")
 HEADER = f"// fabric: vendored from NeoForge {NEO_VERSION} (LGPL-2.1-only) into Create's shim layer, see PORTING.md D7\n"
 
@@ -83,7 +100,7 @@ def cmd_imports(check: bool) -> int:
 
 
 def cmd_missing() -> int:
-	provided = shim_classes()
+	provided = shim_classes() | classpath_provided()
 	counts: Counter[str] = Counter()
 	for root in SOURCE_DIRS:
 		for path in root.rglob("*.java"):

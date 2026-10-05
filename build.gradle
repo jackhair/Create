@@ -239,10 +239,26 @@ boolean hasUnstaged() {
             commandLine("git", "status", "--porcelain")
         }
         String result = output.standardOutput.asText.get().replace("/M gradlew(\\.bat)?/", "").trim()
-        if (!result.isEmpty())
-            println("Found stageable results:\n ${result}\n")
         return !result.isEmpty()
     } catch (Throwable ignored) {
         return false
+    }
+}
+
+// fabric: used by scripts/fabric/javac_check.sh, which runs javac outside Gradle while the port has
+// thousands of compile errors (Gradle runs out of heap relaying that much compiler output)
+tasks.register("writeCompileClasspath") {
+    dependsOn("generateJavaTemplates")
+    var out = layout.buildDirectory.dir("javac-check")
+    var classpath = sourceSets.main.compileClasspath
+    var processors = sourceSets.main.annotationProcessorPath
+    var sources = sourceSets.main.java.srcDirs
+    outputs.dir(out)
+    doLast {
+        var dir = out.get().asFile
+        dir.mkdirs()
+        new File(dir, "classpath.txt").text = classpath.files.join(File.pathSeparator)
+        new File(dir, "processorpath.txt").text = processors.files.join(File.pathSeparator)
+        new File(dir, "sourcedirs.txt").text = sources.findAll { it.exists() }.join("\n")
     }
 }

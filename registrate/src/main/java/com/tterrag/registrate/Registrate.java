@@ -1,9 +1,9 @@
 package com.tterrag.registrate;
 
 import lombok.extern.log4j.Log4j2;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.ModList;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModContainer;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModList;
 
 import java.util.Optional;
 

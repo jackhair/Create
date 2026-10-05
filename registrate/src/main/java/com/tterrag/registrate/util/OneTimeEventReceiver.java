@@ -6,12 +6,12 @@ import com.tterrag.registrate.AbstractRegistrate;
 import com.tterrag.registrate.util.nullness.NonnullType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import net.neoforged.bus.api.Event;
-import net.neoforged.bus.api.EventPriority;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.event.IModBusEvent;
-import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.neoforged.neoforge.common.NeoForge;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.Event;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.IModBusEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.commons.lang3.tuple.Triple;
 

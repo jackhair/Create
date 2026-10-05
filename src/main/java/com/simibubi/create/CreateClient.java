@@ -43,11 +43,11 @@ import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.network.chat.MutableComponent;
 
 import net.fabricmc.api.EnvType;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.common.NeoForge;
+import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
+import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.Mod;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
 
 @Mod(value = Create.ID, dist = Dist.CLIENT)
 public class CreateClient {

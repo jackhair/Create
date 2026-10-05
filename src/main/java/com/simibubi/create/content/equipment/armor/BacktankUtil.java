@@ -13,7 +13,7 @@ import com.simibubi.create.foundation.utility.DistExecutor;
 import com.simibubi.create.infrastructure.config.AllConfigs;
 
 import net.fabricmc.api.EnvType;
-import net.neoforged.api.distmarker.Dist;
+import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 
 import it.unimi.dsi.fastutil.objects.Object2IntMap.Entry;
 import net.minecraft.ChatFormatting;

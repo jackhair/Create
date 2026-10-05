@@ -63,3 +63,10 @@ accessible class net/minecraft/world/item/alchemy/PotionBrewing$Mix
 accessible class net/minecraft/data/models/ItemModelGenerators$TrimModelData
 
 accessible method net/minecraft/world/item/crafting/Ingredient <init> ([Lnet/minecraft/world/item/crafting/Ingredient$Value;)V
+
+# fabric: entries NeoForge's own AT provides, needed by the vendored shims in neoforge-shim/
+accessible method net/minecraft/client/resources/ClientPackSource createVanillaPackSource (Ljava/nio/file/Path;)Lnet/minecraft/server/packs/VanillaPackResources;
+accessible class net/minecraft/server/packs/FilePackResources$SharedZipFileAccess
+accessible method net/minecraft/server/packs/FilePackResources$SharedZipFileAccess <init> (Ljava/io/File;)V
+accessible method net/minecraft/client/renderer/block/model/BlockElement uvsByFace (Lnet/minecraft/core/Direction;)[F
+accessible field net/minecraft/data/models/ItemModelGenerators GENERATED_TRIM_MODELS Ljava/util/List;

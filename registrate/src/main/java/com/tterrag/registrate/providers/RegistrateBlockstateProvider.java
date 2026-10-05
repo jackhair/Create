@@ -4,7 +4,7 @@ import com.tterrag.registrate.AbstractRegistrate;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.fml.LogicalSide;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.VariantBlockStateBuilder;

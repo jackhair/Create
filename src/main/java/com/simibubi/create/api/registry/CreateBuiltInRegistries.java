@@ -23,7 +23,7 @@ import net.minecraft.core.WritableRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 
-import net.neoforged.neoforge.registries.RegistryBuilder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.RegistryBuilder;
 
 /**
  * Static registries added by Create.

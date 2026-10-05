@@ -7,7 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.fml.LogicalSide;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelFile;
