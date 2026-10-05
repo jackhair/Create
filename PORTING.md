@@ -2,7 +2,7 @@
 
 Branch: `mc26.3/fabric/dev` (fork: `jackhair/Create`)
 Base: upstream `Creators-of-Create/Create` `mc1.21.1/dev` @ `a92700863` (Create 6.0.11, NeoForge 21.1.219, MC 1.21.1)
-Status: **Phase 0 — preparation**. Last updated 2026-10-04.
+Status: **Phase 0 complete — starting Phase 1a**. Last updated 2026-10-04.
 
 ## Goal
 
@@ -71,16 +71,19 @@ Ship Create for **Fabric on Minecraft 26.3**, built from the official Create cod
 
 ## Phases
 
-### Phase 0 — Preparation (now)
+### Phase 0 — Preparation (done)
 - [x] Fork, add remotes, create the `mc26.3/fabric/dev` branch
 - [x] Confirm the upstream NeoForge baseline compiles (JDK 21)
 - [x] Inventory NeoForge usage, Fabric dependency matrix, Fabricators' techniques
 - [x] Sign off decisions D1–D3 (D4–D6 still proposed)
-- [ ] Capture a NeoForge reference: run upstream gametests (73 `@GameTest`) and record results, and keep a test world with the smoke-test builds below
-- [ ] Write `scripts/` helpers:
-  - `@OnlyIn`/`Dist` → `@Environment`/`EnvType` (based on the Fabricators' `scripts/convert.sh`)
-  - generated-resource key rewriter: `neoforge:conditions` → `fabric:load_conditions`, data maps, biome modifiers, fluid ingredients
-- [ ] Decide whether CI is needed now. Recommendation: no; add GitHub Actions once Phase 1 compiles.
+- [x] NeoForge gametest baseline: **all 64 required tests pass** (1.46 s). List in `docs/porting/neoforge-gametest-baseline.txt`
+- [ ] Reference test world with the smoke-test builds, made on NeoForge in a client. **Needs Jack**, since it's hands-on play; optional but useful for side-by-side checks
+- [x] `scripts/fabric/convert_onlyin.py`: converts all 311 `@OnlyIn` in 230 files (idempotent). 20 files that use `Dist` for `@EventBusSubscriber`/`@Mod`/`DistExecutor` are flagged for manual work
+- [x] `scripts/fabric/convert_generated_resources.py`: rewrites 584 data files (idempotent, has a `--check` mode). Leaves `data/neoforge/data_maps/*` and `data/create/neoforge/biome_modifier/*` in place for code-side registration
+  - Fluid ingredient type names it emits, which the 1c codecs must register: `create:fluid`, `create:fluid_tag`, `create:fluid_components`; plus `create:block_tag` for items
+- [x] CI: deferred. Add GitHub Actions (build + gametests + `convert_generated_resources.py --check`) once Phase 1 compiles
+
+Both scripts are first run as part of 1a, so the branch stays buildable on NeoForge until the toolchain switch.
 
 ### Phase 1 — Fabric on MC 1.21.1
 Exit criteria:
@@ -95,7 +98,7 @@ Exit criteria:
 - Write `fabric.mod.json` (from `neoforge.mods.toml`), entrypoints for `Create`/`CreateClient`, and the mixin config.
 - Convert `accesstransformer.cfg` (41 entries) to `create.accesswidener` (`-f` becomes `mutable`).
 - Dependencies: Fabric API, Flywheel/Vanillin fabric-1.21.1, Ponder/Catnip fabric, Forge Config API Port 21.1.x.
-- `@OnlyIn` sweep (230 files); `compat/Mods.java` → `FabricLoader.isModLoaded`; `FMLEnvironment`/`FMLPaths`/`ModList` replacements.
+- Run `scripts/fabric/convert_onlyin.py` and `convert_generated_resources.py`, then hand-convert the 20 flagged `Dist` files; `compat/Mods.java` → `FabricLoader.isModLoaded`; `FMLEnvironment`/`FMLPaths`/`ModList` replacements.
 
 **1b. Core platform layer** (`infrastructure/fabric`)
 - **Registration (D2):**
@@ -141,7 +144,7 @@ Exit criteria:
 
 **1e. Datagen (D4), gametests, compat**
 - `CreateDatagen` → FAPI `DataGeneratorEntrypoint`. Run the parity diff against upstream `src/generated`.
-- Port gametests to Fabric's gametest API; all 73 must pass.
+- Port gametests to Fabric's gametest API; all 64 from the NeoForge baseline must pass.
 - Re-enable compat per D5.
 
 **Smoke-test checklist (Phases 1–3):**
