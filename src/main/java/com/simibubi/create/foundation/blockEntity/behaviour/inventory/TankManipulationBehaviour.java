@@ -3,8 +3,8 @@ package com.simibubi.create.foundation.blockEntity.behaviour.inventory;
 import java.util.function.Predicate;
 
 import net.minecraft.core.Direction;
-import net.neoforged.neoforge.capabilities.BlockCapability;
-import net.neoforged.neoforge.capabilities.Capabilities;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.BlockCapability;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;

@@ -18,8 +18,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 
 public class CreativeCrateBlockEntity extends CrateBlockEntity implements Clearable {
 	FilteringBehaviour filtering;

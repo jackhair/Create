@@ -36,7 +36,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.neoforged.neoforge.capabilities.Capabilities;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
 
 public class PumpBlockEntity extends KineticBlockEntity {

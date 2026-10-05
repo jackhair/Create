@@ -29,7 +29,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 
-import net.neoforged.neoforge.capabilities.Capabilities;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandlerItem;

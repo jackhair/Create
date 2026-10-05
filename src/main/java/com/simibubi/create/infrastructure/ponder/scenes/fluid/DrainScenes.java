@@ -15,7 +15,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.material.Fluids;
-import net.neoforged.neoforge.capabilities.Capabilities;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;

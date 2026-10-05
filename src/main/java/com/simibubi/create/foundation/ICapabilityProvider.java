@@ -6,7 +6,7 @@ import java.util.function.Function;
 import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.Nullable;
 
-import net.neoforged.neoforge.capabilities.BlockCapabilityCache;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.BlockCapabilityCache;
 
 public interface ICapabilityProvider<T> {
 	@Nullable

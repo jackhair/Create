@@ -28,7 +28,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 
 public class StickerBlockEntity extends SmartBlockEntity {
 

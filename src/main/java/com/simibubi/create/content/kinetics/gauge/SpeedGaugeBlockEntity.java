@@ -19,7 +19,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 
 public class SpeedGaugeBlockEntity extends GaugeBlockEntity {
 

@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.HopperBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.neoforged.neoforge.capabilities.Capabilities.ItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities.ItemHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 

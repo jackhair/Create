@@ -52,7 +52,17 @@
         "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IFluidStateExtension"
       ],
       "net/minecraft/class_1297": [
-        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/attachment/IAttachmentHolder"
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/attachment/IAttachmentHolder",
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IEntityExtension"
+      ],
+      "net/minecraft/class_1937": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ILevelExtension"
+      ],
+      "net/minecraft/class_1799": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IItemStackExtension"
+      ],
+      "net/minecraft/class_2586": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockEntityExtension"
       ]
     }
   }

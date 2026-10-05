@@ -28,7 +28,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 
 /**
@@ -135,7 +135,7 @@ public class BlockEntityBuilder<T extends BlockEntity, P> extends AbstractBuilde
     }
 
     /**
-     * Register {@link net.neoforged.neoforge.capabilities.Capabilities} for this block entity.
+     * Register {@link com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities} for this block entity.
      *
      * @param registerCapabilitiesEvent A consumer for the register capabilities event
      * @return this {@link BlockEntityBuilder}

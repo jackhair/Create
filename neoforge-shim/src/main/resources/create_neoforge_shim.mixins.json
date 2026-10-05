@@ -4,9 +4,12 @@
   "package": "com.simibubi.create.infrastructure.fabric.neoforged.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BlockEntityMixin",
     "EntityMixin",
     "FluidMixin",
-    "FluidStateMixin"
+    "FluidStateMixin",
+    "ItemStackMixin",
+    "LevelMixin"
   ],
   "client": [],
   "injectors": {
