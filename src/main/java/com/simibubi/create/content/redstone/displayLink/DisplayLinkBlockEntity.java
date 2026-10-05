@@ -18,7 +18,7 @@ import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour
 
 import net.createmod.catnip.math.VecHelper;
 import net.createmod.catnip.nbt.NBTHelper;
-import dan200.computercraft.api.peripheral.PeripheralCapability;
+import com.simibubi.create.infrastructure.fabric.compat.computercraft.PeripheralCapability;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;

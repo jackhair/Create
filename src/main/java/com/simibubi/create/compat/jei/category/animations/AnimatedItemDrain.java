@@ -5,7 +5,7 @@ import com.mojang.math.Axis;
 import com.simibubi.create.AllBlocks;
 
 import net.createmod.catnip.gui.UIRenderHelper;
-import net.createmod.catnip.platform.NeoForgeCatnipServices;
+import com.simibubi.create.infrastructure.fabric.compat.catnip.NeoForgeCatnipServices;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.LightTexture;
 

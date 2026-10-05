@@ -10,7 +10,6 @@ import com.mojang.logging.LogUtils;
 import com.simibubi.create.api.registrate.CreateRegistrateRegistrationCallback;
 import com.simibubi.create.compat.Mods;
 import com.simibubi.create.compat.computercraft.ComputerCraftProxy;
-import com.simibubi.create.compat.curios.Curios;
 import com.simibubi.create.compat.inventorySorter.InventorySorterCompat;
 import com.simibubi.create.content.decoration.palettes.AllPaletteBlocks;
 import com.simibubi.create.content.equipment.armor.AllArmorMaterials;
@@ -161,7 +160,7 @@ public class Create {
 		modEventBus.addListener(AllSoundEvents::register);
 
 		// FIXME: this is not thread-safe
-		Mods.CURIOS.executeIfInstalled(() -> () -> Curios.init(modEventBus));
+		// fabric: Curios is NeoForge-only (PORTING.md D5)
 		Mods.INVENTORYSORTER.executeIfInstalled(() -> () -> InventorySorterCompat.init(modEventBus));
 	}
 

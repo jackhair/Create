@@ -13,7 +13,7 @@ import com.simibubi.create.foundation.item.TooltipHelper;
 import net.createmod.catnip.platform.CatnipServices;
 import com.simibubi.create.foundation.utility.CreateLang;
 
-import dan200.computercraft.api.peripheral.PeripheralCapability;
+import com.simibubi.create.infrastructure.fabric.compat.computercraft.PeripheralCapability;
 import net.createmod.catnip.lang.LangBuilder;
 import net.createmod.catnip.theme.Color;
 import net.minecraft.ChatFormatting;

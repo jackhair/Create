@@ -51,6 +51,13 @@ def classpath_provided() -> set[str]:
 	return found
 
 
+# Non-NeoForge classes with Create-owned Fabric stand-ins (compat APIs that differ on Fabric).
+EXTRA_REWRITES = {
+	"dan200.computercraft.api.peripheral.PeripheralCapability": "com.simibubi.create.infrastructure.fabric.compat.computercraft.PeripheralCapability",
+	"net.createmod.catnip.platform.NeoForgeCatnipServices": "com.simibubi.create.infrastructure.fabric.compat.catnip.NeoForgeCatnipServices",
+	"net.createmod.ponder.render.VirtualRenderHelper": "com.simibubi.create.infrastructure.fabric.compat.ponder.VirtualRenderHelper",
+}
+
 REF = re.compile(r"\bnet\.neoforged((?:\.[A-Za-z_$][\w$]*)+)")
 HEADER = f"// fabric: vendored from NeoForge {NEO_VERSION} (LGPL-2.1-only) into Create's shim layer, see PORTING.md D7\n"
 
@@ -81,7 +88,10 @@ def rewrite(text: str, provided: set[str]) -> str:
 			return SHIM_PREFIX + full[len(NEO_PREFIX):]
 		# package wildcard / package reference whose classes are all shimmed is left alone on purpose
 		return full
-	return REF.sub(sub, text)
+	text = REF.sub(sub, text)
+	for original, replacement in EXTRA_REWRITES.items():
+		text = re.sub(r"\b" + re.escape(original) + r"\b", replacement, text)
+	return text
 
 
 def cmd_imports(check: bool) -> int:
@@ -90,7 +100,7 @@ def cmd_imports(check: bool) -> int:
 	for root in SOURCE_DIRS:
 		for path in root.rglob("*.java"):
 			text = path.read_text(encoding="utf-8")
-			if "net.neoforged" not in text:
+			if "net.neoforged" not in text and not any(o in text for o in EXTRA_REWRITES):
 				continue
 			new = rewrite(text, provided)
 			if new != text:

@@ -9,7 +9,6 @@ import com.google.gson.JsonObject;
 import com.simibubi.create.AllKeys;
 import com.simibubi.create.AllSoundEvents;
 import com.simibubi.create.Create;
-import com.simibubi.create.compat.curios.CuriosDataGenerator;
 import com.simibubi.create.foundation.advancement.AllAdvancements;
 import com.simibubi.create.foundation.data.CreateDatamapProvider;
 import com.simibubi.create.foundation.data.DamageTypeTagGen;
@@ -60,7 +59,7 @@ public class CreateDatagen {
 		generator.addProvider(event.includeServer(), new CreateSequencedAssemblyRecipeGen(output, lookupProvider));
 		generator.addProvider(event.includeServer(), new CreateDatamapProvider(output, lookupProvider));
 		generator.addProvider(event.includeServer(), new VanillaHatOffsetGenerator(output, lookupProvider));
-		generator.addProvider(event.includeServer(), new CuriosDataGenerator(output, lookupProvider, existingFileHelper));
+		// fabric: Curios is NeoForge-only (PORTING.md D5)
 		generator.addProvider(event.includeServer(), new CreateEnchantmentTagsProvider(output, lookupProvider, existingFileHelper));
 		generator.addProvider(event.includeClient(), new CreateWikiBlockInfoProvider(output));
 

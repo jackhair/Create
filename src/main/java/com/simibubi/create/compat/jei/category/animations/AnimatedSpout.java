@@ -10,7 +10,7 @@ import com.simibubi.create.AllPartialModels;
 
 import net.createmod.catnip.animation.AnimationTickHolder;
 import net.createmod.catnip.gui.UIRenderHelper;
-import net.createmod.catnip.platform.NeoForgeCatnipServices;
+import com.simibubi.create.infrastructure.fabric.compat.catnip.NeoForgeCatnipServices;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.util.Mth;

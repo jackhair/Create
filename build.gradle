@@ -131,6 +131,8 @@ dependencies {
     modCompileOnly("dev.ftb.mods:ftb-library-fabric:2101.1.37") { transitive = false }
 
     modCompileOnly("maven.modrinth:journeymap:1.21.1-6.0.9+fabric") { transitive = false }
+    // fabric: JourneyMap's API for 1.21.1 is only published inside the JourneyMap jar
+    modCompileOnly(files(nestedJar("maven.modrinth:journeymap:1.21.1-6.0.9+fabric", "journeymap-api-fabric-")))
 
     modCompileOnly("xaero.lib:xaerolib-fabric-1.21:1.0.42") { transitive = false }
     modCompileOnly("maven.modrinth:xaeros-world-map:fabric-1.21.1-1.40.16") { transitive = false }
@@ -145,13 +147,9 @@ sourceSets.main {
             exclude("com/simibubi/create/compat/computercraft/implementation/**")
         }
 
-        // fabric: integrations with NeoForge-only mods. Their call sites are removed with // fabric: comments
+        // fabric: Curios is NeoForge-only and its API isn't on the classpath; call sites are removed with // fabric: comments.
+        // Other NeoForge-only integrations match by registry name and stay compiled, gated on the mod being loaded.
         exclude("com/simibubi/create/compat/curios/**")
-        exclude("com/simibubi/create/compat/dynamictrees/**")
-        exclude("com/simibubi/create/compat/framedblocks/**")
-        exclude("com/simibubi/create/compat/inventorySorter/**")
-        exclude("com/simibubi/create/compat/tconstruct/**")
-        exclude("com/simibubi/create/compat/thresholdSwitch/**")
     }
 
     resources {
@@ -222,6 +220,25 @@ publishing {
     }
 }
 
+// fabric: extracts a jar-in-jar dependency at configuration time (Loom remaps mod dependencies while configuring)
+File nestedJar(String notation, String namePrefix) {
+    File outDir = layout.buildDirectory.dir("nested-jars").get().asFile
+    File existing = outDir.listFiles()?.find { it.name.startsWith(namePrefix) }
+    if (existing != null)
+        return existing
+    var configuration = configurations.detachedConfiguration(dependencies.create(notation))
+    configuration.transitive = false
+    copy {
+        from(zipTree(configuration.singleFile)) {
+            include("META-INF/jars/${namePrefix}*.jar")
+            eachFile { path = name }
+        }
+        into(outDir)
+        includeEmptyDirs = false
+    }
+    return outDir.listFiles().find { it.name.startsWith(namePrefix) }
+}
+
 String calculateGitHash() {
     try {
         ExecOutput output = providers.exec {
@@ -252,7 +269,7 @@ tasks.register("writeCompileClasspath") {
     var out = layout.buildDirectory.dir("javac-check")
     var classpath = sourceSets.main.compileClasspath
     var processors = sourceSets.main.annotationProcessorPath
-    var sources = sourceSets.main.java.srcDirs
+    var sources = sourceSets.main.java
     outputs.dir(out)
     outputs.upToDateWhen { false } // the classpath changes whenever Loom reprocesses Minecraft
     doLast {
@@ -260,6 +277,6 @@ tasks.register("writeCompileClasspath") {
         dir.mkdirs()
         new File(dir, "classpath.txt").text = classpath.files.join(File.pathSeparator)
         new File(dir, "processorpath.txt").text = processors.files.join(File.pathSeparator)
-        new File(dir, "sourcedirs.txt").text = sources.findAll { it.exists() }.join("\n")
+        new File(dir, "sources.txt").text = sources.files.join("\n") // honours the source set's excludes
     }
 }

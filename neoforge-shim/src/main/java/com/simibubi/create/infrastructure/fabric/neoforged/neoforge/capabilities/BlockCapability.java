@@ -28,6 +28,11 @@ public final class BlockCapability<T, C> extends BaseCapability<T, C> {
 		return new BlockCapability<>(name, typeClass, contextClass);
 	}
 
+	/** Wraps an existing Fabric lookup, such as another mod's API (Create-only addition). */
+	public static <T, C> BlockCapability<T, C> of(BlockApiLookup<T, C> lookup) {
+		return new BlockCapability<>(lookup.getId(), lookup.apiClass(), lookup.contextClass());
+	}
+
 	public static <T> BlockCapability<T, @Nullable Direction> createSided(ResourceLocation name, Class<T> typeClass) {
 		return create(name, typeClass, Direction.class);
 	}

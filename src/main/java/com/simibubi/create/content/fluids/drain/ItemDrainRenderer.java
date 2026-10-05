@@ -13,7 +13,7 @@ import com.simibubi.create.foundation.blockEntity.renderer.SmartBlockEntityRende
 
 import dev.engine_room.flywheel.lib.transform.TransformStack;
 import net.createmod.catnip.math.VecHelper;
-import net.createmod.catnip.platform.NeoForgeCatnipServices;
+import com.simibubi.create.infrastructure.fabric.compat.catnip.NeoForgeCatnipServices;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;

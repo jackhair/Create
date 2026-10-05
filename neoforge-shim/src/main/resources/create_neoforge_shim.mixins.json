@@ -4,16 +4,23 @@
   "package": "com.simibubi.create.infrastructure.fabric.neoforged.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BaseRailBlockMixin",
     "BlockEntityMixin",
+    "BlockGetterMixin",
+    "BlockMixin",
+    "BlockStateMixin",
     "EntityMixin",
     "FluidMixin",
     "FluidStateMixin",
     "HolderMixin",
+    "ItemMixin",
     "ItemStackMixin",
     "LevelMixin",
     "PlayerMixin"
   ],
-  "client": [],
+  "client": [
+    "GuiGraphicsMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

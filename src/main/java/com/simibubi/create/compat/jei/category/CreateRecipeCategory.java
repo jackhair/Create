@@ -36,7 +36,7 @@ import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotRichTooltipCallback;
 import mezz.jei.api.gui.ingredient.IRecipeSlotView;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
-import mezz.jei.api.neoforge.NeoForgeTypes;
+import com.simibubi.create.infrastructure.fabric.compat.jei.JeiFluids; // fabric: JEI fluids are IJeiFluidIngredients on Fabric
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
@@ -171,7 +171,7 @@ public abstract class CreateRecipeCategory<T extends Recipe<?>> implements IReci
 		int amount = ingredient.amount();
 		return builder.addSlot(RecipeIngredientRole.INPUT, x, y)
 			.setBackground(getRenderedSlot(), -1, -1)
-			.addIngredients(NeoForgeTypes.FLUID_STACK, Arrays.asList(ingredient.getFluids()))
+			.addIngredients(JeiFluids.FLUID_STACK, JeiFluids.of(ingredient.getFluids())) // fabric
 			.setFluidRenderer(amount, false, 16, 16) // make fluid take up the full slot
 			.addTooltipCallback(CreateRecipeCategory::addPotionTooltip);
 	}
@@ -180,7 +180,7 @@ public abstract class CreateRecipeCategory<T extends Recipe<?>> implements IReci
 	public static IRecipeSlotBuilder addFluidSlot(IRecipeLayoutBuilder builder, int x, int y, FluidStack stack) {
 		return builder.addSlot(RecipeIngredientRole.OUTPUT, x, y)
 			.setBackground(getRenderedSlot(), -1, -1)
-			.addIngredient(NeoForgeTypes.FLUID_STACK, stack)
+			.addIngredient(JeiFluids.FLUID_STACK, JeiFluids.of(stack)) // fabric
 			.setFluidRenderer(stack.getAmount(), false, 16, 16) // make fluid take up the full slot
 			.addTooltipCallback(CreateRecipeCategory::addPotionTooltip);
 	}
@@ -189,7 +189,7 @@ public abstract class CreateRecipeCategory<T extends Recipe<?>> implements IReci
 	// get added to the bottom. This looks terrible for potion fluids, and doesn't match how potion items look.
 	// https://github.com/mezz/JustEnoughItems/issues/3931
 	private static void addPotionTooltip(IRecipeSlotView view, List<Component> tooltip) {
-		Optional<FluidStack> displayed = view.getDisplayedIngredient(NeoForgeTypes.FLUID_STACK);
+		Optional<FluidStack> displayed = view.getDisplayedIngredient(JeiFluids.FLUID_STACK).map(JeiFluids::toStack); // fabric
 		if (displayed.isEmpty())
 			return;
 

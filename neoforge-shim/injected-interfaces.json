@@ -24,5 +24,23 @@
   ],
   "net/minecraft/world/entity/player/Player": [
     "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IPlayerExtension"
+  ],
+  "net/minecraft/world/level/block/Block": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockExtension"
+  ],
+  "net/minecraft/world/level/block/state/BlockState": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockStateExtension"
+  ],
+  "net/minecraft/world/item/Item": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IItemExtension"
+  ],
+  "net/minecraft/world/level/block/BaseRailBlock": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBaseRailBlockExtension"
+  ],
+  "net/minecraft/client/gui/GuiGraphics": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IGuiGraphicsExtension"
+  ],
+  "net/minecraft/world/level/BlockGetter": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockGetterExtension"
   ]
 }

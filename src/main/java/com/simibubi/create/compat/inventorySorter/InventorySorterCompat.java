@@ -4,8 +4,8 @@ import com.simibubi.create.compat.Mods;
 import com.simibubi.create.content.logistics.redstoneRequester.RedstoneRequesterMenu.SorterProofSlot;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.InterModComms;
-import net.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.InterModComms;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.InterModEnqueueEvent;
 
 /**
  * Compatibility with cpw's InventorySorter.

@@ -8,12 +8,11 @@ OUT=build/javac-check
 JDK21=${JDK21:-$(/usr/libexec/java_home -v 21)}
 JDK25=${JDK25:-$(/usr/libexec/java_home -v 25)}
 
-if [ "$1" = "--refresh" ] || [ ! -f "$OUT/classpath.txt" ]; then
+if [ "$1" = "--refresh" ] || [ ! -f "$OUT/sources.txt" ]; then
 	JAVA_HOME="$JDK25" ./gradlew writeCompileClasspath --console=plain -q
 fi
 
 rm -rf "$OUT/classes" && mkdir -p "$OUT/classes"
-find $(cat "$OUT/sourcedirs.txt") -name '*.java' > "$OUT/sources.txt"
 set +e
 "$JDK21/bin/javac" -d "$OUT/classes" -encoding UTF-8 --release 21 -implicit:none -nowarn \
 	-Xmaxerrs 100000 -Xlint:none -Xdiags:compact \

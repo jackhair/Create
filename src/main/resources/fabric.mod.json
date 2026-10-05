@@ -69,6 +69,24 @@
       ],
       "net/minecraft/class_1657": [
         "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IPlayerExtension"
+      ],
+      "net/minecraft/class_2248": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockExtension"
+      ],
+      "net/minecraft/class_2680": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockStateExtension"
+      ],
+      "net/minecraft/class_1792": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IItemExtension"
+      ],
+      "net/minecraft/class_2241": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBaseRailBlockExtension"
+      ],
+      "net/minecraft/class_332": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IGuiGraphicsExtension"
+      ],
+      "net/minecraft/class_1922": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockGetterExtension"
       ]
     }
   }

@@ -71,7 +71,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.CommonHooks;
-import net.neoforged.neoforge.common.extensions.IBaseRailBlockExtension;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.extensions.IBaseRailBlockExtension;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.TriState;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.EventHooks;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerInteractEvent.LeftClickBlock;

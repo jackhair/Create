@@ -13,7 +13,7 @@ import com.simibubi.create.content.logistics.packager.PackagingRequest;
 
 import com.simibubi.create.compat.computercraft.events.RepackageEvent;
 import com.simibubi.create.compat.computercraft.events.PackageEvent;
-import dan200.computercraft.api.peripheral.PeripheralCapability;
+import com.simibubi.create.infrastructure.fabric.compat.computercraft.PeripheralCapability;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
