@@ -36,8 +36,8 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class SequencedGearshiftBlock extends HorizontalAxisKineticBlock implements IBE<SequencedGearshiftBlockEntity>, TransformableBlock {
 
@@ -101,7 +101,7 @@ public class SequencedGearshiftBlock extends HorizontalAxisKineticBlock implemen
 		return ItemInteractionResult.SUCCESS;
 	}
 
-	@OnlyIn(value = Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	protected void displayScreen(SequencedGearshiftBlockEntity be, Player player) {
 		if (player instanceof LocalPlayer)
 			ScreenOpener.open(new SequencedGearshiftScreen(be));

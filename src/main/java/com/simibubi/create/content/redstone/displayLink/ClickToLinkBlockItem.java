@@ -32,8 +32,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.util.TriState;
@@ -146,7 +146,7 @@ public abstract class ClickToLinkBlockItem extends BlockItem {
 	private static BlockPos lastShownPos = null;
 	private static AABB lastShownAABB = null;
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	public static void clientTick() {
 		Player player = Minecraft.getInstance().player;
 		if (player == null)
@@ -182,7 +182,7 @@ public abstract class ClickToLinkBlockItem extends BlockItem {
 		return true;
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	public AABB getSelectionBounds(BlockPos pos) {
 		Level world = Minecraft.getInstance().level;
 		BlockState state = world.getBlockState(pos);

@@ -53,8 +53,8 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import net.minecraft.world.phys.Vec3;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class CarriageContraptionEntity extends OrientedContraptionEntity {
 
@@ -81,9 +81,9 @@ public class CarriageContraptionEntity extends OrientedContraptionEntity {
 
 	private Vec3 serverPrevPos;
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	public CarriageSounds sounds;
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	public CarriageParticles particles;
 
 	public CarriageContraptionEntity(EntityType<?> type, Level world) {
@@ -741,7 +741,7 @@ public class CarriageContraptionEntity extends OrientedContraptionEntity {
 		dimensional.updateRenderedCutoff();
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	public void updateRenderedPortalCutoff() {
 		if (carriage == null)
 			return;

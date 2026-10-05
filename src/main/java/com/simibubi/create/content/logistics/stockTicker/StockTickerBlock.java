@@ -32,8 +32,8 @@ import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class StockTickerBlock extends HorizontalDirectionalBlock implements IBE<StockTickerBlockEntity>, IWrenchable {
 
@@ -93,7 +93,7 @@ public class StockTickerBlock extends HorizontalDirectionalBlock implements IBE<
 		return AllShapes.STOCK_TICKER;
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	public PartialModel getHat(LevelAccessor level, BlockPos pos, LivingEntity keeper) {
 		return AllPartialModels.LOGISTICS_HAT;
 	}

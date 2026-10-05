@@ -11,7 +11,7 @@
       "item": "minecraft:red_sand"
     },
     {
-      "type": "neoforge:single",
+      "type": "create:fluid",
       "amount": 100,
       "fluid": "minecraft:lava"
     }

@@ -10,8 +10,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 
 public interface IAssemblyRecipe {
@@ -19,7 +19,7 @@ public interface IAssemblyRecipe {
 		return true;
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	Component getDescriptionForAssembly();
 
 	void addRequiredMachines(Set<ItemLike> list);

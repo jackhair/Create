@@ -37,8 +37,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ScheduleItem extends Item implements MenuProvider, SupportsItemCopying {
 
@@ -127,7 +127,7 @@ public class ScheduleItem extends Item implements MenuProvider, SupportsItemCopy
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flagIn) {
 		Schedule schedule = getSchedule(context.registries(), stack);
 		if (schedule == null || schedule.entries.isEmpty())

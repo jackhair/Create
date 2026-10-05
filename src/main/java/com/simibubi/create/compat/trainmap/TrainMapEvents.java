@@ -5,6 +5,7 @@ import com.simibubi.create.compat.Mods;
 
 import net.minecraft.client.Minecraft;
 
+import net.fabricmc.api.EnvType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

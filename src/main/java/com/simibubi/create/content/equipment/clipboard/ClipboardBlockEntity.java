@@ -21,8 +21,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 
 public class ClipboardBlockEntity extends SmartBlockEntity {
 	private UUID lastEdit;
@@ -95,7 +95,7 @@ public class ClipboardBlockEntity extends SmartBlockEntity {
 		}
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	private void readClientSide(CompoundTag tag) {
 		Minecraft mc = Minecraft.getInstance();
 		if (!(mc.screen instanceof ClipboardScreen cs))
@@ -108,7 +108,7 @@ public class ClipboardBlockEntity extends SmartBlockEntity {
 		cs.reopenWith(components().getOrDefault(AllDataComponents.CLIPBOARD_CONTENT, ClipboardContent.EMPTY));
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	private void advertiseToAddressHelper() {
 		AddressEditBoxHelper.advertiseClipboard(this);
 	}

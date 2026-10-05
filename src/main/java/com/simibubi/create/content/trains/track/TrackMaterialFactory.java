@@ -14,8 +14,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.neoforged.neoforge.common.Tags.Items;
 
 public class TrackMaterialFactory {
@@ -30,13 +30,13 @@ public class TrackMaterialFactory {
 	@Nullable
 	private TrackMaterial.TrackType.TrackBlockFactory customFactory = null;
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	private TrackMaterial.TrackModelHolder modelHolder;
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	private PartialModel tieModel;
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	private PartialModel leftSegmentModel;
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	private PartialModel rightSegmentModel;
 
 	public TrackMaterialFactory(ResourceLocation id) {

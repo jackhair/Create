@@ -6,12 +6,12 @@
       "tag": "minecraft:leaves"
     },
     {
-      "type": "neoforge:single",
+      "type": "create:fluid",
       "amount": 250,
       "fluid": "minecraft:water"
     },
     {
-      "type": "neoforge:tag",
+      "type": "create:fluid_tag",
       "amount": 250,
       "tag": "c:milk"
     }

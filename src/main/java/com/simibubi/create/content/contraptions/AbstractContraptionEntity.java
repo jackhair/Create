@@ -72,8 +72,8 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
 
 public abstract class AbstractContraptionEntity extends Entity implements IEntityWithComplexSpawn {
@@ -736,19 +736,19 @@ public abstract class AbstractContraptionEntity extends Entity implements IEntit
 		return entityData.get(STALLED);
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	static void handleStallPacket(ContraptionStallPacket packet) {
 		if (Minecraft.getInstance().level.getEntity(packet.entityId()) instanceof AbstractContraptionEntity ce)
 			ce.handleStallInformation(packet.x(), packet.y(), packet.z(), packet.angle());
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	static void handleBlockChangedPacket(ContraptionBlockChangedPacket packet) {
 		if (Minecraft.getInstance().level.getEntity(packet.entityId()) instanceof AbstractContraptionEntity ce)
 			ce.handleBlockChange(packet.localPos(), packet.newState());
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	static void handleDisassemblyPacket(ContraptionDisassemblyPacket packet) {
 		if (Minecraft.getInstance().level.getEntity(packet.entityId()) instanceof AbstractContraptionEntity ce)
 			ce.moveCollidedEntitiesOnDisassembly(packet.transform());
@@ -758,7 +758,7 @@ public abstract class AbstractContraptionEntity extends Entity implements IEntit
 
 	protected abstract void handleStallInformation(double x, double y, double z, float angle);
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	protected void handleBlockChange(BlockPos localPos, BlockState newState) {
 		if (contraption == null || !contraption.blocks.containsKey(localPos))
 			return;
@@ -864,7 +864,7 @@ public abstract class AbstractContraptionEntity extends Entity implements IEntit
 		return false;
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	public abstract void applyLocalTransforms(PoseStack matrixStack, float partialTicks);
 
 	public static class ContraptionRotationState {

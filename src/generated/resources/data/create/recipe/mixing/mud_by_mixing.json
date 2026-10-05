@@ -2,11 +2,11 @@
   "type": "create:mixing",
   "ingredients": [
     {
-      "type": "neoforge:block_tag",
+      "type": "create:block_tag",
       "tag": "minecraft:convertable_to_mud"
     },
     {
-      "type": "neoforge:single",
+      "type": "create:fluid",
       "amount": 250,
       "fluid": "minecraft:water"
     }

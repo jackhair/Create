@@ -19,6 +19,7 @@ import net.minecraft.world.entity.player.Player;
 
 import net.minecraft.world.phys.Vec3;
 
+import net.fabricmc.api.EnvType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;

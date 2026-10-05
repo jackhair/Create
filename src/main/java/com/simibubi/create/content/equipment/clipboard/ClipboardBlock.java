@@ -53,8 +53,8 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.api.distmarker.OnlyIn;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.neoforged.neoforge.common.util.FakePlayer;
 
 import org.jetbrains.annotations.Nullable;
@@ -116,7 +116,7 @@ public class ClipboardBlock extends FaceAttachedHorizontalDirectionalBlock
 		});
 	}
 
-	@OnlyIn(Dist.CLIENT)
+	@Environment(EnvType.CLIENT)
 	private void openScreen(Player player, DataComponentMap components, BlockPos pos) {
 		if (Minecraft.getInstance().player == player)
 			ScreenOpener.open(new ClipboardScreen(player.getInventory().selected, components, pos));
