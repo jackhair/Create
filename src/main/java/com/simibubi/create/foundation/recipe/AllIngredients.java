@@ -3,9 +3,9 @@ package com.simibubi.create.foundation.recipe;
 import com.simibubi.create.Create;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.common.crafting.IngredientType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.crafting.IngredientType;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
 

@@ -23,9 +23,9 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
 
 public class HosePulleyScenes {
 

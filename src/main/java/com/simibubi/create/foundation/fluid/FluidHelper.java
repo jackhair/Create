@@ -22,12 +22,12 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.common.SoundActions;
-import net.neoforged.neoforge.fluids.BaseFlowingFluid;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
-import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.SoundActions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
 
 public class FluidHelper {
 

@@ -19,9 +19,9 @@ import net.minecraft.world.level.material.Fluid;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.FluidType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
 
 @Environment(EnvType.CLIENT)
 public class FluidRenderer {

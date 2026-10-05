@@ -7,8 +7,8 @@ import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 
 import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.fluids.BaseFlowingFluid;
-import net.neoforged.neoforge.fluids.BaseFlowingFluid.Properties;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid.Properties;
 
 /**
  * For registering fluids with no buckets/blocks

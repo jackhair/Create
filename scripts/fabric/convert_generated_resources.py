@@ -10,8 +10,8 @@ after every upstream merge.
   neoforge:not/and/or/true   -> fabric:not/and/or/true
   neoforge:tag_empty         -> fabric:not + fabric:tags_populated (not(tag_empty) collapses to tags_populated)
   neoforge:item_exists       -> fabric:registry_contains
-  neoforge:single/tag/components (fluid ingredients) -> create:fluid/fluid_tag/fluid_components
-  neoforge:block_tag         -> create:block_tag
+  neoforge:block_tag         -> "fabric:type": create:block_tag (Fabric custom ingredient)
+  neoforge:single/tag/components fluid ingredients are kept (vendored NeoForge fluid ingredients)
   neoforge:cures             -> removed (vanilla effect codec ignores it; milk/totem behaviour is vanilla)
 
 Fluid amounts stay in mB, per decision D3; Create's fluid ingredient codecs convert to droplets on load.
@@ -29,10 +29,10 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 DEFAULT_DIRS = [REPO / "src/generated/resources/data", REPO / "src/main/resources/data"]
 
-INGREDIENT_TYPES = {
-	"neoforge:single": "create:fluid",
-	"neoforge:tag": "create:fluid_tag",
-	"neoforge:components": "create:fluid_components",
+# Item ingredients: Fabric custom ingredients use "fabric:type" instead of "type".
+# Fluid ingredients keep NeoForge's ids (neoforge:single/tag/components): the shim layer vendors NeoForge's
+# fluid ingredient types and registers them under the same names (PORTING.md D7).
+CUSTOM_ITEM_INGREDIENTS = {
 	"neoforge:block_tag": "create:block_tag",
 }
 DROPPED_KEYS = {"neoforge:cures"}
@@ -84,8 +84,8 @@ def convert(node):
 			continue
 		if key == "neoforge:conditions":
 			out["fabric:load_conditions"] = [condition(c) for c in value]
-		elif key == "type" and value in INGREDIENT_TYPES:
-			out[key] = INGREDIENT_TYPES[value]
+		elif key == "type" and value in CUSTOM_ITEM_INGREDIENTS:
+			out["fabric:type"] = CUSTOM_ITEM_INGREDIENTS[value]
 		else:
 			out[key] = convert(value)
 	return out
@@ -114,8 +114,9 @@ def main() -> int:
 				continue
 			if text.endswith("\n"):
 				new += "\n"
-			if "neoforge:" in new:
-				failed.append(f"{path}: unhandled neoforge key remains")
+			leftover = [k for k in ("neoforge:conditions", "neoforge:mod_loaded", "neoforge:not", "neoforge:tag_empty", "neoforge:cures", "neoforge:block_tag") if k in new]
+			if leftover:
+				failed.append(f"{path}: unhandled neoforge keys remain: {leftover}")
 			if new != text:
 				changed.append(path)
 				if write:

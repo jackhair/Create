@@ -42,14 +42,14 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.MapColor;
 
-import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
-import net.neoforged.neoforge.common.NeoForgeMod;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForgeMod;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.fluids.BaseFlowingFluid;
-import net.neoforged.neoforge.fluids.FluidInteractionRegistry;
-import net.neoforged.neoforge.fluids.FluidInteractionRegistry.InteractionInformation;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.FluidType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidInteractionRegistry;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidInteractionRegistry.InteractionInformation;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
 
 public class AllFluids {
 	private static final CreateRegistrate REGISTRATE = Create.registrate();

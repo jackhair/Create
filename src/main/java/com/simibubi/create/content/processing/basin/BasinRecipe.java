@@ -29,9 +29,9 @@ import net.minecraft.world.item.crafting.RecipeInput;
 import net.minecraft.world.level.Level;
 
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
-import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class BasinRecipe extends StandardProcessingRecipe<RecipeInput> {

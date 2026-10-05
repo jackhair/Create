@@ -38,10 +38,10 @@ import net.minecraft.world.level.block.LeverBlock;
 import net.minecraft.world.level.block.RedstoneLampBlock;
 import net.minecraft.world.level.material.Fluids;
 
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.FluidType;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 

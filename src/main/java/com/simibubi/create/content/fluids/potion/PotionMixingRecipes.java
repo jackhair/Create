@@ -29,9 +29,9 @@ import net.minecraft.world.level.Level;
 
 import net.neoforged.neoforge.common.brewing.BrewingRecipe;
 import net.neoforged.neoforge.common.brewing.IBrewingRecipe;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.crafting.DataComponentFluidIngredient;
-import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.DataComponentFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 
 public class PotionMixingRecipes {
 

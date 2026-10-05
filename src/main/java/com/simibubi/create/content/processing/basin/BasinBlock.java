@@ -44,8 +44,8 @@ import net.minecraft.world.phys.shapes.EntityCollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;

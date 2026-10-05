@@ -11,7 +11,7 @@
       "item": "minecraft:calcite"
     },
     {
-      "type": "create:fluid",
+      "type": "neoforge:single",
       "amount": 100,
       "fluid": "minecraft:lava"
     }

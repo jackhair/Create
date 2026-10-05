@@ -12,7 +12,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.material.Fluids;
 
-import net.neoforged.neoforge.common.NeoForgeMod;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForgeMod;
 
 /**
  * Create's own Data Generation for Emptying recipes

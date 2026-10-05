@@ -26,7 +26,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.LeverBlock;
 import net.minecraft.world.level.block.RedstoneLampBlock;
 
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 
 @GameTestGroup(path = "contraptions")
 public class TestContraptions {

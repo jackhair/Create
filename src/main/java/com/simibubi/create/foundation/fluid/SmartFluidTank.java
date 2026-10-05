@@ -1,8 +1,8 @@
 package com.simibubi.create.foundation.fluid;
 
 import java.util.function.Consumer;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.templates.FluidTank;
 
 public class SmartFluidTank extends FluidTank {
 

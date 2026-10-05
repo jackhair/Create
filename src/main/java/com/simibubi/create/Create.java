@@ -60,7 +60,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModContainer;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModLoadingContext;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.Mod;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.NeoForgeMod;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForgeMod;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.RegisterEvent;
 
 @Mod(Create.ID)

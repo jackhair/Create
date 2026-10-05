@@ -5,7 +5,7 @@
       "item": "create:blaze_cake_base"
     },
     {
-      "type": "create:fluid",
+      "type": "neoforge:single",
       "amount": 250,
       "fluid": "minecraft:lava"
     }

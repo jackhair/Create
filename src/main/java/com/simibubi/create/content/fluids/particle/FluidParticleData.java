@@ -13,7 +13,7 @@ import net.minecraft.network.codec.StreamCodec;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 
 public class FluidParticleData implements ParticleOptions, ICustomParticleData<FluidParticleData> {
 

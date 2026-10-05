@@ -106,7 +106,7 @@ import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.item.crafting.SmokingRecipe;
 import net.minecraft.world.level.block.Blocks;
 
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 
 @JeiPlugin
 @SuppressWarnings("unused")

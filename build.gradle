@@ -155,6 +155,7 @@ sourceSets.main {
 
     resources {
         srcDir("src/generated/resources")
+        srcDir("neoforge-shim/src/main/resources")
         exclude(".cache/")
         exclude("data/create/.wiki")
         // fabric: NeoForge-only data; contents are registered in code (scripts/fabric/convert_generated_resources.py)
@@ -193,7 +194,8 @@ tasks.withType(JavaCompile).configureEach {
     options.compilerArgs.addAll(["-Xmaxerrs", "10000"])
 }
 
-var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+// fabric: fabric.mod.json lives in src/main/resources (Loom reads its injected interfaces at configuration time)
+tasks.named("processResources", ProcessResources) {
     var replaceProperties = [
         "mod_version"          : version,
         "mod_id"               : mod_id,
@@ -207,12 +209,10 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
         "ponder_version"       : ponder_version,
     ]
     inputs.properties(replaceProperties)
-    expand(replaceProperties)
-    from("src/main/templates")
-    into("build/generated/sources/modMetadata")
+    filesMatching("fabric.mod.json") {
+        expand(replaceProperties)
+    }
 }
-
-sourceSets.main.resources.srcDir(generateModMetadata)
 
 publishing {
     publications {

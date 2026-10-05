@@ -22,7 +22,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
 
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
 
 public record FluidContentsAttribute(@Nullable Fluid fluid) implements ItemAttribute {
 	public static final MapCodec<FluidContentsAttribute> CODEC = BuiltInRegistries.FLUID.byNameCodec()

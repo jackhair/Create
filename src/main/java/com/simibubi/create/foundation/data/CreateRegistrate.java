@@ -55,9 +55,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
-import net.neoforged.neoforge.fluids.BaseFlowingFluid;
-import net.neoforged.neoforge.fluids.FluidType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 
 public class CreateRegistrate extends AbstractRegistrate<CreateRegistrate> {

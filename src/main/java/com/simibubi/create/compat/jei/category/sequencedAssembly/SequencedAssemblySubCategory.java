@@ -19,7 +19,7 @@ import mezz.jei.api.recipe.RecipeIngredientRole;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.GuiGraphics;
 
-import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 
 public abstract class SequencedAssemblySubCategory {
 

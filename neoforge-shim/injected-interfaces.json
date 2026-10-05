@@ -1,0 +1,12 @@
+{
+  "_comment": "NeoForge extension interfaces injected into vanilla classes (PORTING.md D7). Mojang class names -> shim interfaces. Run scripts/fabric/injected_interfaces.py after editing; each also needs a mixin implementing it at runtime.",
+  "net/minecraft/world/level/material/Fluid": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IFluidExtension"
+  ],
+  "net/minecraft/world/level/material/FluidState": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IFluidStateExtension"
+  ],
+  "net/minecraft/world/entity/Entity": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/attachment/IAttachmentHolder"
+  ]
+}

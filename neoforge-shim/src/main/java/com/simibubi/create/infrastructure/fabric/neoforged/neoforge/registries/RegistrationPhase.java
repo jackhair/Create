@@ -24,7 +24,9 @@ public final class RegistrationPhase {
 	private RegistrationPhase() {}
 
 	public static void run(IEventBus modBus) {
-		modBus.post(new NewRegistryEvent());
+		NewRegistryEvent newRegistries = new NewRegistryEvent();
+		NeoForgeRegistries.registerAll(newRegistries);
+		modBus.post(newRegistries);
 		modBus.post(new DataPackRegistryEvent.NewRegistry());
 		for (ResourceLocation id : registrationOrder()) {
 			ResourceKey<? extends Registry<?>> key = ResourceKey.createRegistryKey(id);

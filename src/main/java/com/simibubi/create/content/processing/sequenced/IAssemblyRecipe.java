@@ -12,7 +12,7 @@ import net.minecraft.world.level.ItemLike;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 
 public interface IAssemblyRecipe {
 	default boolean supportsAssembly() {

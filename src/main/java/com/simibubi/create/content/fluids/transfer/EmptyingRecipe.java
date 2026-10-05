@@ -7,7 +7,7 @@ import com.simibubi.create.content.processing.recipe.StandardProcessingRecipe;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 
 public class EmptyingRecipe extends StandardProcessingRecipe<SingleRecipeInput> {
 

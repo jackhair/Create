@@ -13,7 +13,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.alchemy.PotionContents;
 
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 
 /* From JEI's Potion item subtype interpreter */
 public class PotionFluidSubtypeInterpreter implements ISubtypeInterpreter<FluidStack> {

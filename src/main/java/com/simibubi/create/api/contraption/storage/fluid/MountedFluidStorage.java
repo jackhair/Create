@@ -15,7 +15,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
 
 public abstract class MountedFluidStorage implements IFluidHandler {
 	public static final Codec<MountedFluidStorage> CODEC = MountedFluidStorageType.CODEC.dispatch(

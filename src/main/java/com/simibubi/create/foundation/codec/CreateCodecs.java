@@ -12,11 +12,11 @@ import com.simibubi.create.foundation.item.ItemSlots;
 
 import net.minecraft.util.ExtraCodecs;
 
-import net.neoforged.neoforge.common.util.NeoForgeExtraCodecs;
-import net.neoforged.neoforge.fluids.crafting.FluidIngredient;
-import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.NeoForgeExtraCodecs;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.FluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class CreateCodecs {
 	public static final Codec<Integer> INT_STR = Codec.STRING.comapFlatMap(

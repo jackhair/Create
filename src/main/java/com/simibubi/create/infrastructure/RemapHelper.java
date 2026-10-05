@@ -65,7 +65,7 @@ import net.minecraft.world.level.block.Blocks;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.NeoForgeMod;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForgeMod;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.RegisterEvent;
 
 @EventBusSubscriber

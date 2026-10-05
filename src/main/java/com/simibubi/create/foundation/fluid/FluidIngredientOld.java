@@ -10,10 +10,10 @@ import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.crafting.DataComponentFluidIngredient;
-import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
-import net.neoforged.neoforge.fluids.crafting.TagFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.DataComponentFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.TagFluidIngredient;
 
 @ScheduledForRemoval(inVersion = "1.21.1+ Port")
 @Deprecated(since = "6.0.7", forRemoval = true)

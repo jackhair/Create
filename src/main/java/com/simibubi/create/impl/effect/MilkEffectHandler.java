@@ -9,7 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 
 import net.neoforged.neoforge.common.EffectCures;
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 
 public class MilkEffectHandler implements OpenPipeEffectHandler {
 	@Override

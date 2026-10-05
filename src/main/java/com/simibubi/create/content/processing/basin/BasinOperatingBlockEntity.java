@@ -25,7 +25,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import net.neoforged.neoforge.capabilities.Capabilities.FluidHandler;
 import net.neoforged.neoforge.capabilities.Capabilities.ItemHandler;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public abstract class BasinOperatingBlockEntity extends KineticBlockEntity {

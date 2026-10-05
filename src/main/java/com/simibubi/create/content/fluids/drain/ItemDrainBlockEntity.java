@@ -32,8 +32,8 @@ import net.minecraft.world.phys.Vec3;
 
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 
 public class ItemDrainBlockEntity extends SmartBlockEntity implements IHaveGoggleInformation, Clearable {

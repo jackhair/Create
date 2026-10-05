@@ -9,7 +9,7 @@
       "item": "minecraft:cocoa_beans"
     },
     {
-      "type": "create:fluid_tag",
+      "type": "neoforge:tag",
       "amount": 250,
       "tag": "c:milk"
     }

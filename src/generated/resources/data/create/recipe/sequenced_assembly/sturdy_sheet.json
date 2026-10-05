@@ -16,7 +16,7 @@
           "item": "create:unprocessed_obsidian_sheet"
         },
         {
-          "type": "create:fluid",
+          "type": "neoforge:single",
           "amount": 500,
           "fluid": "minecraft:lava"
         }

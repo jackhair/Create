@@ -6,7 +6,7 @@ import net.minecraft.network.syncher.EntityDataSerializer;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.NeoForgeRegistries;
 
 import org.jetbrains.annotations.ApiStatus.Internal;
 

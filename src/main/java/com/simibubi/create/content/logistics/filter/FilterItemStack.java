@@ -15,7 +15,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class FilterItemStack {
@@ -95,7 +95,7 @@ public class FilterItemStack {
 		if (!matchNBT)
 			return filterFluidStack.getFluid()
 				.isSame(stack.getFluid());
-		return net.neoforged.neoforge.fluids.FluidStack.isSameFluidSameComponents(filterFluidStack, stack);
+		return com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack.isSameFluidSameComponents(filterFluidStack, stack);
 	}
 
 	//

@@ -24,7 +24,8 @@
     ]
   },
   "mixins": [
-    "${mod_id}.mixins.json"
+    "${mod_id}.mixins.json",
+    "create_neoforge_shim.mixins.json"
   ],
   "accessWidener": "${mod_id}.accesswidener",
   "depends": {
@@ -41,5 +42,18 @@
     "lithium": "<0.14.7",
     "radium": "*",
     "palladium": "*"
+  },
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/class_3611": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IFluidExtension"
+      ],
+      "net/minecraft/class_3610": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IFluidStateExtension"
+      ],
+      "net/minecraft/class_1297": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/attachment/IAttachmentHolder"
+      ]
+    }
   }
 }

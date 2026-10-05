@@ -34,7 +34,7 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
-import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
 
 @ParametersAreNonnullByDefault
 public class SequencedAssemblyCategory extends CreateRecipeCategory<SequencedAssemblyRecipe> {

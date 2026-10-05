@@ -51,8 +51,8 @@ import com.simibubi.create.infrastructure.fabric.neoforged.fml.loading.FMLLoader
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.data.loading.DatagenModLoader;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.neoforge.fluids.BaseFlowingFluid;
-import net.neoforged.neoforge.fluids.FluidType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.registries.*;
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.Level;

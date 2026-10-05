@@ -43,12 +43,12 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluid;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.Lazy;
-import net.neoforged.neoforge.fluids.BaseFlowingFluid;
-import net.neoforged.neoforge.fluids.FluidType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class FluidBuilder<T extends BaseFlowingFluid, P> extends AbstractBuilder<Fluid, T, P, FluidBuilder<T, P>> {
 

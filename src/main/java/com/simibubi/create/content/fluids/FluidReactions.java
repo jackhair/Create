@@ -19,7 +19,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 
 @EventBusSubscriber
 public class FluidReactions {

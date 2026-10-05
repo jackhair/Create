@@ -1,9 +1,9 @@
 package com.simibubi.create.foundation.fluid;
 
 import net.createmod.catnip.data.Iterate;
-import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
-import net.neoforged.neoforge.fluids.capability.templates.EmptyFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.templates.EmptyFluidHandler;
 
 /**
  * Combines multiple IFluidHandlers into one interface (See CombinedInvWrapper

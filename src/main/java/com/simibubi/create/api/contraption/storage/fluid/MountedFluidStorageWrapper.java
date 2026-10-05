@@ -5,7 +5,7 @@ import com.simibubi.create.foundation.fluid.CombinedTankWrapper;
 
 import net.minecraft.core.BlockPos;
 
-import net.neoforged.neoforge.fluids.capability.IFluidHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capability.IFluidHandler;
 
 /**
  * Wrapper around many MountedFluidStorages, providing access to all of them as one storage.

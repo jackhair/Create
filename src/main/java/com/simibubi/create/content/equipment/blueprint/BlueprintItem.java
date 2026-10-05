@@ -33,7 +33,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.level.Level;
 
-import net.neoforged.neoforge.common.crafting.CompoundIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.crafting.CompoundIngredient;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class BlueprintItem extends Item {

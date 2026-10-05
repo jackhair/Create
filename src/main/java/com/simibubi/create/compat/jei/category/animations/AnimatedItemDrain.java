@@ -9,7 +9,7 @@ import net.createmod.catnip.platform.NeoForgeCatnipServices;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.LightTexture;
 
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 
 public class AnimatedItemDrain extends AnimatedKinetics {
 

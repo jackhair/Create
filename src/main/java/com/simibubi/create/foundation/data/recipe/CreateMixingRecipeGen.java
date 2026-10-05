@@ -18,7 +18,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.material.Fluids;
 
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.crafting.BlockTagIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.crafting.BlockTagIngredient;
 
 /**
  * Create's own Data Generation for Mixing recipes

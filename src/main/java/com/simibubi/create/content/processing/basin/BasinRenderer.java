@@ -24,7 +24,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
-import net.neoforged.neoforge.fluids.FluidStack;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
