@@ -6,3 +6,4 @@ because javac reports attribution errors only once symbol resolution succeeds.
 | Date | Commit | Errors | Files with errors | Note |
 |---|---|---|---|---|
 | 2026-10-05 | `dd4826ccf` | 3,021 | 591 | First Fabric compile after the Loom switch |
+| 2026-10-05 | `7296d9f4d` | 2,407 | 450 | Shim batch 1: item handlers, datagen generators, utils (45 classes) |
