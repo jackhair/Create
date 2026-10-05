@@ -43,7 +43,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities.ItemHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags.Items;
-import net.neoforged.neoforge.common.util.FakePlayer;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.FakePlayer;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 

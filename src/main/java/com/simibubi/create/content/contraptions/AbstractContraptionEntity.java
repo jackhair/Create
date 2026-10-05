@@ -74,7 +74,7 @@ import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.entity.IEntityWithComplexSpawn;
 
 public abstract class AbstractContraptionEntity extends Entity implements IEntityWithComplexSpawn {
 

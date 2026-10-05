@@ -14,7 +14,7 @@ import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.resources.ResourceKey;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.data.event.GatherDataEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.data.event.GatherDataEvent;
 
 import javax.annotation.Nullable;
 import java.util.*;

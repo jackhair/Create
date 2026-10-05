@@ -12,8 +12,8 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.neoforged.neoforge.common.world.BiomeModifier;
-import net.neoforged.neoforge.common.world.BiomeModifiers.AddFeaturesBiomeModifier;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.world.BiomeModifier;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.world.BiomeModifiers.AddFeaturesBiomeModifier;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class AllBiomeModifiers {

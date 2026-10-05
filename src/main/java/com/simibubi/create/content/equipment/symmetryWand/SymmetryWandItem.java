@@ -48,7 +48,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.BlockSnapshot;
-import net.neoforged.neoforge.event.EventHooks;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.EventHooks;
 
 public class SymmetryWandItem extends Item {
 

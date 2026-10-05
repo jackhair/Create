@@ -25,7 +25,7 @@ import net.minecraft.world.level.material.Fluid;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ICondition;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ModLoadedCondition;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.NotCondition;
-import net.neoforged.neoforge.common.crafting.ICustomIngredient;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.crafting.ICustomIngredient;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidStack;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.FluidIngredient;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;

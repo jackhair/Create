@@ -5,7 +5,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.registries.RegistryPatchGenerator;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;

@@ -25,7 +25,7 @@ import net.minecraft.world.level.block.Block;
  * <p>
  * Create-owned re-implementation of NeoForge's {@code BlockTagIngredient} for Fabric (PORTING.md D7).
  */
-public record BlockTagIngredient(TagKey<Block> tag) implements CustomIngredient {
+public record BlockTagIngredient(TagKey<Block> tag) implements ICustomIngredient {
 	public static final Serializer SERIALIZER = new Serializer();
 
 	public Ingredient toIngredient() {

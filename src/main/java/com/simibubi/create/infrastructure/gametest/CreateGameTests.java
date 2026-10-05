@@ -14,7 +14,7 @@ import net.minecraft.gametest.framework.TestFunction;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.RegisterGameTestsEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.RegisterGameTestsEvent;
 
 @EventBusSubscriber
 public class CreateGameTests {

@@ -8,7 +8,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 
-import net.neoforged.neoforge.common.NeoForgeConfig;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForgeConfig;
 
 public class FixLightingCommand {
 	static ArgumentBuilder<CommandSourceStack, ?> register() {

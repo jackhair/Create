@@ -11,7 +11,7 @@ import com.tterrag.registrate.util.nullness.NonNullFunction;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
-import net.neoforged.neoforge.registries.datamaps.DataMapType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.DataMapType;
 
 import java.util.function.Function;
 

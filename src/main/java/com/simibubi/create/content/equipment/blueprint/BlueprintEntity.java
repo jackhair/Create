@@ -61,10 +61,10 @@ import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.common.CommonHooks;
-import net.neoforged.neoforge.common.util.FakePlayer;
-import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
-import net.neoforged.neoforge.event.EventHooks;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.CommonHooks;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.FakePlayer;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.entity.IEntityWithComplexSpawn;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.EventHooks;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.InvWrapper;

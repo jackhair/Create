@@ -158,9 +158,8 @@ sourceSets.main {
         srcDir("neoforge-shim/src/main/resources")
         exclude(".cache/")
         exclude("data/create/.wiki")
-        // fabric: NeoForge-only data; contents are registered in code (scripts/fabric/convert_generated_resources.py)
-        exclude("data/neoforge/")
-        exclude("data/create/neoforge/")
+        // fabric: data/neoforge/ and data/create/neoforge/ ship as-is; Create's Fabric entrypoint applies them to
+        // Fabric's registries (biome modifiers, oxidizables, waxables, fuels, compostables)
         exclude("META-INF/accesstransformer.cfg") // kept for upstream merges; scripts/fabric/at_to_aw.py turns it into create.accesswidener
     }
 

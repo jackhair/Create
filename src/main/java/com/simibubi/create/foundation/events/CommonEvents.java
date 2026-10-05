@@ -81,7 +81,7 @@ import net.minecraft.world.level.LevelAccessor;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.client.gui.map.RegisterMapDecorationRenderersEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.gui.map.RegisterMapDecorationRenderersEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.AddPackFindersEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.AddReloadListenerEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.RegisterCommandsEvent;

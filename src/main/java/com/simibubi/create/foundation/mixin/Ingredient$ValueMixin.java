@@ -13,7 +13,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import net.minecraft.world.item.crafting.Ingredient.Value;
 
-import net.neoforged.neoforge.data.loading.DatagenModLoader;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.data.loading.DatagenModLoader;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

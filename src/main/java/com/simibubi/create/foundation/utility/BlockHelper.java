@@ -71,7 +71,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.phys.BlockHitResult;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.common.SpecialPlantable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.SpecialPlantable;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockDropsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockEvent;
 

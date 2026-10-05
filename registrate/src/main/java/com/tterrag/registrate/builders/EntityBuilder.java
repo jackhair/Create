@@ -30,7 +30,7 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.loading.FMLEnvironment;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.common.DeferredSpawnEggItem;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.DeferredSpawnEggItem;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;

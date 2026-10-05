@@ -4,7 +4,7 @@ import com.tterrag.registrate.AbstractRegistrate;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import com.tterrag.registrate.util.nullness.NonnullType;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.common.data.LanguageProvider;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.LanguageProvider;
 import org.apache.commons.lang3.StringUtils;
 
 import net.minecraft.core.Registry;

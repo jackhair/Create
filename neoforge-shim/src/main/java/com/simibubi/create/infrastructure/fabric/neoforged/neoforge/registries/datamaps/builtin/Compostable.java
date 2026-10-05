@@ -1,0 +1,35 @@
+// fabric: vendored from NeoForge 21.1.219 (LGPL-2.1-only) into Create's shim layer, see PORTING.md D7
+/*
+ * Copyright (c) NeoForged and contributors
+ * SPDX-License-Identifier: LGPL-2.1-only
+ */
+
+package com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.builtin;
+
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+
+/**
+ * Data map value for {@linkplain NeoForgeDataMaps#COMPOSTABLES compostables}.
+ *
+ * @param chance             the chance that a compost is successful
+ * @param canVillagerCompost whether farmer villagers can compost the item
+ */
+public record Compostable(float chance, boolean canVillagerCompost) {
+    public static final Codec<Compostable> CHANCE_CODEC = Codec.floatRange(0f, 1f)
+            .xmap(Compostable::new, Compostable::chance);
+    public static final Codec<Compostable> CODEC = Codec.withAlternative(
+            RecordCodecBuilder.create(in -> in.group(
+                    Codec.floatRange(0f, 1f).fieldOf("chance").forGetter(Compostable::chance),
+                    Codec.BOOL.optionalFieldOf("can_villager_compost", false).forGetter(Compostable::canVillagerCompost)).apply(in, Compostable::new)),
+            CHANCE_CODEC);
+
+    /**
+     * Constructs a {@link Compostable} that cannot be composted by farmer villagers.
+     * 
+     * @param chance the chance that a compost is successful
+     */
+    public Compostable(float chance) {
+        this(chance, false);
+    }
+}

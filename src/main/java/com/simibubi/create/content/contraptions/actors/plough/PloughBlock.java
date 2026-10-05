@@ -8,7 +8,7 @@ import com.simibubi.create.content.contraptions.actors.AttachedActorBlock;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.neoforged.neoforge.common.util.FakePlayer;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.FakePlayer;
 
 import org.jetbrains.annotations.NotNull;
 

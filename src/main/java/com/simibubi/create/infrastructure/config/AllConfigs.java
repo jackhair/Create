@@ -16,7 +16,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModContainer;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.ModLoadingContext;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.config.ModConfigEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 @EventBusSubscriber

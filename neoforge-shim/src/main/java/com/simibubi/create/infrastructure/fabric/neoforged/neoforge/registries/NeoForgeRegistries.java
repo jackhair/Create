@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.attachment.AttachmentType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.world.BiomeModifier;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.crafting.IngredientType;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.FluidIngredientType;
@@ -45,7 +46,7 @@ public class NeoForgeRegistries {
 		public static final ResourceKey<Registry<FluidIngredientType<?>>> FLUID_INGREDIENT_TYPES = key("fluid_ingredient_type");
 		public static final ResourceKey<Registry<AttachmentType<?>>> ATTACHMENT_TYPES = key("attachment_types");
 		/** Datagen only on Fabric: biome modifiers are applied in code with Fabric's BiomeModifications. */
-		public static final ResourceKey<Registry<Object>> BIOME_MODIFIERS = key("biome_modifier");
+		public static final ResourceKey<Registry<BiomeModifier>> BIOME_MODIFIERS = key("biome_modifier");
 
 		private static <T> ResourceKey<Registry<T>> key(String name) {
 			return ResourceKey.createRegistryKey(ResourceLocation.fromNamespaceAndPath("neoforge", name));

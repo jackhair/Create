@@ -63,6 +63,9 @@
       ],
       "net/minecraft/class_2586": [
         "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockEntityExtension"
+      ],
+      "net/minecraft/class_6880": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IHolderExtension<TT;>"
       ]
     }
   }

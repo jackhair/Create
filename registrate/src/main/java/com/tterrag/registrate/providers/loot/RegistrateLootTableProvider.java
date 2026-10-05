@@ -27,7 +27,7 @@ import net.minecraft.world.level.storage.loot.ValidationContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
-import net.neoforged.fml.util.ObfuscationReflectionHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.util.ObfuscationReflectionHelper;
 import org.apache.commons.lang3.function.TriFunction;
 
 import java.util.*;

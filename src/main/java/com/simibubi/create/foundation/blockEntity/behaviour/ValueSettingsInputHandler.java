@@ -18,7 +18,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEven
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags.Items;
-import net.neoforged.neoforge.common.util.FakePlayer;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.FakePlayer;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 @EventBusSubscriber

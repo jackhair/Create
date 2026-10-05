@@ -4,8 +4,8 @@ import com.tterrag.registrate.AbstractRegistrate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.common.data.DataMapProvider;
-import net.neoforged.neoforge.registries.datamaps.DataMapType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.DataMapProvider;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.DataMapType;
 
 import java.util.concurrent.CompletableFuture;
 

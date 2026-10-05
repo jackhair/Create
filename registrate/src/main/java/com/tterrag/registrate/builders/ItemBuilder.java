@@ -35,9 +35,9 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.datamaps.builtin.Compostable;
-import net.neoforged.neoforge.registries.datamaps.builtin.FurnaceFuel;
-import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.builtin.Compostable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.builtin.FurnaceFuel;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 
 /**
  * A builder for items, allows for customization of the {@link Item.Properties} and configuration of data associated with items (models, recipes, etc.).

@@ -15,7 +15,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
-import net.neoforged.neoforge.client.settings.KeyModifier;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.settings.KeyModifier;
 
 @EventBusSubscriber(Dist.CLIENT)
 public enum AllKeys {

@@ -27,7 +27,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.data.event.GatherDataEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.data.event.GatherDataEvent;
 
 public class CreateDatagen {
 	public static void gatherDataHighPriority(GatherDataEvent event) {

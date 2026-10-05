@@ -48,8 +48,8 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.loading.FMLLoader;
-import net.neoforged.neoforge.data.event.GatherDataEvent;
-import net.neoforged.neoforge.data.loading.DatagenModLoader;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.data.event.GatherDataEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.data.loading.DatagenModLoader;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;

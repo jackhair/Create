@@ -48,7 +48,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.fml.util.ObfuscationReflectionHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.fml.util.ObfuscationReflectionHelper;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientBlockExtensions;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;

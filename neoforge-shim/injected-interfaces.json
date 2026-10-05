@@ -18,5 +18,8 @@
   ],
   "net/minecraft/world/level/block/entity/BlockEntity": [
     "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockEntityExtension"
+  ],
+  "net/minecraft/core/Holder": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IHolderExtension<TT;>"
   ]
 }

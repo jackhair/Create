@@ -23,7 +23,7 @@ import net.minecraft.world.item.crafting.Ingredient;
  * <p>
  * Create-owned re-implementation of NeoForge's {@code CompoundIngredient} for Fabric (PORTING.md D7).
  */
-public record CompoundIngredient(List<Ingredient> children) implements CustomIngredient {
+public record CompoundIngredient(List<Ingredient> children) implements ICustomIngredient {
 	public static final Serializer SERIALIZER = new Serializer();
 
 	public static Ingredient of(Ingredient... children) {

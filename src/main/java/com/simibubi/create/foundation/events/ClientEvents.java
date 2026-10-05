@@ -112,7 +112,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderLevelStageEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderLevelStageEvent.Stage;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.ViewportEvent;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.gui.VanillaGuiLayers;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityMountEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.ItemTooltipEvent;

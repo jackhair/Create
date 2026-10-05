@@ -10,10 +10,10 @@ import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 
-import net.neoforged.neoforge.common.data.DataMapProvider;
-import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
-import net.neoforged.neoforge.registries.datamaps.builtin.Oxidizable;
-import net.neoforged.neoforge.registries.datamaps.builtin.Waxable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.DataMapProvider;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.builtin.Oxidizable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.datamaps.builtin.Waxable;
 
 public class CreateDatamapProvider extends DataMapProvider {
 	public CreateDatamapProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {

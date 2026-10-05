@@ -54,7 +54,7 @@ import net.minecraft.world.phys.Vec3;
 
 import net.neoforged.neoforge.common.extensions.IBaseRailBlockExtension;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.BlockSnapshot;
-import net.neoforged.neoforge.event.EventHooks;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.EventHooks;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class DeployerMovementBehaviour implements MovementBehaviour {

@@ -51,8 +51,8 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.neoforged.neoforge.common.CommonHooks;
-import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.CommonHooks;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.entity.IEntityWithComplexSpawn;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class PackageEntity extends LivingEntity implements IEntityWithComplexSpawn {

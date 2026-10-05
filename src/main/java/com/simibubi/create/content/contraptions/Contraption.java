@@ -129,7 +129,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import net.neoforged.neoforge.registries.GameData;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.GameData;
 
 public abstract class Contraption {
 
