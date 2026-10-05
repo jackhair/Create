@@ -90,7 +90,7 @@ public class FluidHelper {
 		return blockState != null && blockState != Blocks.AIR.defaultBlockState();
 	}
 
-	public static FluidStack copyStackWithAmount(FluidStack fs, int amount) {
+	public static FluidStack copyStackWithAmount(FluidStack fs, long amount) {
 		if (amount <= 0)
 			return FluidStack.EMPTY;
 		if (fs.isEmpty())
@@ -164,7 +164,7 @@ public class FluidHelper {
 			FluidStack fluid = capability.getFluidInTank(i);
 			if (fluid.isEmpty())
 				continue;
-			int requiredAmountForItem = GenericItemFilling.getRequiredAmountForItem(world, heldItem, fluid.copy());
+			long requiredAmountForItem = GenericItemFilling.getRequiredAmountForItem(world, heldItem, fluid.copy());
 			if (requiredAmountForItem == -1)
 				continue;
 			if (requiredAmountForItem > fluid.getAmount())

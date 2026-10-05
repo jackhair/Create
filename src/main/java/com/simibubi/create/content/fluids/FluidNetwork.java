@@ -242,7 +242,7 @@ public class FluidNetwork {
 						continue;
 					}
 
-					int simulatedTransfer = toTransfer;
+					long simulatedTransfer = toTransfer;
 					if (simulate)
 						simulatedTransfer += accumulatedFill.getOrDefault(targetHandler, 0);
 

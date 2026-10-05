@@ -58,7 +58,7 @@ public class CreativeFluidTankBlockEntity extends FluidTankBlockEntity {
 			return tank;
 		}));
 
-		public CreativeSmartFluidTank(int capacity, Consumer<FluidStack> updateCallback) {
+		public CreativeSmartFluidTank(long capacity, Consumer<FluidStack> updateCallback) {
 			super(capacity, updateCallback);
 		}
 

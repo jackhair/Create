@@ -111,7 +111,7 @@ public class SpoutBlockEntity extends SmartBlockEntity implements IHaveGoggleInf
 		if (tank.isEmpty())
 			return HOLD;
 		FluidStack fluid = getCurrentFluidInTank();
-		int requiredAmountForItem = FillingBySpout.getRequiredAmountForItem(level, transported.stack, fluid.copy());
+		long requiredAmountForItem = FillingBySpout.getRequiredAmountForItem(level, transported.stack, fluid.copy());
 		if (requiredAmountForItem == -1)
 			return PASS;
 		if (requiredAmountForItem > fluid.getAmount())

@@ -78,7 +78,7 @@ public class HosePulleyFluidHandler implements IFluidHandler {
 		filler.counterpartActed();
 		FluidStack leftover = returned.copy();
 		long available = 1000 + internalTank.getFluidAmount();
-		int drained;
+		long drained;
 
 		if (!internalTank.isEmpty() && !FluidStack.isSameFluidSameComponents(internalTank.getFluid(), returned)
 				|| returned.isEmpty())

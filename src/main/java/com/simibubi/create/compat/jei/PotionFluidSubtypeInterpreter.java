@@ -45,7 +45,8 @@ public class PotionFluidSubtypeInterpreter implements ISubtypeInterpreter<IJeiFl
 	}
 
 	@Override
-	public String getLegacyStringSubtypeInfo(FluidStack ingredient, UidContext context) {
+	public String getLegacyStringSubtypeInfo(IJeiFluidIngredient jeiIngredient, UidContext context) {
+		FluidStack ingredient = com.simibubi.create.infrastructure.fabric.compat.jei.JeiFluids.toStack(jeiIngredient); // fabric
 		return "";
 	}
 }

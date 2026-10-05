@@ -204,4 +204,28 @@ public interface IGuiGraphicsExtension {
             self.blitRepeating(texture, x + width - edgeWidth, y + cornerHeight, cornerWidth, height - edgeHeight - cornerHeight, uOffset + uWidth - edgeWidth, vOffset + cornerHeight, edgeWidth, vHeight - edgeHeight - cornerHeight, textureWidth, textureHeight);
         }
     }*/
+
+    // fabric: NeoForge adds float-position drawString overloads to GuiGraphics; draw at the integer part and translate by the rest
+    default int drawString(net.minecraft.client.gui.Font font, @org.jetbrains.annotations.Nullable String text, float x, float y, int color, boolean dropShadow) {
+        if (text == null)
+            return 0;
+        return drawStringAt(x, y, () -> self().drawString(font, text, 0, 0, color, dropShadow));
+    }
+
+    default int drawString(net.minecraft.client.gui.Font font, net.minecraft.util.FormattedCharSequence text, float x, float y, int color, boolean dropShadow) {
+        return drawStringAt(x, y, () -> self().drawString(font, text, 0, 0, color, dropShadow));
+    }
+
+    default int drawString(net.minecraft.client.gui.Font font, net.minecraft.network.chat.Component text, float x, float y, int color, boolean dropShadow) {
+        return drawString(font, text.getVisualOrderText(), x, y, color, dropShadow);
+    }
+
+    private int drawStringAt(float x, float y, java.util.function.IntSupplier draw) {
+        var pose = self().pose();
+        pose.pushPose();
+        pose.translate(x, y, 0);
+        int width = draw.getAsInt();
+        pose.popPose();
+        return (int) x + width;
+    }
 }

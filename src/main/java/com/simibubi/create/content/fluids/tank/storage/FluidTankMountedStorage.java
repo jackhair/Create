@@ -99,7 +99,7 @@ public class FluidTankMountedStorage extends WrapperMountedFluidStorage<Handler>
 		private Runnable onChange = () -> {
 		};
 
-		public Handler(int capacity, FluidStack stack) {
+		public Handler(long capacity, FluidStack stack) {
 			super(capacity);
 			this.setFluid(stack);
 		}
