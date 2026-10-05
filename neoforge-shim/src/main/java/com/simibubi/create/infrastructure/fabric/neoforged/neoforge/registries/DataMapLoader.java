@@ -98,7 +98,7 @@ public final class DataMapLoader implements IdentifiableResourceReloadListener {
 				for (Resource resource : entry.getValue()) {
 					try (var reader = resource.openAsReader()) {
 						JsonElement json = JsonParser.parseReader(reader);
-						DataMapFile file = (DataMapFile) DataMapFile.codec(registryKey, type).parse(JsonOps.INSTANCE, json).getOrThrow();
+						DataMapFile file = (DataMapFile) DataMapFile.codec((ResourceKey) registryKey, type).parse(JsonOps.INSTANCE, json).getOrThrow();
 						apply(registry, file, result);
 					} catch (Exception e) {
 						LOGGER.error("Failed to load data map {} from {}", type.id(), resource.sourcePackId(), e);

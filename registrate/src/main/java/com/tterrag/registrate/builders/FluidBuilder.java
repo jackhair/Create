@@ -362,8 +362,8 @@ public class FluidBuilder<T extends BaseFlowingFluid, P> extends AbstractBuilder
             OneTimeEventReceiver.addModListener(getOwner(), FMLClientSetupEvent.class, $ -> {
                 if (this.layer != null) {
                     RenderType layer = this.layer.get().get();
-                    ItemBlockRenderTypes.setRenderLayer(entry, layer);
-                    ItemBlockRenderTypes.setRenderLayer(getSource(), layer);
+                    net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putFluid(entry, layer); // fabric
+                    net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putFluid(getSource(), layer); // fabric
                 }
             });
         });

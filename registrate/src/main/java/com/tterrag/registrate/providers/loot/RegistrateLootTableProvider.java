@@ -75,7 +75,7 @@ public class RegistrateLootTableProvider extends LootTableProvider implements Re
     private CompletableFuture<HolderLookup.Provider> provider;
 
     public RegistrateLootTableProvider(AbstractRegistrate<?> parent, PackOutput packOutput, CompletableFuture<HolderLookup.Provider> provider) {
-        super(packOutput, Set.of(), VanillaLootTableProvider.create(packOutput, provider).getTables(), provider);
+        super(packOutput, Set.of(), VanillaLootTableProvider.create(packOutput, provider).subProviders, provider); // fabric: field via access widener
         this.parent = parent;
         this.provider = provider;
     }
@@ -93,7 +93,7 @@ public class RegistrateLootTableProvider extends LootTableProvider implements Re
         return LogicalSide.SERVER;
     }
 
-    @Override
+    // fabric: NeoForge hook; vanilla doesn't call it (datagen wiring is PORTING.md 1e)
     protected void validate(WritableRegistry<LootTable> writableregistry, ValidationContext validationcontext, ProblemReporter.Collector problemreporter$collector) {
         currentLootCreators.forEach(c -> c.validate(writableregistry, validationcontext));
     }
@@ -113,9 +113,9 @@ public class RegistrateLootTableProvider extends LootTableProvider implements Re
         return creator;
     }
 
-    private static final BiMap<ResourceLocation, LootContextParamSet> SET_REGISTRY = ObfuscationReflectionHelper.getPrivateValue(LootContextParamSets.class, null, "REGISTRY");
+    private static final BiMap<ResourceLocation, LootContextParamSet> SET_REGISTRY = LootContextParamSets.REGISTRY /* fabric: field via access widener */;
 
-    @Override
+    // fabric: NeoForge hook; vanilla reads the subProviders field (datagen wiring is PORTING.md 1e)
     public List<LootTableProvider.SubProviderEntry> getTables() {
         parent.genData(ProviderType.LOOT, this);
         currentLootCreators.clear();

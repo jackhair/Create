@@ -8,18 +8,39 @@
     "BlockEntityMixin",
     "BlockGetterMixin",
     "BlockMixin",
+    "BlockParticleOptionMixin",
     "BlockStateMixin",
+    "DataGeneratorMixin",
+    "DyeColorMixin",
     "EntityMixin",
+    "EntityTypeBuilderMixin",
     "FluidMixin",
     "FluidStateMixin",
     "HolderMixin",
+    "IngredientMixin",
+    "ItemContainerContentsMixin",
     "ItemMixin",
     "ItemStackMixin",
+    "ItemTooltipContextMixin",
     "LevelMixin",
-    "PlayerMixin"
+    "PatchedDataComponentMapMixin",
+    "PlayerMixin",
+    "RegistryMixin",
+    "SlotMixin",
+    "TagAppenderMixin",
+    "TransformationMixin"
   ],
   "client": [
-    "GuiGraphicsMixin"
+    "AbstractContainerScreenMixin",
+    "BakedModelMixin",
+    "BakedQuadMixin",
+    "EntityRenderDispatcherMixin",
+    "FontMixin",
+    "GuiGraphicsMixin",
+    "KeyMappingMixin",
+    "MinecraftMixin",
+    "RenderTypeMixin",
+    "ScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1

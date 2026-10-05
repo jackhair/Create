@@ -160,12 +160,12 @@ public class BlockBuilder<T extends Block, P> extends AbstractBuilder<Block, T, 
             OneTimeEventReceiver.addModListener(getOwner(), FMLClientSetupEvent.class, $ -> {
                 if (renderLayers.size() == 1) {
                     final RenderType layer = renderLayers.get(0).get().get();
-                    ItemBlockRenderTypes.setRenderLayer(entry, layer);
+                    net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(entry, layer); // fabric
                 } else if (renderLayers.size() > 1) {
                     final Set<RenderType> layers = renderLayers.stream()
                             .map(s -> s.get().get())
                             .collect(Collectors.toSet());
-                    ItemBlockRenderTypes.setRenderLayer(entry, layers::contains);
+                    net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap.INSTANCE.putBlock(entry, layers.iterator().next()); // fabric: one layer per block
                 }
             });
         });

@@ -37,7 +37,7 @@ public class RegistrateEntityLootTables extends VanillaEntityLoot implements Reg
         callback.accept(this);
     }
 
-    @Override
+    // fabric: NeoForge hook; unused by vanilla
     protected Stream<EntityType<?>> getKnownEntityTypes() {
         return parent.getAll(Registries.ENTITY_TYPE).stream().map(Supplier::get);
     }
@@ -53,10 +53,6 @@ public class RegistrateEntityLootTables extends VanillaEntityLoot implements Reg
     @Generated(value = "com.tterrag.registrate.test.meta.UpdateEntityLootTables", date = "Tue, 18 Jun 2024 17:49:13 GMT")
     public static LootTable.Builder createSheepTable(ItemLike p_249422_) { return EntityLootSubProvider.createSheepTable(p_249422_); }
 
-    /** Generated override to expose protected method: {@link EntityLootSubProvider#canHaveLootTable} */
-    @Override
-    @Generated(value = "com.tterrag.registrate.test.meta.UpdateEntityLootTables", date = "Tue, 18 Jun 2024 17:49:13 GMT")
-    public boolean canHaveLootTable(EntityType<?> p_249029_) { return super.canHaveLootTable(p_249029_); }
 
     /** Generated override to expose protected method: {@link EntityLootSubProvider#killedByFrogVariant} */
     @Override

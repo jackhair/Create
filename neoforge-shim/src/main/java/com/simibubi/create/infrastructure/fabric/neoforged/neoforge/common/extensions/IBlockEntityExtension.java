@@ -1,5 +1,10 @@
 package com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.extensions;
 
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelData;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.PersistentData;
+import net.fabricmc.fabric.api.attachment.v1.AttachmentTarget;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
 /**
@@ -14,5 +19,27 @@ public interface IBlockEntityExtension {
 	default void invalidateCapabilities() {
 		if (self().getLevel() != null)
 			self().getLevel().invalidateCapabilities(self().getBlockPos());
+	}
+
+	/** NeoForge's persistent data tag (a persistent Fabric attachment here). */
+	default CompoundTag getPersistentData() {
+		return PersistentData.get((AttachmentTarget) self());
+	}
+
+	/** Model data isn't wired to Fabric rendering yet (PORTING.md 1d); requests are ignored. */
+	default void requestModelDataUpdate() {}
+
+	default ModelData getModelData() {
+		return ModelData.EMPTY;
+	}
+
+	/** Called when the block entity is added to a loaded chunk (fired by Fabric's block entity load event). */
+	default void onLoad() {}
+
+	/** Called when the chunk holding this block entity unloads (fired by Fabric's block entity unload event). */
+	default void onChunkUnloaded() {}
+
+	default void handleUpdateTag(CompoundTag tag, HolderLookup.Provider registries) {
+		self().loadWithComponents(tag, registries);
 	}
 }

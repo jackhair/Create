@@ -39,4 +39,14 @@ public final class EventHooks {
 
 	/** NeoForge's ItemCraftedEvent has no Fabric equivalent or listeners. */
 	public static void firePlayerCraftingEvent(Player player, ItemStack crafted, Container craftMatrix) {}
+
+	public static boolean doPlayerHarvestCheck(net.minecraft.world.entity.player.Player player, net.minecraft.world.level.block.state.BlockState state, net.minecraft.world.level.BlockGetter level, net.minecraft.core.BlockPos pos) {
+		return !state.requiresCorrectToolForDrops() || player.hasCorrectToolForDrops(state);
+	}
+
+	/** NeoForge's BlockToolModificationEvent isn't fired; the block decides. */
+	@Nullable
+	public static net.minecraft.world.level.block.state.BlockState onToolUse(net.minecraft.world.level.block.state.BlockState originalState, net.minecraft.world.item.context.UseOnContext context, com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.ItemAbility itemAbility, boolean simulate) {
+		return originalState.getBlock().getToolModifiedState(originalState, context, itemAbility, simulate);
+	}
 }

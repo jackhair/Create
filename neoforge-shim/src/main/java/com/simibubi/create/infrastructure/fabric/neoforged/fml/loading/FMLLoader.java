@@ -13,4 +13,8 @@ public class FMLLoader {
 	public static Dist getDist() {
 		return FMLEnvironment.dist;
 	}
+
+	public static java.nio.file.Path getGamePath() {
+		return net.fabricmc.loader.api.FabricLoader.getInstance().getGameDir();
+	}
 }

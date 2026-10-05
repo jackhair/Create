@@ -42,5 +42,68 @@
   ],
   "net/minecraft/world/level/BlockGetter": [
     "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockGetterExtension"
+  ],
+  "net/minecraft/client/gui/screens/inventory/AbstractContainerScreen": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IAbstractContainerScreenExtension"
+  ],
+  "net/minecraft/client/gui/screens/Screen": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IScreenExtension"
+  ],
+  "net/minecraft/client/KeyMapping": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IKeyMappingExtension"
+  ],
+  "net/minecraft/client/Minecraft": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IMinecraftExtension"
+  ],
+  "net/minecraft/client/gui/Font": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IFontExtension"
+  ],
+  "net/minecraft/client/renderer/entity/EntityRenderDispatcher": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IEntityRenderDispatcherExtension"
+  ],
+  "net/minecraft/client/renderer/RenderType": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IRenderTypeExtension"
+  ],
+  "net/minecraft/core/particles/BlockParticleOption": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockParticleOptionExtension"
+  ],
+  "net/minecraft/world/inventory/Slot": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ISlotExtension"
+  ],
+  "com/mojang/math/Transformation": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ITransformationExtension"
+  ],
+  "net/minecraft/core/Registry": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IRegistryExtension<TT;>"
+  ],
+  "net/minecraft/world/item/component/ItemContainerContents": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IItemContainerContentsExtension"
+  ],
+  "net/minecraft/world/item/Item$TooltipContext": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ITooltipContextExtension"
+  ],
+  "net/minecraft/core/component/PatchedDataComponentMap": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IPatchedDataComponentMapExtension"
+  ],
+  "net/minecraft/world/item/crafting/Ingredient": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IIngredientExtension"
+  ],
+  "net/minecraft/world/item/DyeColor": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IDyeColorExtension"
+  ],
+  "net/minecraft/world/entity/EntityType$Builder": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IEntityTypeBuilderExtension<TT;>"
+  ],
+  "net/minecraft/data/DataGenerator": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IDataGeneratorExtension"
+  ],
+  "net/minecraft/client/resources/model/BakedModel": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IBakedModelExtension"
+  ],
+  "net/minecraft/client/renderer/block/model/BakedQuad": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IBakedQuadExtension"
+  ],
+  "net/minecraft/data/tags/TagsProvider$TagAppender": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ITagAppenderExtension<TT;>"
   ]
 }

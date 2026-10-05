@@ -28,7 +28,7 @@ public interface RegistrateTagsProvider<T> extends RegistrateLookupFillerProvide
         private final String name;
 
         public Impl(AbstractRegistrate<?> owner, ProviderType<? extends Impl<T>> type, String name, PackOutput packOutput, ResourceKey<? extends Registry<T>> registryIn, CompletableFuture<HolderLookup.Provider> registriesLookup, ExistingFileHelper existingFileHelper) {
-            super(packOutput, registryIn, registriesLookup, owner.getModid(), existingFileHelper);
+            super(packOutput, registryIn, registriesLookup); // fabric: vanilla constructor
 
             this.owner = owner;
             this.type = type;
@@ -73,7 +73,7 @@ public interface RegistrateTagsProvider<T> extends RegistrateLookupFillerProvide
         private final String name;
 
         public IntrinsicImpl(AbstractRegistrate<?> owner, ProviderType<? extends IntrinsicImpl<T>> type, String name, PackOutput packOutput, ResourceKey<? extends Registry<T>> registryIn, CompletableFuture<HolderLookup.Provider> registriesLookup, Function<T, ResourceKey<T>> keyExtractor, ExistingFileHelper existingFileHelper) {
-            super(packOutput, registryIn, registriesLookup, keyExtractor, owner.getModid(), existingFileHelper);
+            super(packOutput, registryIn, registriesLookup, keyExtractor); // fabric: vanilla constructor
 
             this.owner = owner;
             this.type = type;

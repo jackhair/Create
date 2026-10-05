@@ -733,20 +733,7 @@ public interface IBlockStateExtension {
         return self().getBlock().canBeHydrated(self(), getter, pos, fluid, fluidPos);
     }
 
-    /**
-     * Returns the {@link BlockState} that this state reports to look like on the given side for querying by other mods.
-     *
-     * @param level      The level this block is in
-     * @param pos        The block's position in the level
-     * @param side       The side of the block that is being queried
-     * @param queryState The state of the block that is querying the appearance, or {@code null} if not applicable
-     * @param queryPos   The position of the block that is querying the appearance, or {@code null} if not applicable
-     * @return The appearance of this block from the given side
-     * @see IBlockExtension#getAppearance(BlockState, BlockAndTintGetter, BlockPos, Direction, BlockState, BlockPos)
-     */
-    default BlockState getAppearance(BlockAndTintGetter level, BlockPos pos, Direction side, @Nullable BlockState queryState, @Nullable BlockPos queryPos) {
-        return self().getBlock().getAppearance(self(), level, pos, side, queryState, queryPos);
-    }
+    // fabric: getAppearance comes from Fabric API's FabricBlock/FabricBlockState (same signature)
 
     /**
      * Return true if the state is able to be replaced with Blocks.AIR in chunk sections that is entirely made of blocks that return true for isEmpty

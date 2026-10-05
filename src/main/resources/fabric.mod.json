@@ -87,6 +87,69 @@
       ],
       "net/minecraft/class_1922": [
         "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockGetterExtension"
+      ],
+      "net/minecraft/class_465": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IAbstractContainerScreenExtension"
+      ],
+      "net/minecraft/class_437": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IScreenExtension"
+      ],
+      "net/minecraft/class_304": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IKeyMappingExtension"
+      ],
+      "net/minecraft/class_310": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IMinecraftExtension"
+      ],
+      "net/minecraft/class_327": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IFontExtension"
+      ],
+      "net/minecraft/class_898": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IEntityRenderDispatcherExtension"
+      ],
+      "net/minecraft/class_1921": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IRenderTypeExtension"
+      ],
+      "net/minecraft/class_2388": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockParticleOptionExtension"
+      ],
+      "net/minecraft/class_1735": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ISlotExtension"
+      ],
+      "net/minecraft/class_4590": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ITransformationExtension"
+      ],
+      "net/minecraft/class_2378": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IRegistryExtension<TT;>"
+      ],
+      "net/minecraft/class_9288": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IItemContainerContentsExtension"
+      ],
+      "net/minecraft/class_1792$class_9635": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ITooltipContextExtension"
+      ],
+      "net/minecraft/class_9335": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IPatchedDataComponentMapExtension"
+      ],
+      "net/minecraft/class_1856": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IIngredientExtension"
+      ],
+      "net/minecraft/class_1767": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IDyeColorExtension"
+      ],
+      "net/minecraft/class_1299$class_1300": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IEntityTypeBuilderExtension<TT;>"
+      ],
+      "net/minecraft/class_2403": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IDataGeneratorExtension"
+      ],
+      "net/minecraft/class_1087": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IBakedModelExtension"
+      ],
+      "net/minecraft/class_777": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IBakedQuadExtension"
+      ],
+      "net/minecraft/class_2474$class_5124": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ITagAppenderExtension<TT;>"
       ]
     }
   }

@@ -594,7 +594,7 @@ public interface IItemExtension {
      */
     @Nullable
     default String getCreatorModId(ItemStack itemStack) {
-        return CommonHooks.getDefaultCreatorModId(itemStack);
+        return net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(itemStack.getItem()).getNamespace(); // fabric: simplified CommonHooks#getDefaultCreatorModId
     }
 
     /**

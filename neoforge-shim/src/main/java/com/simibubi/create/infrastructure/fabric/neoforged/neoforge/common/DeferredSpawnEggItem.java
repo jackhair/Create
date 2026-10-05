@@ -53,9 +53,11 @@ public class DeferredSpawnEggItem extends SpawnEggItem {
         return TYPE_MAP.get(type);
     }
 
+    // fabric: vanilla has no getDefaultType hook; the type from entity data wins, otherwise the deferred type
     @Override
-    protected EntityType<?> getDefaultType() {
-        return this.typeSupplier.get();
+    public EntityType<?> getType(net.minecraft.world.item.ItemStack stack) {
+        EntityType<?> fromData = super.getType(stack);
+        return fromData != null ? fromData : this.typeSupplier.get();
     }
 
     private static final DispenseItemBehavior DEFAULT_DISPENSE_BEHAVIOR = (source, stack) -> {

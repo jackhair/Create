@@ -65,7 +65,7 @@ public class DatapackBuiltinEntriesProvider extends RegistriesDatapackGenerator 
      * @param conditions a map containing conditions to append to registry objects
      */
     public DatapackBuiltinEntriesProvider(PackOutput output, CompletableFuture<RegistrySetBuilder.PatchedRegistries> registries, Map<ResourceKey<?>, List<ICondition>> conditions, Set<String> modIds) {
-        super(output, registries.thenApply(RegistrySetBuilder.PatchedRegistries::patches), modIds, conditions);
+        super(output, registries.thenApply(RegistrySetBuilder.PatchedRegistries::patches)); // fabric: vanilla constructor; mod id filter and conditions are NeoForge additions
         this.fullRegistries = registries.thenApply(RegistrySetBuilder.PatchedRegistries::full);
     }
 

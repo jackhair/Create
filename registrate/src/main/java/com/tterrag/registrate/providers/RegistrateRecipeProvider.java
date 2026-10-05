@@ -63,7 +63,7 @@ public class RegistrateRecipeProvider extends RecipeProvider implements Registra
     }
 
 	@Override
-    protected CompletableFuture<?> run(CachedOutput output, HolderLookup.Provider provider) {
+    public CompletableFuture<?> run(CachedOutput output, HolderLookup.Provider provider) {
         this.provider = provider;
         return super.run(output, provider);
     }
@@ -77,11 +77,16 @@ public class RegistrateRecipeProvider extends RecipeProvider implements Registra
     private RecipeOutput callback;
 
     @Override
+    public void accept(ResourceLocation id, Recipe<?> recipe, @org.jetbrains.annotations.Nullable AdvancementHolder advancement) {
+        accept(id, recipe, advancement, new ICondition[0]);
+    }
+
+    // fabric: conditions are dropped until datagen runs on Fabric (PORTING.md 1e)
     public void accept(ResourceLocation id, Recipe<?> recipe, @org.jetbrains.annotations.Nullable AdvancementHolder advancement, ICondition... conditions) {
         if (callback == null) {
             throw new IllegalStateException("Cannot accept recipes outside of a call to registerRecipes");
         }
-        callback.accept(id, recipe, advancement, conditions);
+        callback.accept(id, recipe, advancement);
     }
 
     @Override
@@ -93,7 +98,7 @@ public class RegistrateRecipeProvider extends RecipeProvider implements Registra
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput) {
+    public void buildRecipes(RecipeOutput recipeOutput) {
         this.callback = recipeOutput;
         owner.genData(ProviderType.RECIPE, this);
         this.callback = null;
@@ -325,20 +330,8 @@ public class RegistrateRecipeProvider extends RecipeProvider implements Registra
     // @formatter:off
     // GENERATED START - DO NOT EDIT BELOW THIS LINE
 
-    /** Generated override to expose protected method: {@link RecipeProvider#buildAdvancement} */
-    @Override
-    @Generated(value = "com.tterrag.registrate.test.meta.UpdateRecipeProvider", date = "Tue, 18 Jun 2024 17:51:56 GMT")
-    public CompletableFuture<?> buildAdvancement(CachedOutput p_253674_, HolderLookup.Provider p_323646_, AdvancementHolder p_301116_) { return super.buildAdvancement(p_253674_, p_323646_, p_301116_); }
 
-    /** Generated override to expose protected method: {@link RecipeProvider#buildAdvancement} */
-    @Override
-    @Generated(value = "com.tterrag.registrate.test.meta.UpdateRecipeProvider", date = "Tue, 18 Jun 2024 17:51:56 GMT")
-    public CompletableFuture<?> buildAdvancement(CachedOutput p_253674_, HolderLookup.Provider p_323646_, AdvancementHolder p_301116_, com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ICondition... conditions) { return super.buildAdvancement(p_253674_, p_323646_, p_301116_, conditions); }
 
-    /** Generated override to expose protected method: {@link RecipeProvider#generateForEnabledBlockFamilies} */
-    @Override
-    @Generated(value = "com.tterrag.registrate.test.meta.UpdateRecipeProvider", date = "Tue, 18 Jun 2024 17:51:56 GMT")
-    public void generateForEnabledBlockFamilies(RecipeOutput p_301146_, FeatureFlagSet p_251836_) { super.generateForEnabledBlockFamilies(p_301146_, p_251836_); }
 
     /** Generated override to expose protected method: {@link RecipeProvider#netheriteSmithing} */
     @Generated(value = "com.tterrag.registrate.test.meta.UpdateRecipeProvider", date = "Tue, 18 Jun 2024 17:51:56 GMT")

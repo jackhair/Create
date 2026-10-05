@@ -32,4 +32,8 @@ public final class ClientHooks {
 		stack.getTooltipImage().ifPresent(image -> components.add(Math.min(1, components.size()), ClientTooltipComponent.create(image)));
 		return components;
 	}
+
+	public static boolean isBlockInSolidLayer(net.minecraft.world.level.block.state.BlockState state) {
+		return net.minecraft.client.renderer.ItemBlockRenderTypes.getChunkRenderType(state) == net.minecraft.client.renderer.RenderType.solid();
+	}
 }

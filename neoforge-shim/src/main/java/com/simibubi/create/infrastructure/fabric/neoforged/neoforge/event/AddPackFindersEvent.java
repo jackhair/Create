@@ -71,15 +71,25 @@ public class AddPackFindersEvent extends Event implements IModBusEvent {
      */
     public void addPackFinders(ResourceLocation packLocation, PackType packType, Component packNameDisplay, PackSource packSource, boolean alwaysActive, Pack.Position packPosition) {
         if (getPackType() == packType) {
-            IModInfo modInfo = ModList.get().getModContainerById(packLocation.getNamespace()).orElseThrow(() -> new IllegalArgumentException("Mod not found: " + packLocation.getNamespace())).getModInfo();
+            // fabric: the pack lives in the mod's Fabric Loader container
+            var container = net.fabricmc.loader.api.FabricLoader.getInstance().getModContainer(packLocation.getNamespace()).orElseThrow(() -> new IllegalArgumentException("Mod not found: " + packLocation.getNamespace()));
+            var resourcePath = container.findPath(packLocation.getPath()).orElseThrow(() -> new IllegalArgumentException("Pack not found: " + packLocation));
+            var version = container.getMetadata().getVersion().getFriendlyString();
+            Pack.ResourcesSupplier resources = new Pack.ResourcesSupplier() {
+                @Override
+                public net.minecraft.server.packs.PackResources openPrimary(PackLocationInfo info) {
+                    return new PathPackResources(info, resourcePath);
+                }
 
-            var resourcePath = modInfo.getOwningFile().getFile().findResource(packLocation.getPath());
-
-            var version = modInfo.getVersion();
+                @Override
+                public net.minecraft.server.packs.PackResources openFull(PackLocationInfo info, Pack.Metadata metadata) {
+                    return new PathPackResources(info, resourcePath);
+                }
+            };
 
             var pack = Pack.readMetaAndCreate(
-                    new PackLocationInfo("mod/" + packLocation, packNameDisplay, packSource, Optional.of(new KnownPack("neoforge", "mod/" + packLocation, version.toString()))),
-                    BuiltInPackSource.fromName((path) -> new PathPackResources(path, resourcePath)),
+                    new PackLocationInfo("mod/" + packLocation, packNameDisplay, packSource, Optional.of(new KnownPack("neoforge", "mod/" + packLocation, version))),
+                    resources,
                     packType,
                     new PackSelectionConfig(alwaysActive, packPosition, false));
 

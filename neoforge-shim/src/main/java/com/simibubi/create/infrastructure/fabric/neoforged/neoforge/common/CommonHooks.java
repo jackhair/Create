@@ -58,7 +58,7 @@ public final class CommonHooks {
 	}
 
 	public static PlayerInteractEvent.LeftClickBlock onLeftClickBlock(Player player, BlockPos pos, Direction face, ServerboundPlayerActionPacket.Action action) {
-		PlayerInteractEvent.LeftClickBlock event = NeoForge.EVENT_BUS.post(new PlayerInteractEvent.LeftClickBlock(player, pos, face, action));
+		PlayerInteractEvent.LeftClickBlock event = NeoForge.EVENT_BUS.post(new PlayerInteractEvent.LeftClickBlock(player, pos, face, PlayerInteractEvent.LeftClickBlock.Action.convert(action)));
 		if (!event.isCanceled() && AttackBlockCallback.EVENT.invoker().interact(player, player.level(), InteractionHand.MAIN_HAND, pos, face) != InteractionResult.PASS)
 			event.setCanceled(true);
 		return event;

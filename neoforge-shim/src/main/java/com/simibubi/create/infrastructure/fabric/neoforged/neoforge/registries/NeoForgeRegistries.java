@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.attachment.AttachmentType;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.world.BiomeModifier;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ICondition;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.crafting.IngredientType;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.crafting.FluidIngredientType;
@@ -26,6 +27,8 @@ public class NeoForgeRegistries {
 	public static final Registry<FluidType> FLUID_TYPES = new RegistryBuilder<>(Keys.FLUID_TYPES).sync(true).create();
 	public static final Registry<IngredientType<?>> INGREDIENT_TYPES = new RegistryBuilder<>(Keys.INGREDIENT_TYPES).sync(true).create();
 	public static final Registry<FluidIngredientType<?>> FLUID_INGREDIENT_TYPES = new RegistryBuilder<>(Keys.FLUID_INGREDIENT_TYPES).sync(true).create();
+	/** Datagen only on Fabric: conditions are written by datagen, loading uses Fabric resource conditions. */
+	public static final Registry<com.mojang.serialization.MapCodec<? extends ICondition>> CONDITION_SERIALIZERS = new RegistryBuilder<>(Keys.CONDITION_CODECS).create();
 	public static final Registry<AttachmentType<?>> ATTACHMENT_TYPES = new RegistryBuilder<>(Keys.ATTACHMENT_TYPES)
 		// fabric: each NeoForge attachment type is backed by a Fabric attachment with the same id
 		.onAdd((registry, id, key, type) -> type.bind(key.location()))
@@ -36,6 +39,7 @@ public class NeoForgeRegistries {
 		event.register(FLUID_TYPES);
 		event.register(INGREDIENT_TYPES);
 		event.register(FLUID_INGREDIENT_TYPES);
+		event.register(CONDITION_SERIALIZERS);
 		event.register(ATTACHMENT_TYPES);
 	}
 
@@ -45,6 +49,7 @@ public class NeoForgeRegistries {
 		public static final ResourceKey<Registry<IngredientType<?>>> INGREDIENT_TYPES = key("ingredient_serializer");
 		public static final ResourceKey<Registry<FluidIngredientType<?>>> FLUID_INGREDIENT_TYPES = key("fluid_ingredient_type");
 		public static final ResourceKey<Registry<AttachmentType<?>>> ATTACHMENT_TYPES = key("attachment_types");
+		public static final ResourceKey<Registry<com.mojang.serialization.MapCodec<? extends ICondition>>> CONDITION_CODECS = key("condition_codecs");
 		/** Datagen only on Fabric: biome modifiers are applied in code with Fabric's BiomeModifications. */
 		public static final ResourceKey<Registry<BiomeModifier>> BIOME_MODIFIERS = key("biome_modifier");
 

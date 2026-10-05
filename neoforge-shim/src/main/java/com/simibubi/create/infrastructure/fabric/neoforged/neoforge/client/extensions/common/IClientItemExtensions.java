@@ -175,7 +175,7 @@ public interface IClientItemExtensions {
      * By default, returns vanilla's block entity renderer.
      */
     default BlockEntityWithoutLevelRenderer getCustomRenderer() {
-        return Minecraft.getInstance().getItemRenderer().getBlockEntityRenderer();
+        return Minecraft.getInstance().getItemRenderer().blockEntityRenderer; // fabric: field via access widener
     }
 
     /**

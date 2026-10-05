@@ -105,8 +105,7 @@ public class RegistrateAdvancementProvider implements RegistrateProvider, Consum
             } else if (conditions.isEmpty()) {
                 advancementsToSave.add(DataProvider.saveStable(cache, lookup, Advancement.CODEC, holder.value(), path));
             } else {
-                advancementsToSave.add(DataProvider.saveStable(cache, lookup, Advancement.CONDITIONAL_CODEC,
-                        Optional.of(new WithConditions<>(conditions, holder.value())), path));
+                advancementsToSave.add(DataProvider.saveStable(cache, lookup, Advancement.CODEC, holder.value(), path)); // fabric: conditions dropped until datagen runs on Fabric (PORTING.md 1e)
             }
         });
     }

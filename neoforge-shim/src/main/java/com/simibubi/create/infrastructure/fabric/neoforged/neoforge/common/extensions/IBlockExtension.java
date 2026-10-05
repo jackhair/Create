@@ -683,7 +683,7 @@ public interface IBlockExtension {
      * @return A number that is used to determine the speed of fire growth around the block
      */
     default int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return ((FireBlock) Blocks.FIRE).getIgniteOdds(state);
+        return ((FireBlock) Blocks.FIRE).igniteOdds.getInt(state.getBlock()); // fabric: field via access widener
     }
 
     /**
@@ -781,14 +781,14 @@ public interface IBlockExtension {
             return null;
 
         if (ItemAbilities.AXE_STRIP == itemAbility) {
-            return AxeItem.getAxeStrippingState(state);
+            return Optional.ofNullable(AxeItem.STRIPPABLES.get(state.getBlock())).map(b -> b.withPropertiesOf(state)).orElse(null); // fabric: from AxeItem#getStripped
         } else if (ItemAbilities.AXE_SCRAPE == itemAbility) {
             return WeatheringCopper.getPrevious(state).orElse(null);
         } else if (ItemAbilities.AXE_WAX_OFF == itemAbility) {
             Block waxOffBlock = net.minecraft.world.item.HoneycombItem.WAX_OFF_BY_BLOCK.get().get(state.getBlock()); // fabric: vanilla map instead of NeoForge data maps
             return Optional.ofNullable(waxOffBlock).map(block -> block.withPropertiesOf(state)).orElse(null);
         } else if (ItemAbilities.SHOVEL_FLATTEN == itemAbility) {
-            return ShovelItem.getShovelPathingState(state);
+            return ShovelItem.FLATTENABLES.get(state.getBlock()); // fabric: vanilla map (Fabric API adds to it too)
         } else if (ItemAbilities.HOE_TILL == itemAbility) {
             // Logic copied from HoeItem#TILLABLES; needs to be kept in sync during updating
             Block block = state.getBlock();
@@ -907,7 +907,7 @@ public interface IBlockExtension {
      */
     default boolean supportsExternalFaceHiding(BlockState state) {
         if (FMLEnvironment.dist.isClient()) {
-            return !ClientHooks.isBlockInSolidLayer(state);
+            return !com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.ClientHooks.isBlockInSolidLayer(state);
         }
         return true;
     }
@@ -958,32 +958,7 @@ public interface IBlockExtension {
         return defaultColor;
     }
 
-    /**
-     * Returns the {@link BlockState} that this block reports to look like on the given side, for querying by other mods.
-     * Note: Overriding this does not change how this block renders. That must still be handled in the block's model.
-     * <p>
-     * Common implementors would be covers and facades, or any other mimic blocks that proxy another block's model.
-     * Common consumers would be models with connected textures that wish to seamlessly connect to mimic blocks.
-     * <p>
-     * <b>Note that this method may be called on the server, or on any of the client's meshing threads.</b><br/>
-     * As such, if you need any data from your {@link BlockEntity}, you should put it in {@link ModelData} to guarantee
-     * safe concurrent access to it on the client.<br/>
-     * Calling {@link ILevelExtension#getModelDataManager()} will return {@code null} if in a server context, where it is
-     * safe to query your {@link BlockEntity} directly. Otherwise, {@link IBlockGetterExtension#getModelData(BlockPos)} will return
-     * the {@link ModelData} for the queried block, or {@link ModelData#EMPTY} if none is present.
-     *
-     * @param state      The state of this block
-     * @param level      The level this block is in
-     * @param pos        The block's position in the level
-     * @param side       The side of the block that is being queried
-     * @param queryState The state of the block that is querying the appearance, or {@code null} if not applicable
-     * @param queryPos   The position of the block that is querying the appearance, or {@code null} if not applicable
-     * @return The appearance of this block on the given side. By default, the current state
-     * @see IBlockStateExtension#getAppearance(BlockAndTintGetter, BlockPos, Direction, BlockState, BlockPos)
-     */
-    default BlockState getAppearance(BlockState state, BlockAndTintGetter level, BlockPos pos, Direction side, @Nullable BlockState queryState, @Nullable BlockPos queryPos) {
-        return state;
-    }
+    // fabric: getAppearance comes from Fabric API's FabricBlock/FabricBlockState (same signature)
 
     /**
      * Returns the reaction of the block when pushed or pulled by a piston. This method should be not called directly, instead via {@link BlockState#getPistonPushReaction()}.

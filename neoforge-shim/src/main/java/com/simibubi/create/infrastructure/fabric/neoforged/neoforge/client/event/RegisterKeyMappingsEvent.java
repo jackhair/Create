@@ -34,6 +34,6 @@ public class RegisterKeyMappingsEvent extends Event implements IModBusEvent {
      * Registers a new key mapping.
      */
     public void register(KeyMapping key) {
-        options.keyMappings = ArrayUtils.add(options.keyMappings, key);
+        net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper.registerKeyBinding(key); // fabric
     }
 }

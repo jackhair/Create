@@ -225,9 +225,10 @@ public abstract class AbstractRegistrate<S extends AbstractRegistrate<S>> {
 
         Consumer<RegisterEvent> onRegister = this::onRegister;
         Consumer<RegisterEvent> onRegisterLate = this::onRegisterLate;
-        bus.addListener(onRegister);
-        bus.addListener(EventPriority.LOWEST, onRegisterLate);
-        bus.addListener(this::onBuildCreativeModeTabContents); // Fired multiple times when ever tabs need contents rebuilt (changing op tab perms for example)
+        // fabric: the shim bus needs explicit event classes
+        bus.addListener(RegisterEvent.class, onRegister);
+        bus.addListener(EventPriority.LOWEST, RegisterEvent.class, onRegisterLate);
+        bus.addListener(BuildCreativeModeTabContentsEvent.class, this::onBuildCreativeModeTabContents); // Fired multiple times when ever tabs need contents rebuilt (changing op tab perms for example)
         
         // Register events fire multiple times, so clean them up on common setup
         OneTimeEventReceiver.addModListener(this, FMLCommonSetupEvent.class, $ -> {
@@ -1284,7 +1285,7 @@ public abstract class AbstractRegistrate<S extends AbstractRegistrate<S>> {
     public <P> NoConfigBuilder<CreativeModeTab, CreativeModeTab, P> defaultCreativeTab(P parent, String name, Consumer<CreativeModeTab.Builder> config) {
         this.defaultCreativeModeTab = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.fromNamespaceAndPath(this.modid, name));
         return this.generic(parent, name, Registries.CREATIVE_MODE_TAB, () -> {
-            var builder = CreativeModeTab.builder()
+            var builder = net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup.builder() // fabric: vanilla builder needs a row and column
                     .icon(() -> getAll(Registries.ITEM).stream().findFirst().map(ItemEntry::cast).map(ItemEntry::asStack).orElse(new ItemStack(Items.AIR)))
                     .title(this.addLang("itemGroup", this.defaultCreativeModeTab.location(), RegistrateLangProvider.toEnglishName(name)));
             config.accept(builder);
