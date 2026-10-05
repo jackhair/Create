@@ -62,9 +62,9 @@ Ship Create for **Fabric on Minecraft 26.3**, built from the official Create cod
 
 | # | Decision | Recommendation | Status |
 |---|---|---|---|
-| D1 | Phase order | Fabric on 1.21.1 first, then 26.1.2, then 26.3 | proposed |
-| D2 | Registration | Vendor Registrate (MPL-2.0) as an in-repo subproject, ported to Fabric without Porting Lib. Stub its datagen until Phase 1d. Use upstream Registrate's 26.1/26.2 releases as the reference for each version jump. | proposed |
-| D3 | Fluid units | Droplets (81,000 per bucket) internally, matching the Fabric ecosystem. Recipe codecs read upstream's mB values and multiply by 81, so data JSON stays identical to upstream. Display in mB. | proposed |
+| D1 | Phase order | Fabric on 1.21.1 first, then 26.1.2, then 26.3 | **accepted** 2026-10-04 |
+| D2 | Registration | Vendor Registrate (MPL-2.0) as an in-repo subproject, ported to Fabric without Porting Lib. Stub its datagen until Phase 1d. Use upstream Registrate's 26.1/26.2 releases as the reference for each version jump. | **accepted** 2026-10-04 |
+| D3 | Fluid units | Droplets (81,000 per bucket) internally, matching the Fabric ecosystem. Recipe codecs read upstream's mB values and multiply by 81, so data JSON stays identical to upstream. Display in mB. | **accepted** 2026-10-04 |
 | D4 | Datagen | Phase 1: ship upstream's generated resources, run through a script that rewrites `neoforge:` keys. Phase 1d: port datagen to Fabric and verify parity. Required before Phase 2, because the 26.x data formats change. | proposed |
 | D5 | Compat | Gate every compat module off at first. Re-enable after the core works: JEI/REI, CC:T, Sodium/Iris, FD, JourneyMap/Xaero. Drop Curios at 26.x unless Trinkets or Accessories gets ported. Drop NeoForge-only mods (TConstruct, FramedBlocks, DynamicTrees, StorageDrawers, etc.). | proposed |
 | D6 | Mod id / distribution | Mod id stays `create`, private builds only. Assets are All Rights Reserved; a public release needs the Create team's permission. | proposed |
@@ -75,7 +75,7 @@ Ship Create for **Fabric on Minecraft 26.3**, built from the official Create cod
 - [x] Fork, add remotes, create the `mc26.3/fabric/dev` branch
 - [x] Confirm the upstream NeoForge baseline compiles (JDK 21)
 - [x] Inventory NeoForge usage, Fabric dependency matrix, Fabricators' techniques
-- [ ] Sign off decisions D1–D6
+- [x] Sign off decisions D1–D3 (D4–D6 still proposed)
 - [ ] Capture a NeoForge reference: run upstream gametests (73 `@GameTest`) and record results, and keep a test world with the smoke-test builds below
 - [ ] Write `scripts/` helpers:
   - `@OnlyIn`/`Dist` → `@Environment`/`EnvType` (based on the Fabricators' `scripts/convert.sh`)
