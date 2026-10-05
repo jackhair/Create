@@ -9,3 +9,4 @@ because javac reports attribution errors only once symbol resolution succeeds.
 | 2026-10-05 | `7296d9f4d` | 2,407 | 450 | Shim batch 1: item handlers, datagen generators, utils (45 classes) |
 | 2026-10-05 | `c4776f79c` | 1,776 | 411 | Bus, FML and registry shims; counts from scripts/fabric/javac_check.sh from here on |
 | 2026-10-05 | `c36b1b895` | 1,103 | 328 | Fluids (droplets), ingredients, attachments shimmed |
+| 2026-10-05 | `2e7991f4b` | 928 | 265 | Capabilities on API Lookup + Transfer API bridges |
