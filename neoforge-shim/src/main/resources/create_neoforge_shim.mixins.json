@@ -10,7 +10,8 @@
     "FluidStateMixin",
     "HolderMixin",
     "ItemStackMixin",
-    "LevelMixin"
+    "LevelMixin",
+    "PlayerMixin"
   ],
   "client": [],
   "injectors": {

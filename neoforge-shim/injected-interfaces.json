@@ -21,5 +21,8 @@
   ],
   "net/minecraft/core/Holder": [
     "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IHolderExtension<TT;>"
+  ],
+  "net/minecraft/world/entity/player/Player": [
+    "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IPlayerExtension"
   ]
 }

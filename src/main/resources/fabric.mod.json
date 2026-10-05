@@ -66,6 +66,9 @@
       ],
       "net/minecraft/class_6880": [
         "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IHolderExtension<TT;>"
+      ],
+      "net/minecraft/class_1657": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IPlayerExtension"
       ]
     }
   }

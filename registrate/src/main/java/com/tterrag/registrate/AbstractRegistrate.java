@@ -53,7 +53,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.data.loading
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
-import net.neoforged.neoforge.registries.*;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.*; // fabric: NeoForge API shim (PORTING.md D7)
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.message.Message;
