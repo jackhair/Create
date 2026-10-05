@@ -27,7 +27,7 @@ import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 
 public class SawMovementBehaviour extends BlockBreakingMovementBehaviour {
 

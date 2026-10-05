@@ -3,7 +3,7 @@ package com.simibubi.create.content.logistics.depot;
 import com.simibubi.create.content.kinetics.belt.transport.TransportedItemStack;
 
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class DepotItemHandler implements IItemHandler {
 

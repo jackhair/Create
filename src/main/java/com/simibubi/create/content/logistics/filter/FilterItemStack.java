@@ -16,7 +16,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class FilterItemStack {
 	private final ItemStack filterItemStack;

@@ -15,7 +15,7 @@ import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagsProvider;
 
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class CreateContraptionTypeTagsProvider extends TagsProvider<ContraptionType> {
 	public CreateContraptionTypeTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {

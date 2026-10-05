@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class PortableItemInterfaceBlockEntity extends PortableStorageInterfaceBlockEntity {
 

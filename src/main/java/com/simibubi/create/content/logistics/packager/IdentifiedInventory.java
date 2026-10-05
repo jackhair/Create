@@ -4,7 +4,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.simibubi.create.api.packager.InventoryIdentifier;
 
-import net.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 /**
  * An item inventory, possibly with an associated InventoryIdentifier.

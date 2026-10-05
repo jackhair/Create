@@ -65,9 +65,9 @@ import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.common.util.FakePlayer;
 import net.neoforged.neoforge.entity.IEntityWithComplexSpawn;
 import net.neoforged.neoforge.event.EventHooks;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.items.wrapper.InvWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.InvWrapper;
 
 public class BlueprintEntity extends HangingEntity
 	implements IEntityWithComplexSpawn, SpecialEntityItemRequirement, ISyncPersistentData, IInteractionChecker {

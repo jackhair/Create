@@ -1,7 +1,7 @@
 package com.simibubi.create.foundation.utility;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
 
 /**
  * Specialized combined inventory wrapper with faster slot -> inv lookup

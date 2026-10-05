@@ -19,7 +19,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.LevelEvent;
 
-import net.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class DropperMovementBehaviour implements MovementBehaviour {
 	@Override

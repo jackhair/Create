@@ -5,7 +5,7 @@ import com.simibubi.create.AllItems;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class SchematicannonInventory extends ItemStackHandler {
 	private final SchematicannonBlockEntity blockEntity;

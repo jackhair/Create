@@ -69,11 +69,11 @@ import net.neoforged.neoforge.fluids.FluidStack;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler.FluidAction;
 import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
 
 public class BasinBlockEntity extends SmartBlockEntity implements IHaveGoggleInformation, Clearable {
 

@@ -43,8 +43,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 
-import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ConfiguredModel;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.Tags;
 
 public class WindowGen {

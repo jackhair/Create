@@ -1,8 +1,8 @@
 package com.simibubi.create.content.equipment.toolbox;
 
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.SlotItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.SlotItemHandler;
 
 public class ToolboxSlot extends SlotItemHandler {
 

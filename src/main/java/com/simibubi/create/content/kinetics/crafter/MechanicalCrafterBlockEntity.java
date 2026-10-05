@@ -48,7 +48,7 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.common.Tags.Items;
-import net.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class MechanicalCrafterBlockEntity extends KineticBlockEntity implements TransformableBlockEntity {
 

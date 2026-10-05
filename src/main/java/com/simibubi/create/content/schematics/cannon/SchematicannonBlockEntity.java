@@ -71,9 +71,9 @@ import net.minecraft.world.phys.AABB;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
-import net.neoforged.neoforge.items.wrapper.EmptyItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.EmptyItemHandler;
 
 public class SchematicannonBlockEntity extends SmartBlockEntity implements MenuProvider, Clearable {
 	public static final int NEIGHBOUR_CHECKING = 100;

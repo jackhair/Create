@@ -41,7 +41,7 @@ import net.minecraft.world.phys.Vec3;
 
 import net.neoforged.neoforge.attachment.IAttachmentHolder;
 import net.neoforged.neoforge.attachment.IAttachmentSerializer;
-import net.neoforged.neoforge.common.util.INBTSerializable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.INBTSerializable;
 
 /**
  * Extended code for Minecarts, this allows for handling stalled carts and

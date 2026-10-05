@@ -33,7 +33,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.RecipeWrapper;
 
 @EventBusSubscriber
 public class ManualApplicationRecipe extends ItemApplicationRecipe {

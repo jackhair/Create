@@ -7,7 +7,7 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
 
 public class DeployerItemHandler implements IItemHandlerModifiable {
 

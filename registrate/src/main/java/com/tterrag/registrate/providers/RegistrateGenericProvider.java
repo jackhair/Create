@@ -6,7 +6,7 @@ import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
 import net.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.apache.commons.compress.utils.Lists;
 import org.jetbrains.annotations.ApiStatus;

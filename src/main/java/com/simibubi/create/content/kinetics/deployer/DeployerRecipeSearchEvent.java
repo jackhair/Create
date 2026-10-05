@@ -10,7 +10,7 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.item.crafting.RecipeInput;
 import net.neoforged.bus.api.Event;
 import net.neoforged.bus.api.ICancellableEvent;
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.RecipeWrapper;
 
 public class DeployerRecipeSearchEvent extends Event implements ICancellableEvent {
 	private final DeployerBlockEntity blockEntity;

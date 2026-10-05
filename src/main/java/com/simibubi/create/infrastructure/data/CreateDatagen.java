@@ -26,7 +26,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 public class CreateDatagen {

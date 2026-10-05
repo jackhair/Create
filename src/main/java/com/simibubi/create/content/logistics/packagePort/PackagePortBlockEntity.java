@@ -32,8 +32,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 import net.neoforged.neoforge.common.util.FakePlayer;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 
 public abstract class PackagePortBlockEntity extends SmartBlockEntity implements MenuProvider, Clearable {
 	public boolean acceptsPackages;

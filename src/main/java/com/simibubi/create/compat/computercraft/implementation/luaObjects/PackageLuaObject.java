@@ -13,7 +13,7 @@ import dan200.computercraft.api.lua.LuaException;
 import dan200.computercraft.api.lua.LuaFunction;
 import net.minecraft.world.item.ItemStack;
 
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class PackageLuaObject implements LuaComparable {
 	public final PackagerBlockEntity blockEntity;

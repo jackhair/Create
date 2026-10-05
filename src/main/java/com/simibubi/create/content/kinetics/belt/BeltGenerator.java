@@ -9,7 +9,7 @@ import net.minecraft.core.Direction.AxisDirection;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelFile;
 
 public class BeltGenerator extends SpecialBlockStateGen {
 

@@ -5,10 +5,10 @@ import com.tterrag.registrate.AbstractRegistrate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
-import net.neoforged.neoforge.client.model.generators.VariantBlockStateBuilder;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.VariantBlockStateBuilder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.Optional;
 

@@ -9,7 +9,7 @@ import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import top.theillusivec4.curios.api.CuriosDataProvider;
 
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class CuriosDataGenerator extends CuriosDataProvider {
 	public CuriosDataGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, ExistingFileHelper fileHelper) {

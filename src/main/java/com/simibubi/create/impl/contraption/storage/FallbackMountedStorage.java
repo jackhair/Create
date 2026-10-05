@@ -6,9 +6,9 @@ import com.mojang.serialization.MapCodec;
 import com.simibubi.create.AllMountedStorageTypes;
 import com.simibubi.create.api.contraption.storage.item.simple.SimpleMountedStorage;
 
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 /**
  * A fallback mounted storage impl that will try to be used when no type is

@@ -49,7 +49,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.RecipeWrapper;
 
 public class CrushingWheelControllerBlockEntity extends SmartBlockEntity implements Clearable {
 	public Entity processingEntity;

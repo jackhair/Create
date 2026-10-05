@@ -3,7 +3,7 @@ package com.simibubi.create.foundation.blockEntity.behaviour.inventory;
 import com.simibubi.create.foundation.blockEntity.SmartBlockEntity;
 import com.simibubi.create.foundation.blockEntity.behaviour.BehaviourType;
 import com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour;
-import net.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class VersionedInventoryTrackerBehaviour extends BlockEntityBehaviour {
 

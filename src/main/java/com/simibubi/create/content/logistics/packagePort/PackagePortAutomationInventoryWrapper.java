@@ -5,7 +5,7 @@ import com.simibubi.create.foundation.item.ItemHandlerWrapper;
 
 import net.minecraft.world.item.ItemStack;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
 
 public class PackagePortAutomationInventoryWrapper extends ItemHandlerWrapper {
 	private final PackagePortBlockEntity ppbe;

@@ -13,7 +13,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.RecipeWrapper;
 
 /**
  * Helper recipe type for displaying an item relationship in JEI

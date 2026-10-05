@@ -8,10 +8,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelFile;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class RegistrateItemModelProvider extends ItemModelProvider implements RegistrateProvider {
 

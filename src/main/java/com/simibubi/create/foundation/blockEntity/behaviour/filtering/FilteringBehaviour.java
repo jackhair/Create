@@ -45,7 +45,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 
 import net.neoforged.neoforge.fluids.FluidStack;
-import net.neoforged.neoforge.items.wrapper.InvWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.InvWrapper;
 
 public class FilteringBehaviour extends BlockEntityBehaviour implements ValueSettingsBehaviour {
 	public static final BehaviourType<FilteringBehaviour> TYPE = new BehaviourType<>();

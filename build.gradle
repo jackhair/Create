@@ -138,6 +138,7 @@ dependencies {
 sourceSets.main {
     java {
         srcDir("registrate/src/main/java")
+        srcDir("neoforge-shim/src/main/java")
 
         if (!cc_tweaked_enable.toBoolean()) {
             exclude("com/simibubi/create/compat/computercraft/implementation/**")
@@ -174,6 +175,9 @@ jar {
     }
     from("registrate/LICENSE") {
         rename { "Registrate_LICENSE" }
+    }
+    from("neoforge-shim/LICENSE.txt") {
+        rename { "NeoForge-shim_LICENSE.txt" }
     }
 }
 

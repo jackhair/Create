@@ -3,7 +3,7 @@ package com.simibubi.create.content.logistics.packager;
 import com.simibubi.create.content.logistics.box.PackageItem;
 
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
 
 public class PackagerItemHandler implements IItemHandlerModifiable {
 

@@ -6,7 +6,7 @@ import net.createmod.catnip.registry.RegisteredObjectsHelper;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
-import net.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class SophisticatedStorage implements ThresholdSwitchCompat {
 

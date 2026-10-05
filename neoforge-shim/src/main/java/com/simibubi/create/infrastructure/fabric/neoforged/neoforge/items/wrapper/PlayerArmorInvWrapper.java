@@ -1,0 +1,40 @@
+// fabric: vendored from NeoForge 21.1.219 (LGPL-2.1-only) into Create's shim layer, see PORTING.md D7
+/*
+ * Copyright (c) Forge Development LLC and contributors
+ * SPDX-License-Identifier: LGPL-2.1-only
+ */
+
+package com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper;
+
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.item.ItemStack;
+
+public class PlayerArmorInvWrapper extends RangedWrapper {
+    private final Inventory inventoryPlayer;
+
+    public PlayerArmorInvWrapper(Inventory inv) {
+        super(new InvWrapper(inv), inv.items.size(), inv.items.size() + inv.armor.size());
+        inventoryPlayer = inv;
+    }
+
+    @Override
+    public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
+        EquipmentSlot equ = null;
+        for (EquipmentSlot s : EquipmentSlot.values()) {
+            if (s.getType() == EquipmentSlot.Type.HUMANOID_ARMOR && s.getIndex() == slot) {
+                equ = s;
+                break;
+            }
+        }
+        // check if it's valid for the armor slot
+        if (equ != null && slot < 4 && !stack.isEmpty() && stack.canEquip(equ, getInventoryPlayer().player)) {
+            return super.insertItem(slot, stack, simulate);
+        }
+        return stack;
+    }
+
+    public Inventory getInventoryPlayer() {
+        return inventoryPlayer;
+    }
+}

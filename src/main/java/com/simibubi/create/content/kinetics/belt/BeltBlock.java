@@ -92,7 +92,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class BeltBlock extends HorizontalKineticBlock
 	implements IBE<BeltBlockEntity>, SpecialBlockItemRequirement, TransformableBlock, ProperWaterloggedBlock {

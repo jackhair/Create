@@ -21,7 +21,7 @@ import net.minecraft.world.level.Level;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.items.wrapper.RecipeWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.RecipeWrapper;
 
 @ParametersAreNonnullByDefault
 public class CuttingRecipe extends StandardProcessingRecipe<RecipeWrapper> implements IAssemblyRecipe {

@@ -12,7 +12,7 @@ import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class LinkedControllerBindPacket extends LinkedControllerPacketBase {
 	public static final StreamCodec<ByteBuf, LinkedControllerBindPacket> STREAM_CODEC = StreamCodec.composite(

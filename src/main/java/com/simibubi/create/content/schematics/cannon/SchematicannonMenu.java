@@ -13,7 +13,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
-import net.neoforged.neoforge.items.SlotItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.SlotItemHandler;
 
 public class SchematicannonMenu extends MenuBase<SchematicannonBlockEntity> {
 

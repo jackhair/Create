@@ -4,8 +4,8 @@ import com.google.common.collect.ImmutableMap;
 
 import net.minecraft.core.BlockPos;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
 
 /**
  * Wrapper around many MountedItemStorages, providing access to all of them as one storage.

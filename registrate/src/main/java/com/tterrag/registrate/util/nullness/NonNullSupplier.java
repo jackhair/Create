@@ -1,6 +1,6 @@
 package com.tterrag.registrate.util.nullness;
 
-import net.neoforged.neoforge.common.util.Lazy;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.Lazy;
 
 import java.util.Objects;
 import java.util.function.Supplier;

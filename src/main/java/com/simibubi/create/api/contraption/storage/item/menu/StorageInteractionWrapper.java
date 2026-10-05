@@ -7,7 +7,7 @@ import com.simibubi.create.foundation.blockEntity.ItemHandlerContainer;
 
 import net.minecraft.world.entity.player.Player;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
 
 public class StorageInteractionWrapper extends ItemHandlerContainer {
 	private final Predicate<Player> stillValid;

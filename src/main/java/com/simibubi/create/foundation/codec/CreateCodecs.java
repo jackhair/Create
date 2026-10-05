@@ -15,7 +15,7 @@ import net.minecraft.util.ExtraCodecs;
 import net.neoforged.neoforge.common.util.NeoForgeExtraCodecs;
 import net.neoforged.neoforge.fluids.crafting.FluidIngredient;
 import net.neoforged.neoforge.fluids.crafting.SizedFluidIngredient;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class CreateCodecs {

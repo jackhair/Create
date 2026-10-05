@@ -3,8 +3,8 @@ package com.simibubi.create.foundation.blockEntity.behaviour.inventory;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 
 public class VersionedInventoryWrapper implements IItemHandlerModifiable {
 

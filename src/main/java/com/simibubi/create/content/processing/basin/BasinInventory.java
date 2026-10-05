@@ -3,7 +3,7 @@ package com.simibubi.create.content.processing.basin;
 import com.simibubi.create.foundation.item.SmartInventory;
 
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 
 public class BasinInventory extends SmartInventory {
 

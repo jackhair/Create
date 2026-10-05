@@ -16,7 +16,7 @@ import com.simibubi.create.content.logistics.stockTicker.PackageOrderWithCrafts.
 
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.ItemStack;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class PackageRepackageHelper {
 

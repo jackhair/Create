@@ -39,7 +39,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 
-import net.neoforged.neoforge.items.SlotItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.SlotItemHandler;
 
 public class StockKeeperCategoryScreen extends AbstractSimiContainerScreen<StockKeeperCategoryMenu> {
 

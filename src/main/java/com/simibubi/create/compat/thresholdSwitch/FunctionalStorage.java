@@ -4,7 +4,7 @@ import com.simibubi.create.compat.Mods;
 
 import net.createmod.catnip.registry.RegisteredObjectsHelper;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 
 public class FunctionalStorage implements ThresholdSwitchCompat {
 

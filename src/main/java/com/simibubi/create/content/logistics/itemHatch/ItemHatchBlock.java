@@ -44,8 +44,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.neoforged.neoforge.capabilities.Capabilities.ItemHandler;
 import net.neoforged.neoforge.common.Tags.Items;
 import net.neoforged.neoforge.common.util.FakePlayer;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 
 public class ItemHatchBlock extends HorizontalDirectionalBlock
 	implements IBE<ItemHatchBlockEntity>, IWrenchable, ProperWaterloggedBlock {

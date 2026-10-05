@@ -2,8 +2,8 @@ package com.simibubi.create.content.trains.station;
 
 import com.simibubi.create.Create;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class GlobalPackagePort {
 	public String address = "";

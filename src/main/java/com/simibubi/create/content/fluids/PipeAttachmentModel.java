@@ -29,7 +29,7 @@ import net.neoforged.neoforge.client.ChunkRenderTypeSet;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import net.neoforged.neoforge.client.model.data.ModelData.Builder;
 import net.neoforged.neoforge.client.model.data.ModelProperty;
-import net.neoforged.neoforge.common.util.TriState;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.TriState;
 
 public class PipeAttachmentModel extends BakedModelWrapperWithData {
 

@@ -21,7 +21,7 @@ import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
 
 /**
  * MovementBehaviors, also known as Actors, provide behavior to blocks mounted on contraptions.

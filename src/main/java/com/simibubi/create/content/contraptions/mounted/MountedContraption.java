@@ -33,7 +33,7 @@ import net.minecraft.world.level.block.state.properties.RailShape;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate.StructureBlockInfo;
 import net.minecraft.world.phys.AABB;
 
-import net.neoforged.neoforge.items.wrapper.InvWrapper;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.InvWrapper;
 
 public class MountedContraption extends Contraption {
 

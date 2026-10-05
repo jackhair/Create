@@ -71,7 +71,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.items.ItemStackHandler;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
