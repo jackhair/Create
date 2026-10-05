@@ -31,7 +31,7 @@ import net.minecraft.world.phys.Vec3;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
 
 @EventBusSubscriber
 public class SuperGlueHandler {

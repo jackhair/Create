@@ -49,9 +49,9 @@ import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.util.ObfuscationReflectionHelper;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientBlockExtensions;
-import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientBlockExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 
@@ -140,7 +140,7 @@ public class BlockBuilder<T extends Block, P> extends AbstractBuilder<Block, T, 
     }
 
     /**
-     * @deprecated Set your render type in your model's JSON ({@link com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelBuilder#renderType(ResourceLocation)}) or override {@link net.minecraft.client.resources.model.BakedModel#getRenderTypes(BlockState, net.minecraft.util.RandomSource,  net.neoforged.neoforge.client.model.data.ModelData)}
+     * @deprecated Set your render type in your model's JSON ({@link com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelBuilder#renderType(ResourceLocation)}) or override {@link net.minecraft.client.resources.model.BakedModel#getRenderTypes(BlockState, net.minecraft.util.RandomSource,  com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelData)}
      */
     @Deprecated(forRemoval = true)
     public BlockBuilder<T, P> addLayer(Supplier<Supplier<RenderType>> layer) {

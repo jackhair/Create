@@ -13,7 +13,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.TagsUpdatedEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.TagsUpdatedEvent;
 
 public class TagProviderImpl<K, V> implements SimpleRegistry.Provider<K, V> {
 	private final TagKey<K> tag;

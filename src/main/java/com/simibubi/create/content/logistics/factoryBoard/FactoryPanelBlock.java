@@ -64,7 +64,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.level.BlockEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockEvent;
 
 public class FactoryPanelBlock extends FaceAttachedHorizontalDirectionalBlock
 	implements ProperWaterloggedBlock, IBE<FactoryPanelBlockEntity>, IWrenchable, SpecialBlockItemRequirement {

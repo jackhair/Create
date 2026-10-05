@@ -28,7 +28,7 @@ import net.fabricmc.api.EnvType;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.ScreenEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.ScreenEvent;
 
 public class OpenCreateMenuButton extends Button {
 

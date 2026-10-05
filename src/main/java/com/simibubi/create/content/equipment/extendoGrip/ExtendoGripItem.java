@@ -39,21 +39,21 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult.Type;
 import net.minecraft.world.phys.Vec3;
 
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.EntityTickEvent;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.InputEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
-import net.neoforged.neoforge.event.entity.living.LivingKnockBackEvent;
-import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import net.neoforged.neoforge.event.level.BlockEvent.BreakEvent;
-import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.InputEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingKnockBackEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockEvent.BreakEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
 
 @EventBusSubscriber
 public class ExtendoGripItem extends Item {

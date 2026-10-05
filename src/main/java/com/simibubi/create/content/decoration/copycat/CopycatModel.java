@@ -24,9 +24,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 import net.neoforged.neoforge.client.model.QuadTransformers;
-import net.neoforged.neoforge.client.model.data.ModelData;
-import net.neoforged.neoforge.client.model.data.ModelData.Builder;
-import net.neoforged.neoforge.client.model.data.ModelProperty;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelData;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelData.Builder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelProperty;
 
 public abstract class CopycatModel extends BakedModelWrapperWithData {
 

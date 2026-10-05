@@ -33,7 +33,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemStackHandler;
 
 public class LinkedControllerItem extends Item implements MenuProvider {

@@ -10,7 +10,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
 
 @EventBusSubscriber
 public final class NetheriteDivingHandler {

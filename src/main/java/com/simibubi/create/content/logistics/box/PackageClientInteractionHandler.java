@@ -9,7 +9,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import net.fabricmc.api.Environment;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 
 @EventBusSubscriber(value = Dist.CLIENT)
 public class PackageClientInteractionHandler {

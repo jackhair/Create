@@ -18,8 +18,8 @@ import net.minecraft.core.Direction.Axis;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.BakedModelWrapper;
-import net.neoforged.neoforge.client.model.data.ModelData;
-import net.neoforged.neoforge.client.model.data.ModelProperty;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelData;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelProperty;
 
 public class BeltModel extends BakedModelWrapper<BakedModel> {
 

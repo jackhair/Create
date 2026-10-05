@@ -82,26 +82,26 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEven
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.gui.map.RegisterMapDecorationRenderersEvent;
-import net.neoforged.neoforge.event.AddPackFindersEvent;
-import net.neoforged.neoforge.event.AddReloadListenerEvent;
-import net.neoforged.neoforge.event.RegisterCommandsEvent;
-import net.neoforged.neoforge.event.entity.EntityEvent;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
-import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent.PlayerLoggedInEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent.PlayerLoggedOutEvent;
-import net.neoforged.neoforge.event.level.ChunkEvent;
-import net.neoforged.neoforge.event.level.LevelEvent;
-import net.neoforged.neoforge.event.server.ServerStoppingEvent;
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.AddPackFindersEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.AddReloadListenerEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.RegisterCommandsEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerEvent.PlayerLoggedInEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerEvent.PlayerLoggedOutEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.ChunkEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.LevelEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.server.ServerStoppingEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.EntityTickEvent;
 
 @EventBusSubscriber
 public class CommonEvents {
 
 	@SubscribeEvent
-	public static void onServerTick(net.neoforged.neoforge.event.tick.ServerTickEvent.Post event) {
+	public static void onServerTick(com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.ServerTickEvent.Post event) {
 		Create.SCHEMATIC_RECEIVER.tick();
 		Create.LAGGER.tick();
 		ServerSpeedProvider.serverTick();
@@ -130,7 +130,7 @@ public class CommonEvents {
 	}
 
 	@SubscribeEvent
-	public static void onServerWorldTick(net.neoforged.neoforge.event.tick.LevelTickEvent.Post event) {
+	public static void onServerWorldTick(com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.LevelTickEvent.Post event) {
 		Level world = event.getLevel();
 		if (world.isClientSide())
 			return;
@@ -208,7 +208,7 @@ public class CommonEvents {
 	}
 
 	@SubscribeEvent
-	public static void attachData(net.neoforged.neoforge.event.entity.EntityJoinLevelEvent event) {
+	public static void attachData(com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityJoinLevelEvent event) {
 		CapabilityMinecartController.attach(event);
 	}
 

@@ -44,7 +44,7 @@ import net.minecraft.world.level.material.MapColor;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForgeMod;
-import net.neoforged.neoforge.common.Tags;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidInteractionRegistry;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidInteractionRegistry.InteractionInformation;

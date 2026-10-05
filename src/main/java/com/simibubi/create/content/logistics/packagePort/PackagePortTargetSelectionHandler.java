@@ -22,7 +22,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.HitResult.Type;
 import net.minecraft.world.phys.Vec3;
 
-import net.neoforged.neoforge.common.Tags.Items;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags.Items;
 
 public class PackagePortTargetSelectionHandler {
 

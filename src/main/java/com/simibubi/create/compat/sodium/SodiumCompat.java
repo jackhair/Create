@@ -11,8 +11,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
-import net.neoforged.neoforge.client.event.RenderLevelStageEvent.Stage;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderLevelStageEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderLevelStageEvent.Stage;
 
 /**
  * Fixes the Mechanical Saw's sprite and Factory Gauge's sprite

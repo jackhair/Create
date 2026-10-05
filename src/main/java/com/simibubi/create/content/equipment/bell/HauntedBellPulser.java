@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.ChunkPos;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;

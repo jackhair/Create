@@ -154,7 +154,7 @@ public interface IClientFluidTypeExtensions {
     default void renderOverlay(Minecraft mc, PoseStack poseStack) {
         ResourceLocation texture = this.getRenderOverlayTexture(mc);
         if (texture != null)
-            ScreenEffectRenderer.renderFluid(mc, poseStack, texture);
+            com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.FluidOverlays.renderFluid(mc, poseStack, texture); // fabric
     }
 
     /**

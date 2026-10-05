@@ -72,8 +72,8 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.common.SpecialPlantable;
-import net.neoforged.neoforge.event.level.BlockDropsEvent;
-import net.neoforged.neoforge.event.level.BlockEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockDropsEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockEvent;
 
 public class BlockHelper {
 	private static final List<IntegerProperty> COUNT_STATES = List.of(

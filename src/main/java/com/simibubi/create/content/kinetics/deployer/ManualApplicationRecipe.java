@@ -32,7 +32,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.wrapper.RecipeWrapper;
 
 @EventBusSubscriber

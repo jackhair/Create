@@ -45,7 +45,7 @@ import net.minecraft.world.level.material.MapColor;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.common.Tags;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags;
 
 public class WindowGen {
 	private static final CreateRegistrate REGISTRATE = Create.registrate();

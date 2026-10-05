@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.EntityRenderersEvent;
 import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 @Environment(EnvType.CLIENT)

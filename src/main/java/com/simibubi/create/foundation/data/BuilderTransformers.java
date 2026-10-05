@@ -92,7 +92,7 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.common.Tags;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags;
 
 @SuppressWarnings("removal") // addLayer is staying... for now
 public class BuilderTransformers {

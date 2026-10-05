@@ -63,7 +63,7 @@ public record CompoundIngredient(List<Ingredient> children) implements CustomIng
 
 	public static final class Serializer implements CustomIngredientSerializer<CompoundIngredient> {
 		private static final ResourceLocation ID = ResourceLocation.fromNamespaceAndPath("neoforge", "compound");
-		private static final MapCodec<CompoundIngredient> CODEC = Ingredient.LIST_CODEC_NONEMPTY.fieldOf("children").xmap(CompoundIngredient::new, CompoundIngredient::children);
+		private static final MapCodec<CompoundIngredient> CODEC = Ingredient.CODEC_NONEMPTY.listOf().fieldOf("children").xmap(CompoundIngredient::new, CompoundIngredient::children);
 		private static final StreamCodec<RegistryFriendlyByteBuf, CompoundIngredient> STREAM_CODEC = Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list())
 			.map(CompoundIngredient::new, CompoundIngredient::children);
 

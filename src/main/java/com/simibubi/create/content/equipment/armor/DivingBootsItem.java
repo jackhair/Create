@@ -16,7 +16,7 @@ import net.minecraft.world.phys.Vec3;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.EntityTickEvent;
 
 @EventBusSubscriber
 public class DivingBootsItem extends BaseArmorItem {

@@ -110,7 +110,7 @@ public class ExistingFileHelper {
             File file = existing.toFile();
             if (!file.exists())
                 continue;
-            PackResources pack = file.isDirectory() ? new PathPackResources(new PackLocationInfo(file.getName(), Component.empty(), PackSource.BUILT_IN, Optional.empty()), file.toPath()) : new FilePackResources(new PackLocationInfo(file.getName(), Component.empty(), PackSource.BUILT_IN, Optional.empty()), new FilePackResources.SharedZipFileAccess(file), "");
+            PackResources pack = file.isDirectory() ? new PathPackResources(new PackLocationInfo(file.getName(), Component.empty(), PackSource.BUILT_IN, Optional.empty()), file.toPath()) : new FilePackResources.FileResourcesSupplier(file).openPrimary(new PackLocationInfo(file.getName(), Component.empty(), PackSource.BUILT_IN, Optional.empty())) /* fabric */;
             candidateClientResources.add(pack);
             candidateServerResources.add(pack);
         }

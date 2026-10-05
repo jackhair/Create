@@ -5,6 +5,8 @@ import org.jetbrains.annotations.Nullable;
 import net.fabricmc.fabric.api.transfer.v1.context.ContainerItemContext;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidStorage;
 import net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant;
+import net.fabricmc.fabric.api.transfer.v1.item.ItemVariant;
+import net.fabricmc.fabric.api.transfer.v1.storage.base.SingleVariantStorage;
 import net.fabricmc.fabric.api.transfer.v1.storage.Storage;
 import net.minecraft.world.item.ItemStack;
 
@@ -29,9 +31,27 @@ public final class ItemContextFluidHandler extends StorageFluidHandler implement
 	public static IFluidHandlerItem of(ItemStack stack) {
 		if (stack.isEmpty())
 			return null;
-		ContainerItemContext context = ContainerItemContext.withInitial(stack);
+		ContainerItemContext context = ContainerItemContext.ofSingleSlot(new HeldItem(stack));
 		Storage<FluidVariant> storage = context.find(FluidStorage.ITEM);
 		return storage == null ? null : new ItemContextFluidHandler(context, storage);
+	}
+
+	/** The context's single slot, holding the item as fluid operations change it. */
+	private static final class HeldItem extends SingleVariantStorage<ItemVariant> {
+		private HeldItem(ItemStack stack) {
+			variant = ItemVariant.of(stack);
+			amount = stack.getCount();
+		}
+
+		@Override
+		protected ItemVariant getBlankVariant() {
+			return ItemVariant.blank();
+		}
+
+		@Override
+		protected long getCapacity(ItemVariant variant) {
+			return variant.getItem().getDefaultMaxStackSize();
+		}
 	}
 
 	@Override

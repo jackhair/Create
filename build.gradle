@@ -254,6 +254,7 @@ tasks.register("writeCompileClasspath") {
     var processors = sourceSets.main.annotationProcessorPath
     var sources = sourceSets.main.java.srcDirs
     outputs.dir(out)
+    outputs.upToDateWhen { false } // the classpath changes whenever Loom reprocesses Minecraft
     doLast {
         var dir = out.get().asFile
         dir.mkdirs()

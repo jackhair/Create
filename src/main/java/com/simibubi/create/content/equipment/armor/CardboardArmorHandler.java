@@ -19,10 +19,10 @@ import net.minecraft.world.item.ItemStack;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.EntityEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
-import net.neoforged.neoforge.event.entity.living.LivingEvent;
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingEquipmentChangeEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.EntityTickEvent;
 
 @EventBusSubscriber
 public class CardboardArmorHandler {

@@ -21,7 +21,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEven
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.util.FakePlayer;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 @EventBusSubscriber
 public class LinkHandler {

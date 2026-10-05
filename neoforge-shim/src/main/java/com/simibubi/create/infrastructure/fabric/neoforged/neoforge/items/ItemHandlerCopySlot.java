@@ -64,7 +64,7 @@ public class ItemHandlerCopySlot extends StackCopySlot {
 
     // fabric: Slot#isSameInventory is a NeoForge patch
     public boolean isSameInventory(Slot other) {
-        return slotItemHandler.isSameInventory(other);
+        return other instanceof SlotItemHandler otherSlot && otherSlot.getItemHandler() == slotItemHandler.getItemHandler(); // fabric
     }
 
     public IItemHandler getItemHandler() {

@@ -19,7 +19,7 @@ import net.fabricmc.api.EnvType;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.RegisterShadersEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RegisterShadersEvent;
 
 public class RenderTypes extends RenderStateShard {
 	public static final RenderStateShard.ShaderStateShard GLOWING_SHADER = new RenderStateShard.ShaderStateShard(() -> Shaders.glowingShader);

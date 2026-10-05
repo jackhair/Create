@@ -37,8 +37,8 @@ import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import net.fabricmc.api.Environment;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.InputEvent;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.InputEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class ContraptionHandlerClient {

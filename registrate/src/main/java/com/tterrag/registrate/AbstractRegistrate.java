@@ -50,7 +50,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.fml.event.lifecycle.F
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.loading.FMLLoader;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.data.loading.DatagenModLoader;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.BaseFlowingFluid;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidType;
 import net.neoforged.neoforge.registries.*;

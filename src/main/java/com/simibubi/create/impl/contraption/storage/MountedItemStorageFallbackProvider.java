@@ -10,7 +10,7 @@ import com.simibubi.create.api.registry.SimpleRegistry;
 import net.minecraft.world.level.block.Block;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.TagsUpdatedEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.TagsUpdatedEvent;
 
 public enum MountedItemStorageFallbackProvider implements SimpleRegistry.Provider<Block, MountedItemStorageType<?>> {
 	INSTANCE;

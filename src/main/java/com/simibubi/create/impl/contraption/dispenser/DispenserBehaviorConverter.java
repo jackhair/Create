@@ -30,8 +30,8 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.phys.Vec3;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.TagsUpdatedEvent;
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.TagsUpdatedEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.server.ServerLifecycleHooks;
 
 public enum DispenserBehaviorConverter implements SimpleRegistry.Provider<Item, MountedDispenseBehavior> {
 	INSTANCE;

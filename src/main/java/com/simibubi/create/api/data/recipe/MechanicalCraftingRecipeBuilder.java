@@ -21,9 +21,9 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.ShapedRecipePattern;
 import net.minecraft.world.level.ItemLike;
 
-import net.neoforged.neoforge.common.conditions.ICondition;
-import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
-import net.neoforged.neoforge.common.conditions.NotCondition;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ICondition;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ModLoadedCondition;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.NotCondition;
 
 /**
  * The builder for building Mechanical Crafting recipes.

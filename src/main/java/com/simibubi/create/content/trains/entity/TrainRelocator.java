@@ -53,7 +53,7 @@ import net.minecraft.world.phys.Vec3;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.client.event.InputEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.InputEvent;
 
 public class TrainRelocator {
 

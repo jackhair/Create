@@ -20,7 +20,7 @@ import net.minecraft.core.registries.Registries;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredRegister;
 

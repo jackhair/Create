@@ -18,7 +18,7 @@ import net.minecraft.network.chat.Style;
 import net.minecraft.world.item.ItemStack;
 
 import net.neoforged.neoforge.client.ClientHooks;
-import net.neoforged.neoforge.client.event.RenderTooltipEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderTooltipEvent;
 import net.neoforged.neoforge.client.extensions.IGuiGraphicsExtension;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
 

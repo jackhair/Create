@@ -29,10 +29,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.levelgen.Heightmap;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.common.DeferredSpawnEggItem;
-import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 
 import javax.annotation.Nullable;

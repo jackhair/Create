@@ -43,7 +43,7 @@ import net.minecraft.world.phys.Vec3;
 
 import net.neoforged.neoforge.common.util.FakePlayer;
 import net.neoforged.neoforge.event.EventHooks;
-import net.neoforged.neoforge.event.entity.EntityTeleportEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityTeleportEvent;
 
 public class AllPotatoProjectileEntityHitActions {
 

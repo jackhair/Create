@@ -34,7 +34,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandlerModifiable;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.ItemHandlerHelper;
-import net.neoforged.neoforge.server.ServerLifecycleHooks;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.server.ServerLifecycleHooks;
 
 public class GlobalStation extends SingleBlockEntityEdgePoint {
 

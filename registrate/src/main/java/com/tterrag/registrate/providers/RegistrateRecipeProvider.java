@@ -44,8 +44,8 @@ import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.conditions.ICondition;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ICondition;
 
 public class RegistrateRecipeProvider extends RecipeProvider implements RegistrateProvider, RecipeOutput {
 
@@ -333,7 +333,7 @@ public class RegistrateRecipeProvider extends RecipeProvider implements Registra
     /** Generated override to expose protected method: {@link RecipeProvider#buildAdvancement} */
     @Override
     @Generated(value = "com.tterrag.registrate.test.meta.UpdateRecipeProvider", date = "Tue, 18 Jun 2024 17:51:56 GMT")
-    public CompletableFuture<?> buildAdvancement(CachedOutput p_253674_, HolderLookup.Provider p_323646_, AdvancementHolder p_301116_, net.neoforged.neoforge.common.conditions.ICondition... conditions) { return super.buildAdvancement(p_253674_, p_323646_, p_301116_, conditions); }
+    public CompletableFuture<?> buildAdvancement(CachedOutput p_253674_, HolderLookup.Provider p_323646_, AdvancementHolder p_301116_, com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ICondition... conditions) { return super.buildAdvancement(p_253674_, p_323646_, p_301116_, conditions); }
 
     /** Generated override to expose protected method: {@link RecipeProvider#generateForEnabledBlockFamilies} */
     @Override

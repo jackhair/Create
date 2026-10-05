@@ -39,7 +39,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ConcretePowderBlock;
 
-import net.neoforged.neoforge.common.conditions.WithConditions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.WithConditions;
 
 @ApiStatus.Internal
 public class RuntimeDataGenerator {

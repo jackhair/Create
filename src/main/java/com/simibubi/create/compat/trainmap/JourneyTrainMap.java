@@ -25,7 +25,7 @@ import net.minecraft.client.renderer.Rect2i;
 import net.minecraft.network.chat.FormattedText;
 import net.minecraft.util.Mth;
 
-import net.neoforged.neoforge.client.event.InputEvent.MouseButton.Pre;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.InputEvent.MouseButton.Pre;
 
 @JourneyMapPlugin(apiVersion = "2.0.0")
 public class JourneyTrainMap implements IClientPlugin {

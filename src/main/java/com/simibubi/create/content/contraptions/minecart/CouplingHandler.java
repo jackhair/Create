@@ -26,7 +26,7 @@ import net.minecraft.world.level.Level;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.EntityMountEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityMountEvent;
 
 @EventBusSubscriber
 public class CouplingHandler {

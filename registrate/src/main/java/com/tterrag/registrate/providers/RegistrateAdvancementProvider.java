@@ -18,8 +18,8 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
-import net.neoforged.neoforge.common.conditions.ICondition;
-import net.neoforged.neoforge.common.conditions.WithConditions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ICondition;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.WithConditions;
 
 import javax.annotation.Nullable;
 import java.nio.file.Path;

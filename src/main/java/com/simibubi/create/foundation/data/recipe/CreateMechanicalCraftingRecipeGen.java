@@ -13,8 +13,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.crafting.Ingredient;
 
-import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.Tags.Items;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags.Items;
 
 /**
  * Create's own Data Generation for Mechanical Crafting recipes

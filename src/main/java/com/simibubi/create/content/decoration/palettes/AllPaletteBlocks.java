@@ -29,7 +29,7 @@ import net.minecraft.world.level.block.TransparentBlock;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 
-import net.neoforged.neoforge.common.Tags;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags;
 
 public class AllPaletteBlocks {
 	private static final CreateRegistrate REGISTRATE = Create.registrate();

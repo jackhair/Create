@@ -20,9 +20,9 @@ import net.minecraft.network.chat.FormattedText;
 import net.minecraft.util.Mth;
 
 import net.neoforged.fml.util.ObfuscationReflectionHelper;
-import net.neoforged.neoforge.client.event.InputEvent;
-import net.neoforged.neoforge.client.event.RenderTooltipEvent;
-import net.neoforged.neoforge.client.event.ScreenEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.InputEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderTooltipEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.ScreenEvent;
 
 public class FTBChunksTrainMap {
 

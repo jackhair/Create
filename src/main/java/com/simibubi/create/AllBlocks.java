@@ -320,8 +320,8 @@ import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.util.DeferredSoundType;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.DeferredSoundType;
 
 @SuppressWarnings("removal")
 public class AllBlocks {

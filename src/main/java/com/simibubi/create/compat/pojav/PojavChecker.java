@@ -9,7 +9,7 @@ import net.minecraft.Util;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 
-import net.neoforged.neoforge.client.event.ScreenEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.ScreenEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.NeoForge;
 
 /**

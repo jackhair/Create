@@ -16,7 +16,7 @@ import net.minecraft.world.level.ItemLike;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.neoforged.neoforge.common.Tags.Items;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags.Items;
 
 public class TrackMaterialFactory {
 	private final ResourceLocation id;

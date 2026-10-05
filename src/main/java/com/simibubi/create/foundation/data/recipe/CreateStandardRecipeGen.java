@@ -84,10 +84,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.conditions.ICondition;
-import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
-import net.neoforged.neoforge.common.conditions.NotCondition;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.Tags;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ICondition;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.ModLoadedCondition;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.conditions.NotCondition;
 
 /**
  * Create's own Data Generation for all vanilla recipe types.

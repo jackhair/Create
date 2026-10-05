@@ -24,7 +24,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.ClientHooks;
-import net.neoforged.neoforge.client.event.RenderHandEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderHandEvent;
 
 @EventBusSubscriber(value = Dist.CLIENT)
 public class ExtendoGripRenderHandler {

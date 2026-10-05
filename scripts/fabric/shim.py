@@ -13,6 +13,8 @@ com.simibubi.create.infrastructure.fabric.neoforged.neoforge.items.IItemHandler.
                               shim package, for every class the shim tree provides. Idempotent;
                               re-run after adding shims and after upstream merges.
   missing                     List NeoForge classes still referenced, by use count.
+  tidy                        In the shim tree, drop imports of unshimmed NeoForge classes that only
+                              javadoc mentions, turning those links into {@code} text. Run by vendor.
 """
 
 from __future__ import annotations
@@ -155,6 +157,28 @@ def cmd_vendor(targets: list[str]) -> int:
 	return 0
 
 
+def cmd_tidy() -> int:
+	changed = 0
+	for path in SHIM_ROOT.rglob("*.java"):
+		text = path.read_text(encoding="utf-8")
+		imports = re.findall(r"^import (net\.neoforged\.[\w.]+)\.(\w+);\n", text, re.M)
+		if not imports:
+			continue
+		code = "\n".join(l for l in text.splitlines() if not re.match(r"\s*(\*|/\*\*|//|import )", l))
+		new = text
+		for pkg, name in imports:
+			if re.search(r"\b" + re.escape(name) + r"\b", code):
+				continue
+			new = new.replace(f"import {pkg}.{name};\n", "")
+			new = re.sub(r"\{@link(?:plain)? " + re.escape(name) + r"((?:[#.][^}\s]*)?)(?: [^}]*)?\}", lambda m: "{@code " + name + m.group(1) + "}", new)
+			new = re.sub(r"@see " + re.escape(name) + r"\b", f'@see "NeoForge {name}"', new)
+		if new != text:
+			path.write_text(new, encoding="utf-8")
+			changed += 1
+	print(f"Tidied {changed} files.")
+	return 0
+
+
 def main() -> int:
 	if len(sys.argv) < 2:
 		print(__doc__)
@@ -165,7 +189,11 @@ def main() -> int:
 	if cmd == "missing":
 		return cmd_missing()
 	if cmd == "vendor":
-		return cmd_vendor(args)
+		result = cmd_vendor(args)
+		cmd_tidy()
+		return result
+	if cmd == "tidy":
+		return cmd_tidy()
 	print(__doc__)
 	return 1
 

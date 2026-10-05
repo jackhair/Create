@@ -7,7 +7,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.TriState;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerInteractEvent.RightClickBlock;
 
 
 @EventBusSubscriber(modid = Create.ID)

@@ -33,9 +33,9 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.LogicalSide;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
-import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 @EventBusSubscriber
 public class CardboardSwordItem extends SwordItem {

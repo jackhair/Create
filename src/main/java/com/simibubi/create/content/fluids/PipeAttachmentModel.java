@@ -26,9 +26,9 @@ import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.state.BlockState;
 
 import net.neoforged.neoforge.client.ChunkRenderTypeSet;
-import net.neoforged.neoforge.client.model.data.ModelData;
-import net.neoforged.neoforge.client.model.data.ModelData.Builder;
-import net.neoforged.neoforge.client.model.data.ModelProperty;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelData;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelData.Builder;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelProperty;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.util.TriState;
 
 public class PipeAttachmentModel extends BakedModelWrapperWithData {

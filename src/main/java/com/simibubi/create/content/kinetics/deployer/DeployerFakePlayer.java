@@ -38,10 +38,10 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEven
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.UsernameCache;
 import net.neoforged.neoforge.common.util.FakePlayer;
-import net.neoforged.neoforge.event.entity.EntityEvent;
-import net.neoforged.neoforge.event.entity.living.LivingChangeTargetEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDropsEvent;
-import net.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingChangeTargetEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingDropsEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingExperienceDropEvent;
 
 @EventBusSubscriber
 public class DeployerFakePlayer extends FakePlayer {

@@ -22,7 +22,7 @@ import net.minecraft.world.level.Level;
 
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingBreatheEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.living.LivingBreatheEvent;
 
 @EventBusSubscriber
 public class DivingHelmetItem extends BaseArmorItem {

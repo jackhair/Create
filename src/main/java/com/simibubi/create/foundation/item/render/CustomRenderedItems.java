@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 
 public class CustomRenderedItems {
 

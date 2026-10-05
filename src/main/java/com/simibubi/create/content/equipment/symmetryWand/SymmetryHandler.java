@@ -33,12 +33,12 @@ import net.fabricmc.api.Environment;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.ClientTickEvent;
-import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
-import net.neoforged.neoforge.client.event.RenderLevelStageEvent.Stage;
-import net.neoforged.neoforge.client.model.data.ModelData;
-import net.neoforged.neoforge.event.level.BlockEvent.BreakEvent;
-import net.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.ClientTickEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderLevelStageEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderLevelStageEvent.Stage;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.model.data.ModelData;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockEvent.BreakEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.level.BlockEvent.EntityPlaceEvent;
 
 @EventBusSubscriber
 public class SymmetryHandler {

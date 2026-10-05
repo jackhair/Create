@@ -24,8 +24,8 @@ import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.EventPriority;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.SubscribeEvent;
 import com.simibubi.create.infrastructure.fabric.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.RenderPlayerEvent;
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RenderPlayerEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 @EventBusSubscriber(value = Dist.CLIENT)
 public class CardboardArmorHandlerClient {

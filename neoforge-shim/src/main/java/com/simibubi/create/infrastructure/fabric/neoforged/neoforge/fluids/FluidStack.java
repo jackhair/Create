@@ -157,7 +157,7 @@ public final class FluidStack implements MutableDataComponentHolder {
     }
 
     public boolean isComponentsPatchEmpty() {
-        return !this.isEmpty() ? this.components.isPatchEmpty() : true;
+        return !this.isEmpty() ? this.components.asPatch().isEmpty() : true; // fabric: isPatchEmpty is a NeoForge patch
     }
 
     public FluidStack(Holder<Fluid> fluid, long amount, DataComponentPatch patch) {
@@ -539,6 +539,8 @@ public final class FluidStack implements MutableDataComponentHolder {
      */
     @Deprecated(forRemoval = true, since = "1.20.5")
     public boolean isFluidEqual(ItemStack other) {
-        return FluidUtil.getFluidContained(other).map(this::isFluidEqual).orElse(false);
+        // fabric: FluidUtil isn't shimmed; look the contained fluid up through the item capability
+        var handler = com.simibubi.create.infrastructure.fabric.neoforged.neoforge.capabilities.Capabilities.FluidHandler.ITEM.getCapability(other, null);
+        return handler != null && handler.getTanks() > 0 && isFluidEqual(handler.getFluidInTank(0));
     }
 }

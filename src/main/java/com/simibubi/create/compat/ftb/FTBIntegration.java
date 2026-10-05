@@ -5,7 +5,7 @@ import com.simibubi.create.foundation.gui.menu.AbstractSimiContainerScreen;
 import net.createmod.catnip.gui.AbstractSimiScreen;
 import net.minecraft.client.gui.screens.Screen;
 import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.client.event.ScreenEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.ScreenEvent;
 
 public class FTBIntegration {
 

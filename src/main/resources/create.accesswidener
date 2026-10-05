@@ -70,3 +70,10 @@ accessible class net/minecraft/server/packs/FilePackResources$SharedZipFileAcces
 accessible method net/minecraft/server/packs/FilePackResources$SharedZipFileAccess <init> (Ljava/io/File;)V
 accessible method net/minecraft/client/renderer/block/model/BlockElement uvsByFace (Lnet/minecraft/core/Direction;)[F
 accessible field net/minecraft/data/models/ItemModelGenerators GENERATED_TRIM_MODELS Ljava/util/List;
+accessible field net/minecraft/world/item/BucketItem content Lnet/minecraft/world/level/material/Fluid;
+accessible class net/minecraft/client/particle/ParticleEngine$SpriteParticleRegistration
+accessible field net/minecraft/world/level/block/PointedDripstoneBlock WATER_TRANSFER_PROBABILITY_PER_RANDOM_TICK F
+accessible field net/minecraft/world/level/block/PointedDripstoneBlock LAVA_TRANSFER_PROBABILITY_PER_RANDOM_TICK F
+accessible method net/minecraft/resources/RegistryOps <init> (Lcom/mojang/serialization/DynamicOps;Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;)V
+accessible field net/minecraft/resources/RegistryOps lookupProvider Lnet/minecraft/resources/RegistryOps$RegistryInfoLookup;
+accessible field net/minecraft/resources/DelegatingOps delegate Lcom/mojang/serialization/DynamicOps;

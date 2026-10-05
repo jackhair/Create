@@ -20,7 +20,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import com.simibubi.create.infrastructure.fabric.neoforged.api.distmarker.Dist;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.common.extensions.IMenuTypeExtension;
 import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.registries.DeferredHolder;
 
