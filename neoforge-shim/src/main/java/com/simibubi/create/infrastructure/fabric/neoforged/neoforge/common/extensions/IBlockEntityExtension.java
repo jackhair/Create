@@ -42,4 +42,11 @@ public interface IBlockEntityExtension {
 	default void handleUpdateTag(CompoundTag tag, HolderLookup.Provider registries) {
 		self().loadWithComponents(tag, registries);
 	}
+
+	/** Called on the client for update packets (wired by the shim's block entity data packet mixin). */
+	default void onDataPacket(net.minecraft.network.Connection connection, net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket packet, HolderLookup.Provider registries) {
+		CompoundTag tag = packet.getTag();
+		if (!tag.isEmpty())
+			self().loadWithComponents(tag, registries);
+	}
 }

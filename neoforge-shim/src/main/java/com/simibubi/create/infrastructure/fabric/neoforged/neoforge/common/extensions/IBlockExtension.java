@@ -1019,4 +1019,8 @@ public interface IBlockExtension {
     default boolean shouldHideAdjacentFluidFace(BlockState state, Direction selfFace, FluidState adjacentFluid) {
         return state.getFluidState().getType().isSame(adjacentFluid.getType());
     }
+
+    /** fabric: NeoForge's deprecated per-block client extension hook; Create's client entrypoint collects these. */
+    @Deprecated
+    default void initializeClient(java.util.function.Consumer<com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientBlockExtensions> consumer) {}
 }

@@ -182,7 +182,7 @@ public class FluidNetwork {
 		}
 
 		long flowSpeed = transferSpeed;
-		Map<IFluidHandler, Integer> accumulatedFill = new IdentityHashMap<>();
+		Map<IFluidHandler, Long> accumulatedFill = new IdentityHashMap<>();
 
 		for (boolean simulate : Iterate.trueAndFalse) {
 			FluidAction action = simulate ? FluidAction.SIMULATE : FluidAction.EXECUTE;
@@ -244,14 +244,14 @@ public class FluidNetwork {
 
 					long simulatedTransfer = toTransfer;
 					if (simulate)
-						simulatedTransfer += accumulatedFill.getOrDefault(targetHandler, 0);
+						simulatedTransfer += accumulatedFill.getOrDefault(targetHandler, 0L);
 
 					FluidStack divided = transfer.copy();
 					divided.setAmount(simulatedTransfer);
 					long fill = targetHandler.fill(divided, action);
 
 					if (simulate) {
-						accumulatedFill.put(targetHandler, Integer.valueOf(fill));
+						accumulatedFill.put(targetHandler, Long.valueOf(fill));
 						fill -= simulatedTransfer - toTransfer;
 					}
 

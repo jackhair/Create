@@ -809,4 +809,8 @@ public interface IItemExtension {
     default boolean canFitInsideContainerItems(ItemStack stack) {
         return self().canFitInsideContainerItems();
     }
+
+    /** fabric: NeoForge's deprecated per-item client extension hook; Create's client entrypoint collects these. */
+    @Deprecated
+    default void initializeClient(java.util.function.Consumer<com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.extensions.common.IClientItemExtensions> consumer) {}
 }

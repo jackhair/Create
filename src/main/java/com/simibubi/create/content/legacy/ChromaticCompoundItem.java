@@ -231,7 +231,7 @@ public class ChromaticCompoundItem extends Item {
 		newEntity.setDeltaMovement(entity.getDeltaMovement());
 		newEntity.setDefaultPickUpDelay();
 		world.addFreshEntity(newEntity);
-		entity.lifespan = 6000;
+		// fabric: NeoForge item lifespan; 6000 ticks is vanilla\'s fixed despawn age
 		if (stack.isEmpty())
 			entity.discard();
 		return true;

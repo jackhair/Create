@@ -56,7 +56,7 @@ public class NoGravMagicalDohickyItem extends Item {
 	}
 
 	protected void onCreated(ItemEntity entity, CompoundTag persistentData) {
-		entity.lifespan = 6000;
+		// fabric: NeoForge item lifespan; 6000 ticks is vanilla\'s fixed despawn age
 		persistentData.remove("JustCreated");
 
 		// just a flag to tell the client to play an effect

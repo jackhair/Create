@@ -1,5 +1,7 @@
 package com.simibubi.create;
 
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.data.event.GatherDataEvent;
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import java.util.Random;
 
 import org.slf4j.Logger;
@@ -152,12 +154,12 @@ public class Create {
 
 		NeoForgeMod.enableMilkFluid();
 
-		modEventBus.addListener(Create::init);
-		modEventBus.addListener(Create::onRegister);
-		modEventBus.addListener(AllEntityTypes::registerEntityAttributes);
-		modEventBus.addListener(EventPriority.HIGHEST, CreateDatagen::gatherDataHighPriority);
-		modEventBus.addListener(EventPriority.LOWEST, CreateDatagen::gatherData);
-		modEventBus.addListener(AllSoundEvents::register);
+		modEventBus.addListener(FMLCommonSetupEvent.class, Create::init);
+		modEventBus.addListener(RegisterEvent.class, Create::onRegister);
+		modEventBus.addListener(EntityAttributeCreationEvent.class, AllEntityTypes::registerEntityAttributes);
+		modEventBus.addListener(EventPriority.HIGHEST, GatherDataEvent.class, CreateDatagen::gatherDataHighPriority);
+		modEventBus.addListener(EventPriority.LOWEST, GatherDataEvent.class, CreateDatagen::gatherData);
+		modEventBus.addListener(RegisterEvent.class, AllSoundEvents::register);
 
 		// FIXME: this is not thread-safe
 		// fabric: Curios is NeoForge-only (PORTING.md D5)

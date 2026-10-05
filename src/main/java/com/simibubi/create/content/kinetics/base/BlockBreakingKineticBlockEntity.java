@@ -144,7 +144,7 @@ public abstract class BlockBreakingKineticBlockEntity extends KineticBlockEntity
 			if (!level.getGameRules()
 				.getBoolean(GameRules.RULE_DOBLOCKDROPS))
 				return;
-			if (level.restoringBlockSnapshots)
+			if (false /* fabric: NeoForge block snapshot restore flag */)
 				return;
 
 			ItemEntity itementity = new ItemEntity(level, vec.x, vec.y, vec.z, stack);

@@ -95,7 +95,7 @@ public class SailBlock extends WrenchableDirectionalBlock {
 		if (frame)
 			return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 
-		DyeColor color = DyeColor.getColor(stack);
+		DyeColor color = com.simibubi.create.infrastructure.fabric.NeoForgeStatics.dyeColor(stack);
 		if (color != null) {
 			if (!level.isClientSide)
 				level.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0f, 1.1f - level.random.nextFloat() * .2f);

@@ -113,7 +113,7 @@ public enum AllRecipeTypes implements IRecipeTypeInfo, StringRepresentable {
 		id = Create.asResource(name);
 		this.serializerSupplier = serializerSupplier;
 		serializerObject = Registers.SERIALIZER_REGISTER.register(name, serializerSupplier);
-		typeObject = Registers.TYPE_REGISTER.register(name, () -> RecipeType.simple(id));
+		typeObject = Registers.TYPE_REGISTER.register(name, () -> com.simibubi.create.infrastructure.fabric.NeoForgeStatics.recipeType(id));
 		type = typeObject;
 		isProcessingRecipe = false;
 	}
@@ -130,7 +130,7 @@ public enum AllRecipeTypes implements IRecipeTypeInfo, StringRepresentable {
 
 	@Internal
 	public static void register(IEventBus modEventBus) {
-		ShapedRecipePattern.setCraftingSize(9, 9);
+		com.simibubi.create.infrastructure.fabric.NeoForgeStatics.setCraftingSize(9, 9);
 		Registers.SERIALIZER_REGISTER.register(modEventBus);
 		Registers.TYPE_REGISTER.register(modEventBus);
 	}

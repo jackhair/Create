@@ -17,7 +17,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.
 
 public class CreateEnchantmentTagsProvider extends EnchantmentTagsProvider {
 	public CreateEnchantmentTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-		super(output, lookupProvider, Create.ID, existingFileHelper);
+		super(output, lookupProvider); // fabric: vanilla constructor
 	}
 
 	@Override

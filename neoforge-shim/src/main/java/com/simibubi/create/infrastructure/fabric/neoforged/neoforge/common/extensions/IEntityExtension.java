@@ -78,4 +78,11 @@ public interface IEntityExtension {
 	default void deserializeNBT(HolderLookup.Provider registries, CompoundTag tag) {
 		self().load(tag);
 	}
+
+	/** Called when the entity leaves its level (fired from Fabric's entity unload events by the shim's adapters). */
+	default void onRemovedFromLevel() {}
+
+	default boolean canDrownInFluidType(FluidType type) {
+		return type.canDrownIn(self() instanceof net.minecraft.world.entity.LivingEntity living ? living : null);
+	}
 }

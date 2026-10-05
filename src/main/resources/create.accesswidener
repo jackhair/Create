@@ -103,6 +103,7 @@ accessible method net/minecraft/client/gui/components/AbstractWidget renderScrol
 accessible field net/minecraft/data/loot/LootTableProvider subProviders Ljava/util/List;
 accessible field net/minecraft/world/level/storage/loot/parameters/LootContextParamSets REGISTRY Lcom/google/common/collect/BiMap;
 accessible field net/minecraft/data/tags/TagsProvider$TagAppender builder Lnet/minecraft/tags/TagBuilder;
+accessible method net/minecraft/client/particle/TextureSheetParticle setSprite (Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V
 
 # fabric: NeoForge 21.1.219's access transformer (LGPL-2.1-only), so Create sees vanilla with NeoForge's visibility.
 # Merged into create.accesswidener by scripts/fabric/at_to_aw.py; entries for members vanilla doesn't have are skipped.

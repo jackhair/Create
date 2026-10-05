@@ -80,7 +80,7 @@ public class ValveHandleBlock extends HandCrankBlock {
 
 	public boolean clicked(Level level, BlockPos pos, BlockState blockState, Player player, InteractionHand hand) {
 		ItemStack heldItem = player.getItemInHand(hand);
-		DyeColor color = DyeColor.getColor(heldItem);
+		DyeColor color = com.simibubi.create.infrastructure.fabric.NeoForgeStatics.dyeColor(heldItem);
 
 		if (color != null && color != this.color) {
 			if (!level.isClientSide)

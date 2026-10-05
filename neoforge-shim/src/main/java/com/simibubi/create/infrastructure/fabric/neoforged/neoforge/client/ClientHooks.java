@@ -36,4 +36,12 @@ public final class ClientHooks {
 	public static boolean isBlockInSolidLayer(net.minecraft.world.level.block.state.BlockState state) {
 		return net.minecraft.client.renderer.ItemBlockRenderTypes.getChunkRenderType(state) == net.minecraft.client.renderer.RenderType.solid();
 	}
+
+	public static List<ClientTooltipComponent> gatherTooltipComponents(ItemStack stack, List<? extends FormattedText> textElements, java.util.Optional<net.minecraft.world.inventory.tooltip.TooltipComponent> itemComponent, int mouseX, int screenWidth, int screenHeight, Font fallbackFont) {
+		List<ClientTooltipComponent> components = new ArrayList<>();
+		for (FormattedText text : textElements)
+			components.add(ClientTooltipComponent.create(Language.getInstance().getVisualOrder(text)));
+		itemComponent.ifPresent(image -> components.add(Math.min(1, components.size()), ClientTooltipComponent.create(image)));
+		return components;
+	}
 }

@@ -150,7 +150,7 @@ public class RenderTypes extends RenderStateShard {
 		@SubscribeEvent
 		public static void onRegisterShaders(RegisterShadersEvent event) throws IOException {
 			ResourceProvider resourceProvider = event.getResourceProvider();
-			event.registerShader(new ShaderInstance(resourceProvider, Create.asResource("glowing_shader"),
+			event.registerShader(new net.fabricmc.fabric.impl.client.rendering.FabricShaderProgram(resourceProvider, Create.asResource("glowing_shader"), // fabric: namespaced shader (Fabric API impl)
 				DefaultVertexFormat.NEW_ENTITY), shader -> glowingShader = shader);
 		}
 	}

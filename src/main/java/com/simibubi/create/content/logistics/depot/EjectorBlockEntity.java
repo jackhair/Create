@@ -605,7 +605,7 @@ public class EjectorBlockEntity extends KineticBlockEntity {
 	@Override
 	@Environment(EnvType.CLIENT)
 	public AABB getRenderBoundingBox() {
-		return AABB.INFINITE;
+		return com.simibubi.create.infrastructure.fabric.NeoForgeStatics.INFINITE_AABB /* fabric */;
 	}
 
 	private static abstract class EntityHack extends Entity {

@@ -15,7 +15,7 @@ public class InventorySorterCompat {
 	public static final String SLOT_BLACKLIST = "slotblacklist";
 
 	public static void init(IEventBus bus) {
-		bus.addListener(InventorySorterCompat::sendImc);
+		bus.addListener(InterModEnqueueEvent.class, InventorySorterCompat::sendImc);
 	}
 
 	private static void sendImc(InterModEnqueueEvent event) {

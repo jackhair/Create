@@ -2,7 +2,7 @@
 
 Branch: `mc26.3/fabric/dev` (fork: `jackhair/Create`)
 Base: upstream `Creators-of-Create/Create` `mc1.21.1/dev` @ `a92700863` (Create 6.0.11, NeoForge 21.1.219, MC 1.21.1)
-Status: **Phase 1b in progress (shim layer)**. Last updated 2026-10-04.
+Status: **Phase 1 — compiles on Fabric 1.21.1 (2026-10-05); runtime wiring next**. Last updated 2026-10-04.
 
 ## Goal
 
@@ -114,12 +114,22 @@ Exit criteria:
 - [x] Item handlers, datagen model builders, utils (vendored)
 - [x] Event buses (`SimpleEventBus`), FML environment, `ModList`/`ModContainer` (configs via Forge Config API Port), lifecycle events
 - [x] Registries: `DeferredHolder`/`DeferredRegister`/`RegisterEvent` (vendored), `RegistryBuilder`, `NewRegistryEvent`, `DataPackRegistryEvent`, `RegistrationPhase` (NeoForge's order)
-- [ ] Capabilities on `BlockApiLookup`/`ItemApiLookup`/`EntityApiLookup`, bridged both ways to `ItemStorage.SIDED`/`FluidStorage` (1c)
-- [ ] Fluids: `FluidStack`/`IFluidHandler`/`FluidTank` with long droplets, `FluidType` on `FluidVariantAttributes` (1c)
-- [ ] `ModelData`/`BakedModelWrapper`, client extensions (1d)
-- [ ] Game-event adapters for the 73 event types; `@EventBusSubscriber` index (Gradle task)
-- [ ] Extension-method interfaces + interface injection (`ILevelExtension#getCapability` and others)
-- [ ] Port Registrate onto the shims; Fabric entrypoints (`CreateFabric`, client) running `RegistrationPhase` and lifecycle events
+- [x] Capabilities on `BlockApiLookup`/`ItemApiLookup`/`EntityApiLookup`, bridged both ways to `ItemStorage.SIDED`/`FluidStorage`
+- [x] Fluids: `FluidStack`/`IFluidHandler`/`FluidTank` with long droplets (D3), `FluidType` via `FluidTypeLookup`, fluid ingredients
+- [x] Event classes (~60, vendored) and registration events delegating to Fabric registries
+- [x] ~50 NeoForge extension interfaces injected into vanilla classes (Loom interface injection + shim mixins), NeoForge's AT merged into the access widener
+- [x] Registrate on the shims (datagen providers on vanilla 1.21.1 signatures)
+- [x] **Everything compiles** (`./gradlew compileJava`), 2026-10-05
+
+**1b–1d runtime wiring (compiling isn't running).** The shims define NeoForge's API; most hooks still have to be *called*:
+- [ ] Fabric entrypoints (`CreateFabric`, client, game tests): mod bus, `@EventBusSubscriber` index (Gradle task), `NeoForgeMod.register`, `RegistrationPhase`, capability/attribute/spawn/creative-tab/reload/command/pack events, `TransferBridges.init`, data maps, biome modifiers, config events, `ServerLifecycleHooks.init`
+- [ ] Game-event adapters: fire the ~60 game-bus events from Fabric callbacks or mixins (ticks, interactions, level/chunk/entity lifecycle, living events, client input/render/screen/tooltip)
+- [ ] Extension hooks vanilla must call: block/item/entity/block-entity methods Create overrides (`onDestroyedByPlayer`, `getCloneItemStack`, `shouldCheckWeakPower`, `onLoad`/`onChunkUnloaded`, `onDataPacket`, `getRenderBoundingBox`, structure processors, minecart rails, `initializeClient`, …), each via a mixin or Fabric event
+- [ ] Complex entity spawn data (`IEntityWithComplexSpawn`) over a custom payload
+- [ ] Client: GUI layers, item decorations, shaders, item renderers (BEWLR), fluid rendering from `IClientFluidTypeExtensions`, `ModelData` → FRAPI (1d)
+- [ ] D3 literal audit: millibucket literals and mB config values in Create code (the compiler can't find these)
+
+**Known gaps (decide later):** copycat light emission (no per-position light API); tag `remove` entries ignored (diving gear counts as trimmable); creative tab ordering; NeoForge per-face model data (`neoforge_data`, 84 hand-written models, e.g. emissive faces); fluid interactions (`FluidInteractionRegistry` needs a `LiquidBlock` mixin); datagen conditions dropped until datagen runs on Fabric (1e); adjustable day speed; data maps not synced to clients.
 
 Original plan text:
 - **Registration (D2):**

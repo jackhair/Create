@@ -56,7 +56,7 @@ public class FillingBySpout {
 		return GenericItemFilling.getRequiredAmountForItem(world, stack, availableFluid);
 	}
 
-	public static ItemStack fillItem(Level level, int requiredAmount, ItemStack stack, FluidStack availableFluid) {
+	public static ItemStack fillItem(Level level, long requiredAmount, ItemStack stack, FluidStack availableFluid) {
 		FluidStack toFill = availableFluid.copy();
 		toFill.setAmount(requiredAmount);
 

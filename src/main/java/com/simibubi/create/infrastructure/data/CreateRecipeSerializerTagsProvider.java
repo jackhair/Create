@@ -19,7 +19,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.
 
 public class CreateRecipeSerializerTagsProvider extends TagsProvider<RecipeSerializer<?>> {
 	public CreateRecipeSerializerTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-		super(output, Registries.RECIPE_SERIALIZER, lookupProvider, Create.ID, existingFileHelper);
+		super(output, Registries.RECIPE_SERIALIZER, lookupProvider); // fabric: vanilla constructor
 	}
 
 	@Override

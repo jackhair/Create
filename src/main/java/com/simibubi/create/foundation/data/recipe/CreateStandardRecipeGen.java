@@ -1822,6 +1822,12 @@ public final class CreateStandardRecipeGen extends BaseRecipeProvider {
 			return wrapped.advancement();
 		}
 
+		// fabric: vanilla RecipeOutput's abstract accept
+		@Override
+		public void accept(ResourceLocation id, Recipe<?> recipe, @Nullable AdvancementHolder advancement) {
+			accept(id, recipe, advancement, new ICondition[0]);
+		}
+
 		@Override
 		public void accept(ResourceLocation id, Recipe<?> recipe, @Nullable AdvancementHolder advancement, ICondition... conditions) {
 			wrapped.accept(id, new ModdedCookingRecipeOutputShim(recipe, outputOverride), advancement, conditions);

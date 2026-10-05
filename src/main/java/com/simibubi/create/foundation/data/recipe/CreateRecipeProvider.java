@@ -42,7 +42,7 @@ public final class CreateRecipeProvider extends RecipeProvider {
 	}
 
 	@Override
-	protected void buildRecipes(RecipeOutput recipeOutput) {
+	public void buildRecipes(RecipeOutput recipeOutput) {
 	}
 
 	public static void registerAllProcessing(DataGenerator gen, PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

@@ -14,8 +14,8 @@ public class FTBIntegration {
 	private static boolean buttonStatePreviously;
 
 	public static void init(IEventBus modEventBus, IEventBus forgeEventBus) {
-//		forgeEventBus.addListener(EventPriority.HIGH, FTBIntegration::removeGUIClutterOpen);
-//		forgeEventBus.addListener(EventPriority.LOW, FTBIntegration::removeGUIClutterClose);
+//		forgeEventBus.addListener(EventPriority.HIGH, ScreenEvent.Opening.class, FTBIntegration::removeGUIClutterOpen);
+//		forgeEventBus.addListener(EventPriority.LOW, ScreenEvent.Closing.class, FTBIntegration::removeGUIClutterClose);
 	}
 
 	private static void removeGUIClutterOpen(ScreenEvent.Opening event) {

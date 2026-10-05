@@ -25,7 +25,7 @@ public enum MountedItemStorageFallbackProvider implements SimpleRegistry.Provide
 
 	@Override
 	public void onRegister(Runnable invalidate) {
-		NeoForge.EVENT_BUS.addListener((TagsUpdatedEvent event) -> {
+		NeoForge.EVENT_BUS.addListener(TagsUpdatedEvent.class, (TagsUpdatedEvent event) -> {
 			if (event.shouldUpdateStaticData()) {
 				invalidate.run();
 			}

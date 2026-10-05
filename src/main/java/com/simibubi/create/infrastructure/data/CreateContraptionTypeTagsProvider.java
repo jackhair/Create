@@ -19,7 +19,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.
 
 public class CreateContraptionTypeTagsProvider extends TagsProvider<ContraptionType> {
 	public CreateContraptionTypeTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-		super(output, CreateRegistries.CONTRAPTION_TYPE, lookupProvider, Create.ID, existingFileHelper);
+		super(output, CreateRegistries.CONTRAPTION_TYPE, lookupProvider); // fabric: vanilla constructor
 	}
 
 	@Override

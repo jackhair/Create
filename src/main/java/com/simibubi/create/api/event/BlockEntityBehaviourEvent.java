@@ -26,7 +26,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.bus.api.Event;
  * allowing block entities to store and retrieve data for injected behaviours.<br>
  * <br>
  * Example: <pre> {@code
- * 		neoForgeEventBus.addListener((BlockEntityBehaviourEvent event) -> {
+ * 		neoForgeEventBus.addListener(BlockEntityBehaviourEvent.class, (BlockEntityBehaviourEvent event) -> {
  * 			event.forType(AllBlockEntityTypes.FUNNEL.get(), be -> {
  * 				event.attach(new FunFunnelBehaviour(be));
  * 			});

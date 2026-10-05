@@ -230,7 +230,7 @@ public class BlockHelper {
 		}
 
 		if (level instanceof ServerLevel serverLevel && level.getGameRules()
-			.getBoolean(GameRules.RULE_DOBLOCKDROPS) && !level.restoringBlockSnapshots
+			.getBoolean(GameRules.RULE_DOBLOCKDROPS) && !false /* fabric: NeoForge block snapshot restore flag */
 			&& (player == null || !player.isCreative())) {
 			List<ItemStack> drops = Block.getDrops(state, serverLevel, pos, blockEntity, player, usedTool);
 

@@ -43,7 +43,7 @@ public class FluidListDisplaySource extends ValueListDisplaySource {
 			return Stream.empty();
 
 
-		Map<Fluid, Integer> fluids = new HashMap<>();
+		Map<Fluid, Long> fluids = new HashMap<>(); // fabric: droplets (PORTING.md D3)
 		Map<Fluid, FluidStack> fluidNames = new HashMap<>();
 
 		for (int i = 0; i < handler.getTanks(); i++) {
@@ -53,16 +53,16 @@ public class FluidListDisplaySource extends ValueListDisplaySource {
 			if (!filteringBehaviour.test(stack))
 				continue;
 
-			fluids.merge(stack.getFluid(), stack.getAmount(), Integer::sum);
+			fluids.merge(stack.getFluid(), stack.getAmount(), Long::sum);
 			fluidNames.putIfAbsent(stack.getFluid(), stack);
 		}
 
 		return fluids.entrySet()
 				.stream()
-				.sorted(Comparator.<Map.Entry<Fluid, Integer>>comparingInt(value -> value.getValue()).reversed())
+				.sorted(Comparator.<Map.Entry<Fluid, Long>>comparingLong(value -> value.getValue()).reversed())
 				.limit(maxRows)
 				.map(entry -> IntAttached.with(
-						entry.getValue(),
+						(int) com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidAmounts.toMillibuckets(entry.getValue()), // fabric: shown in mB (PORTING.md D3)
 						fluidNames.get(entry.getKey()).getHoverName().copy())
 				);
 	}

@@ -17,7 +17,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.
 
 public class DamageTypeTagGen extends TagsProvider<DamageType> {
 	public DamageTypeTagGen(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-		super(output, Registries.DAMAGE_TYPE, lookupProvider, Create.ID, existingFileHelper);
+		super(output, Registries.DAMAGE_TYPE, lookupProvider); // fabric: vanilla constructor
 	}
 
 	@Override

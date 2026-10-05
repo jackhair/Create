@@ -150,6 +150,42 @@
       ],
       "net/minecraft/class_2474$class_5124": [
         "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ITagAppenderExtension<TT;>"
+      ],
+      "net/minecraft/class_1309": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/ILivingEntityExtension"
+      ],
+      "net/minecraft/class_1688": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IAbstractMinecartExtension"
+      ],
+      "net/minecraft/class_2442": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IPoweredRailBlockExtension"
+      ],
+      "net/minecraft/class_1747": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IBlockItemExtension"
+      ],
+      "net/minecraft/class_1845": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IPotionBrewingExtension"
+      ],
+      "net/minecraft/class_3491": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IStructureProcessorExtension"
+      ],
+      "net/minecraft/class_8790": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IRecipeOutputExtension"
+      ],
+      "net/minecraft/class_727": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/ITerrainParticleExtension"
+      ],
+      "net/minecraft/class_827": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IBlockEntityRendererExtension<TT;>"
+      ],
+      "net/minecraft/class_4174$class_4175": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/common/extensions/IFoodPropertiesBuilderExtension"
+      ],
+      "net/minecraft/class_778": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IModelBlockRendererExtension"
+      ],
+      "net/minecraft/class_776": [
+        "com/simibubi/create/infrastructure/fabric/neoforged/neoforge/client/extensions/IBlockRenderDispatcherExtension"
       ]
     }
   }

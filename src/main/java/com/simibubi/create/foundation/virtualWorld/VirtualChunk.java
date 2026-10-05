@@ -176,7 +176,12 @@ public class VirtualChunk extends LevelChunk {
 		return null;
 	}
 
+	// fabric: vanilla's findBlocks has no fine filter (NeoForge's 3-argument version isn't on ChunkAccess)
 	@Override
+	public void findBlocks(@NotNull Predicate<BlockState> filter, @NotNull BiConsumer<BlockPos, BlockState> output) {
+		findBlocks(filter, (state, pos) -> true, output);
+	}
+
 	public void findBlocks(@NotNull Predicate<BlockState> roughFilter, @NotNull BiPredicate<BlockState, BlockPos> fineFilter, @NotNull BiConsumer<BlockPos, BlockState> output) {
 		world.blockStates.forEach((pos, state) -> {
 			if (SectionPos.blockToSectionCoord(pos.getX()) == chunkPos.x && SectionPos.blockToSectionCoord(pos.getZ()) == chunkPos.z) {

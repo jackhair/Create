@@ -59,7 +59,7 @@ public class ToolboxDyeingRecipe extends CustomRecipe {
 				if (Block.byItem(stack.getItem()) instanceof ToolboxBlock) {
 					toolbox = stack;
 				} else {
-					DyeColor color1 = DyeColor.getColor(stack);
+					DyeColor color1 = com.simibubi.create.infrastructure.fabric.NeoForgeStatics.dyeColor(stack);
 					if (color1 != null) {
 						color = color1;
 					}

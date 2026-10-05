@@ -17,4 +17,10 @@ public interface IHolderExtension<T> {
 	default <A> A getData(DataMapType<T, A> type) {
 		return DataMapLoader.getData(type, (Holder<T>) this);
 	}
+
+	@Nullable
+	@SuppressWarnings("unchecked")
+	default net.minecraft.resources.ResourceKey<T> getKey() {
+		return ((Holder<T>) this).unwrapKey().orElse(null);
+	}
 }

@@ -1,5 +1,6 @@
 package com.simibubi.create;
 
+import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.simibubi.create.compat.Mods;
@@ -75,8 +76,8 @@ public class CreateClient {
 	public static void onCtorClient(IEventBus modEventBus) {
 		IEventBus neoEventBus = NeoForge.EVENT_BUS;
 
-		modEventBus.addListener(CreateClient::clientInit);
-		modEventBus.addListener(AllParticleTypes::registerFactories);
+		modEventBus.addListener(FMLClientSetupEvent.class, CreateClient::clientInit);
+		modEventBus.addListener(RegisterParticleProvidersEvent.class, AllParticleTypes::registerFactories);
 
 		AllInstanceTypes.init();
 

@@ -24,7 +24,10 @@ public interface IBaseRailBlockExtension {
      * @param pos   Block's position in level
      * @return True if the rail can make corners.
      */
-    boolean isFlexibleRail(BlockState state, BlockGetter level, BlockPos pos);
+    // fabric: NeoForge implements this in its BaseRailBlock patch
+    default boolean isFlexibleRail(BlockState state, BlockGetter level, BlockPos pos) {
+        return !((net.minecraft.world.level.block.BaseRailBlock) this).isStraight();
+    }
 
     /**
      * Returns true if the rail can make up and down slopes.
@@ -50,7 +53,10 @@ public interface IBaseRailBlockExtension {
      * @param cart  The cart asking for the metadata, null if it is not called by EntityMinecart.
      * @return The direction.
      */
-    RailShape getRailDirection(BlockState state, BlockGetter level, BlockPos pos, @Nullable AbstractMinecart cart);
+    // fabric: NeoForge implements this in its BaseRailBlock patch
+    default RailShape getRailDirection(BlockState state, BlockGetter level, BlockPos pos, @Nullable AbstractMinecart cart) {
+        return state.getValue(((net.minecraft.world.level.block.BaseRailBlock) this).getShapeProperty());
+    }
 
     /**
      * Returns the max speed of the rail at the specified position.

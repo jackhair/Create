@@ -23,7 +23,7 @@ public class SodiumCompat {
 
 	public static void init(IEventBus modEventBus, IEventBus neoEventBus) {
 		Minecraft mc = Minecraft.getInstance();
-		neoEventBus.addListener((RenderLevelStageEvent event) -> {
+		neoEventBus.addListener(RenderLevelStageEvent.class, (RenderLevelStageEvent event) -> {
 			if (event.getStage() == Stage.AFTER_ENTITIES) {
 				Function<ResourceLocation, TextureAtlasSprite> atlas = mc.getTextureAtlas(InventoryMenu.BLOCK_ATLAS);
 				TextureAtlasSprite sawSprite = atlas.apply(SAW_TEXTURE);

@@ -920,7 +920,7 @@ public class StationBlockEntity extends SmartBlockEntity implements Transformabl
 	@Environment(EnvType.CLIENT)
 	public AABB getRenderBoundingBox() {
 		if (isAssembling())
-			return AABB.INFINITE;
+			return com.simibubi.create.infrastructure.fabric.NeoForgeStatics.INFINITE_AABB /* fabric */;
 		return super.getRenderBoundingBox();
 	}
 

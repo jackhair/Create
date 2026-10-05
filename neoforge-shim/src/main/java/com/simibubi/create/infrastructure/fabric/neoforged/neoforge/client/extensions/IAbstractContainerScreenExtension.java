@@ -26,4 +26,8 @@ public interface IAbstractContainerScreenExtension {
 	default int getYSize() {
 		return self().imageHeight;
 	}
+
+	default int getSlotColor(int index) {
+		return -2130706433;
+	}
 }

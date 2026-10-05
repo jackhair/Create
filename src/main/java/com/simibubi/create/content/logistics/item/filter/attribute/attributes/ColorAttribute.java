@@ -37,7 +37,7 @@ public record ColorAttribute(DyeColor color) implements ItemAttribute {
 		.map(ColorAttribute::new, ColorAttribute::color);
 
 	private static Collection<DyeColor> findMatchingDyeColors(ItemStack stack) {
-		DyeColor color = DyeColor.getColor(stack);
+		DyeColor color = com.simibubi.create.infrastructure.fabric.NeoForgeStatics.dyeColor(stack);
 		if (color != null)
 			return Collections.singletonList(color);
 

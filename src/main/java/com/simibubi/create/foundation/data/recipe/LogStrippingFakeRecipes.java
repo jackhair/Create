@@ -47,7 +47,7 @@ public class LogStrippingFakeRecipes {
 			return;
 		BlockState state = blockItem.getBlock()
 			.defaultBlockState();
-		BlockState strippedState = AxeItem.getAxeStrippingState(state);
+		BlockState strippedState = com.simibubi.create.infrastructure.fabric.NeoForgeStatics.axeStrippingState(state);
 		if (strippedState == null)
 			return;
 		Item resultItem = strippedState.getBlock()

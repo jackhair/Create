@@ -63,7 +63,7 @@ public enum DispenserBehaviorConverter implements SimpleRegistry.Provider<Item, 
 	@Override
 	public void onRegister(Runnable invalidate) {
 		// invalidate if the blacklist tag might've changed
-		NeoForge.EVENT_BUS.addListener((TagsUpdatedEvent event) -> {
+		NeoForge.EVENT_BUS.addListener(TagsUpdatedEvent.class, (TagsUpdatedEvent event) -> {
 			if (event.shouldUpdateStaticData()) {
 				invalidate.run();
 			}

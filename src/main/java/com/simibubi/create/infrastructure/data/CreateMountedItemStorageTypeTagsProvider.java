@@ -19,7 +19,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.common.data.
 
 public class CreateMountedItemStorageTypeTagsProvider extends IntrinsicHolderTagsProvider<MountedItemStorageType<?>> {
 	public CreateMountedItemStorageTypeTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-		super(output, CreateRegistries.MOUNTED_ITEM_STORAGE_TYPE, lookupProvider, type -> type.holder.key(), Create.ID, existingFileHelper);
+		super(output, CreateRegistries.MOUNTED_ITEM_STORAGE_TYPE, lookupProvider, type -> type.holder.key()); // fabric: vanilla constructor
 	}
 
 	@Override

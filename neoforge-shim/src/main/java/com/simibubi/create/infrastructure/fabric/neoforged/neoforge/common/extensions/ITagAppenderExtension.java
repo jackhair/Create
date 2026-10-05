@@ -22,4 +22,12 @@ public interface ITagAppenderExtension<T> {
 		self().builder.add(entry);
 		return self();
 	}
+
+	/**
+	 * NeoForge writes tag removals into the tag file; vanilla 1.21.1 has no removal entries, so this is a no-op
+	 * (PORTING.md known gaps).
+	 */
+	default TagsProvider.TagAppender<T> remove(net.minecraft.resources.ResourceLocation first, net.minecraft.resources.ResourceLocation... rest) {
+		return self();
+	}
 }

@@ -36,7 +36,7 @@ public class Curios {
 	}
 
 	public static void init(IEventBus modEventBus) {
-		modEventBus.addListener(Curios::onClientSetup);
+		modEventBus.addListener(FMLClientSetupEvent.class, Curios::onClientSetup);
 
 		GogglesItem.addIsWearingPredicate(player -> resolveCuriosMap(player)
 			.map(curiosMap -> {
@@ -70,7 +70,7 @@ public class Curios {
 				return stacks;
 			}).orElse(Collections.emptyList()));
 
-		CatnipServices.PLATFORM.executeOnClientOnly(() -> () -> modEventBus.addListener(CuriosRenderers::onLayerRegister));
+		CatnipServices.PLATFORM.executeOnClientOnly(() -> () -> modEventBus.addListener(EntityRenderersEvent.RegisterLayerDefinitions.class, CuriosRenderers::onLayerRegister));
 	}
 
 	private static void onClientSetup(final FMLClientSetupEvent event) {

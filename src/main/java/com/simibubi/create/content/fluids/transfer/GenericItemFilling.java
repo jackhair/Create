@@ -108,7 +108,7 @@ public class GenericItemFilling {
 		return false;
 	}
 
-	public static ItemStack fillItem(Level world, int requiredAmount, ItemStack stack, FluidStack availableFluid) {
+	public static ItemStack fillItem(Level world, long requiredAmount, ItemStack stack, FluidStack availableFluid) {
 		FluidStack toFill = availableFluid.copy();
 		toFill.setAmount(requiredAmount);
 		availableFluid.shrink(requiredAmount);
