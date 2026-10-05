@@ -34,7 +34,7 @@ public class FillingBySpout {
 		return GenericItemFilling.canItemBeFilled(world, stack);
 	}
 
-	public static int getRequiredAmountForItem(Level world, ItemStack stack, FluidStack availableFluid) {
+	public static long getRequiredAmountForItem(Level world, ItemStack stack, FluidStack availableFluid) {
 		SingleRecipeInput input = new SingleRecipeInput(stack);
 
 		Optional<RecipeHolder<FillingRecipe>> assemblyRecipe = SequencedAssemblyRecipe.getRecipe(world, input,

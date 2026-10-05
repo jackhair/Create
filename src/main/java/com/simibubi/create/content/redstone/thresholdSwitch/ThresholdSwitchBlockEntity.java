@@ -189,8 +189,8 @@ public class ThresholdSwitchBlockEntity extends SmartBlockEntity implements Clea
 				IFluidHandler tank = observedTank.getInventory();
 				for (int slot = 0; slot < tank.getTanks(); slot++) {
 					FluidStack stackInSlot = tank.getFluidInTank(slot);
-					int space = tank.getTankCapacity(slot);
-					int count = stackInSlot.getAmount();
+					long space = tank.getTankCapacity(slot);
+					long count = stackInSlot.getAmount();
 					if (space == 0)
 						continue;
 

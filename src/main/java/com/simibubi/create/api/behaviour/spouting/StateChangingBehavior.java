@@ -24,7 +24,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.Fluid
 public record StateChangingBehavior(int amount, Predicate<Fluid> fluidTest, Predicate<BlockState> canFill,
 									UnaryOperator<BlockState> fillFunction) implements BlockSpoutingBehaviour {
 	@Override
-	public int fillBlock(Level level, BlockPos pos, SpoutBlockEntity spout, FluidStack availableFluid, boolean simulate) {
+	public long fillBlock(Level level, BlockPos pos, SpoutBlockEntity spout, FluidStack availableFluid, boolean simulate) {
 		if (availableFluid.getAmount() < this.amount || !this.fluidTest.test(availableFluid.getFluid()))
 			return 0;
 

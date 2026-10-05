@@ -60,7 +60,7 @@ public class PojavChecker {
 		if (!IS_PRESENT)
 			return;
 
-		NeoForge.EVENT_BUS.addListener(PojavChecker::onScreenInit);
+		NeoForge.EVENT_BUS.addListener(ScreenEvent.Init.Post.class, PojavChecker::onScreenInit);
 	}
 
 	public static void onScreenInit(ScreenEvent.Init.Post event) {

@@ -46,7 +46,7 @@ public class CreativeFluidTankMountedStorage extends WrapperMountedFluidStorage<
 	}
 
 	public static CreativeFluidTankMountedStorage fromLegacy(HolderLookup.Provider registries, CompoundTag nbt) {
-		int capacity = nbt.getInt("Capacity");
+		long capacity = com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidAmounts.fromMillibuckets(nbt.getInt("Capacity")); // fabric: legacy NBT is mB
 		FluidStack fluid = FluidStack.parseOptional(registries, nbt.getCompound("ProvidedStack"));
 		CreativeSmartFluidTank tank = new CreativeSmartFluidTank(capacity, $ -> {});
 		tank.setContainedFluid(fluid);

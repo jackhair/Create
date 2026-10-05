@@ -228,7 +228,7 @@ public class OpenEndedPipe extends FlowSource {
 		}
 
 		@Override
-		public int fill(FluidStack resource, FluidAction action) {
+		public long fill(FluidStack resource, FluidAction action) {
 			// Never allow being filled when a source is attached
 			if (world == null)
 				return 0;
@@ -251,7 +251,7 @@ public class OpenEndedPipe extends FlowSource {
 			if (effectHandler != null && !hasBlockState)
 				resource = FluidHelper.copyStackWithAmount(resource, 1);
 
-			int fill = super.fill(resource, action);
+			long fill = super.fill(resource, action);
 			if (action.simulate())
 				return fill;
 
@@ -274,11 +274,11 @@ public class OpenEndedPipe extends FlowSource {
 		}
 
 		@Override
-		public FluidStack drain(int maxDrain, FluidAction action) {
+		public FluidStack drain(long maxDrain, FluidAction action) {
 			return drainInner(maxDrain, null, action);
 		}
 
-		private FluidStack drainInner(int amount, @Nullable FluidStack filter, FluidAction action) {
+		private FluidStack drainInner(long amount, @Nullable FluidStack filter, FluidAction action) {
 			FluidStack empty = FluidStack.EMPTY;
 			boolean filterPresent = filter != null;
 
@@ -307,7 +307,7 @@ public class OpenEndedPipe extends FlowSource {
 			if (filterPresent && !FluidStack.isSameFluidSameComponents(drainedFromWorld, filter))
 				return FluidStack.EMPTY;
 
-			int remainder = drainedFromWorld.getAmount() - amount;
+			long remainder = drainedFromWorld.getAmount() - amount;
 			drainedFromWorld.setAmount(amount);
 
 			if (!action.simulate() && remainder > 0) {

@@ -29,7 +29,7 @@ public enum CauldronSpoutingBehavior implements BlockSpoutingBehaviour {
 	});
 
 	@Override
-	public int fillBlock(Level level, BlockPos pos, SpoutBlockEntity spout, FluidStack availableFluid, boolean simulate) {
+	public long fillBlock(Level level, BlockPos pos, SpoutBlockEntity spout, FluidStack availableFluid, boolean simulate) {
 		CauldronInfo info = CAULDRON_INFO.get(availableFluid.getFluid());
 		if (info == null)
 			return 0;

@@ -19,7 +19,7 @@ public enum SpoutCasting implements BlockSpoutingBehaviour {
 	INSTANCE;
 
 	@Override
-	public int fillBlock(Level level, BlockPos pos, SpoutBlockEntity spout, FluidStack availableFluid, boolean simulate) {
+	public long fillBlock(Level level, BlockPos pos, SpoutBlockEntity spout, FluidStack availableFluid, boolean simulate) {
 		if (!enabled())
 			return 0;
 
@@ -41,7 +41,7 @@ public enum SpoutCasting implements BlockSpoutingBehaviour {
 			return 0;
 
 		// Do not fill if it would only partially fill the table (unless > 1000mb)
-		int amount = availableFluid.getAmount();
+		long amount = availableFluid.getAmount();
 		if (amount < 1000
 			&& handler.fill(FluidHelper.copyStackWithAmount(availableFluid, amount + 1), FluidAction.SIMULATE) > amount)
 			return 0;

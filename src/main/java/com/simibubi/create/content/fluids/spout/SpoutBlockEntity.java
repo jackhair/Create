@@ -216,7 +216,7 @@ public class SpoutBlockEntity extends SmartBlockEntity implements IHaveGoggleInf
 		if (processingTicks >= 0) {
 			processingTicks--;
 			if (processingTicks == 5 && customProcess != null) {
-				int fillBlock = customProcess.fillBlock(level, worldPosition.below(2), this, currentFluidInTank.copy(), false);
+				long fillBlock = customProcess.fillBlock(level, worldPosition.below(2), this, currentFluidInTank.copy(), false);
 				customProcess = null;
 				if (fillBlock > 0) {
 					tank.getPrimaryHandler()

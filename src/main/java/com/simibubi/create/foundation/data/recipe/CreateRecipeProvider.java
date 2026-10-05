@@ -34,7 +34,7 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.Fluid
 public final class CreateRecipeProvider extends RecipeProvider {
 
 	static final List<ProcessingRecipeGen<?, ?, ?>> GENERATORS = new ArrayList<>();
-	static final int BUCKET = FluidType.BUCKET_VOLUME;
+	static final long BUCKET = FluidType.BUCKET_VOLUME; // fabric: droplets (PORTING.md D3)
 	static final int BOTTLE = 250;
 
 	public CreateRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {

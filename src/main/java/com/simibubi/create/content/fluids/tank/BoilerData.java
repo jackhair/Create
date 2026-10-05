@@ -103,7 +103,7 @@ public class BoilerData {
 		ticksUntilNextSample--;
 		if (ticksUntilNextSample > 0)
 			return;
-		int capacity = controller.tankInventory.getCapacity();
+		long capacity = controller.tankInventory.getCapacity();
 		if (capacity == 0)
 			return;
 
@@ -463,7 +463,7 @@ public class BoilerData {
 		}
 
 		@Override
-		public int getTankCapacity(int tank) {
+		public long getTankCapacity(int tank) {
 			return 10000;
 		}
 
@@ -473,10 +473,10 @@ public class BoilerData {
 		}
 
 		@Override
-		public int fill(FluidStack resource, FluidAction action) {
+		public long fill(FluidStack resource, FluidAction action) {
 			if (!isFluidValid(0, resource))
 				return 0;
-			int amount = resource.getAmount();
+			long amount = resource.getAmount();
 			if (action.execute())
 				gatheredSupply += amount;
 			return amount;
@@ -488,7 +488,7 @@ public class BoilerData {
 		}
 
 		@Override
-		public FluidStack drain(int maxDrain, FluidAction action) {
+		public FluidStack drain(long maxDrain, FluidAction action) {
 			return FluidStack.EMPTY;
 		}
 

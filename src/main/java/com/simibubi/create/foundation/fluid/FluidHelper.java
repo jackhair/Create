@@ -214,11 +214,11 @@ public class FluidHelper {
 			for (int slot = 0; slot < fluidItem.getTanks(); slot++) {
 
 				FluidStack fluidInTank = fluidTank.getFluidInTank(tankSlot);
-				int tankCapacity = fluidTank.getTankCapacity(tankSlot) - fluidInTank.getAmount();
+				long tankCapacity = fluidTank.getTankCapacity(tankSlot) - fluidInTank.getAmount();
 				boolean tankEmpty = fluidInTank.isEmpty();
 
 				FluidStack fluidInItem = fluidItem.getFluidInTank(tankSlot);
-				int itemCapacity = fluidItem.getTankCapacity(tankSlot) - fluidInItem.getAmount();
+				long itemCapacity = fluidItem.getTankCapacity(tankSlot) - fluidInItem.getAmount();
 				boolean itemEmpty = fluidInItem.isEmpty();
 
 				boolean undecided = lockedExchange == null;
@@ -233,7 +233,7 @@ public class FluidHelper {
 				if (((tankEmpty || itemCapacity <= 0) && canMoveToTank)
 					|| undecided && preferred == FluidExchange.ITEM_TO_TANK) {
 
-					int amount = fluidTank.fill(
+					long amount = fluidTank.fill(
 						fluidItem.drain(Math.min(maxTransferAmountPerTank, tankCapacity), FluidAction.EXECUTE),
 						FluidAction.EXECUTE);
 					if (amount > 0) {
@@ -248,7 +248,7 @@ public class FluidHelper {
 				if (((itemEmpty || tankCapacity <= 0) && canMoveToItem)
 					|| undecided && preferred == FluidExchange.TANK_TO_ITEM) {
 
-					int amount = fluidItem.fill(
+					long amount = fluidItem.fill(
 						fluidTank.drain(Math.min(maxTransferAmountPerTank, itemCapacity), FluidAction.EXECUTE),
 						FluidAction.EXECUTE);
 					if (amount > 0) {

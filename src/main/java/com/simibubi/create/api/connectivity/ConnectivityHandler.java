@@ -342,7 +342,7 @@ public class ConnectivityHandler {
 							if (creativeTank.isEmpty())
 								creativeTank.setContainedFluid(toDistribute);
 						} else {
-							int split = Math.min(maxCapacity, toDistribute.getAmount());
+							long split = Math.min(maxCapacity, toDistribute.getAmount());
 							copy.setAmount(split);
 							toDistribute.shrink(split);
 							if (tank != null)

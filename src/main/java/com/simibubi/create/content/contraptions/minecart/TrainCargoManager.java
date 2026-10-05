@@ -105,8 +105,8 @@ public class TrainCargoManager extends MountedStorageManager {
 		}
 
 		@Override
-		public int fill(FluidStack resource, FluidAction action) {
-			int filled = super.fill(resource, action);
+		public long fill(FluidStack resource, FluidAction action) {
+			long filled = super.fill(resource, action);
 			if (action.execute() && filled > 0)
 				changeDetected();
 			return filled;
@@ -121,7 +121,7 @@ public class TrainCargoManager extends MountedStorageManager {
 		}
 
 		@Override
-		public FluidStack drain(int maxDrain, FluidAction action) {
+		public FluidStack drain(long maxDrain, FluidAction action) {
 			FluidStack drained = super.drain(maxDrain, action);
 			if (action.execute() && !drained.isEmpty())
 				changeDetected();

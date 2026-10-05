@@ -28,7 +28,7 @@ public abstract class WrapperMountedFluidStorage<T extends IFluidHandler> extend
 	}
 
 	@Override
-	public int getTankCapacity(int tank) {
+	public long getTankCapacity(int tank) {
 		return this.wrapped.getTankCapacity(tank);
 	}
 
@@ -38,7 +38,7 @@ public abstract class WrapperMountedFluidStorage<T extends IFluidHandler> extend
 	}
 
 	@Override
-	public int fill(FluidStack resource, FluidAction action) {
+	public long fill(FluidStack resource, FluidAction action) {
 		return this.wrapped.fill(resource, action);
 	}
 
@@ -50,7 +50,7 @@ public abstract class WrapperMountedFluidStorage<T extends IFluidHandler> extend
 
 	@Override
 	@NotNull
-	public FluidStack drain(int maxDrain, FluidAction action) {
+	public FluidStack drain(long maxDrain, FluidAction action) {
 		return this.wrapped.drain(maxDrain, action);
 	}
 }

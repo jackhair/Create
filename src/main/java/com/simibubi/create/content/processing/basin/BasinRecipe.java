@@ -112,7 +112,7 @@ public class BasinRecipe extends StandardProcessingRecipe<RecipeInput> {
 			boolean fluidsAffected = false;
 			FluidIngredients:
 			for (SizedFluidIngredient fluidIngredient : fluidIngredients) {
-				int amountRequired = fluidIngredient.amount();
+				long amountRequired = fluidIngredient.amount();
 
 				for (int tank = 0; tank < availableFluids.getTanks(); tank++) {
 					FluidStack fluidStack = availableFluids.getFluidInTank(tank);
@@ -120,7 +120,7 @@ public class BasinRecipe extends StandardProcessingRecipe<RecipeInput> {
 						continue;
 					if (!fluidIngredient.test(fluidStack))
 						continue;
-					int drainedAmount = Math.min(amountRequired, fluidStack.getAmount());
+					long drainedAmount = Math.min(amountRequired, fluidStack.getAmount());
 					if (!simulate) {
 						fluidStack.shrink(drainedAmount);
 						fluidsAffected = true;

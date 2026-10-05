@@ -12,12 +12,12 @@ import net.minecraft.util.FormattedCharSequence;
  */
 public interface IFontExtension {
 	/** Trims text to the width, adding an ellipsis if it was cut. */
-	default FormattedCharSequence ellipsize(FormattedText text, int maxWidth) {
+	default FormattedText ellipsize(FormattedText text, int maxWidth) {
 		Font self = (Font) this;
 		FormattedText ellipsis = CommonComponents.ELLIPSIS;
 		if (self.width(text) <= maxWidth)
-			return Language.getInstance().getVisualOrder(text);
+			return text;
 		FormattedText trimmed = self.substrByWidth(text, maxWidth - self.width(ellipsis));
-		return Language.getInstance().getVisualOrder(FormattedText.composite(trimmed, ellipsis));
+		return FormattedText.composite(trimmed, ellipsis);
 	}
 }

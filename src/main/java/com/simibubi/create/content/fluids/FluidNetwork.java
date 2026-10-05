@@ -181,7 +181,7 @@ public class FluidNetwork {
 			});
 		}
 
-		int flowSpeed = transferSpeed;
+		long flowSpeed = transferSpeed;
 		Map<IFluidHandler, Integer> accumulatedFill = new IdentityHashMap<>();
 
 		for (boolean simulate : Iterate.trueAndFalse) {
@@ -218,12 +218,12 @@ public class FluidNetwork {
 
 			List<Pair<BlockFace, FlowSource>> availableOutputs = new ArrayList<>(targets);
 			while (!availableOutputs.isEmpty() && transfer.getAmount() > 0) {
-				int dividedTransfer = transfer.getAmount() / availableOutputs.size();
-				int remainder = transfer.getAmount() % availableOutputs.size();
+				long dividedTransfer = transfer.getAmount() / availableOutputs.size();
+				long remainder = transfer.getAmount() % availableOutputs.size();
 
 				for (Iterator<Pair<BlockFace, FlowSource>> iterator = availableOutputs.iterator(); iterator.hasNext();) {
 					Pair<BlockFace, FlowSource> pair = iterator.next();
-					int toTransfer = dividedTransfer;
+					long toTransfer = dividedTransfer;
 					if (remainder > 0) {
 						toTransfer++;
 						remainder--;
@@ -248,7 +248,7 @@ public class FluidNetwork {
 
 					FluidStack divided = transfer.copy();
 					divided.setAmount(simulatedTransfer);
-					int fill = targetHandler.fill(divided, action);
+					long fill = targetHandler.fill(divided, action);
 
 					if (simulate) {
 						accumulatedFill.put(targetHandler, Integer.valueOf(fill));

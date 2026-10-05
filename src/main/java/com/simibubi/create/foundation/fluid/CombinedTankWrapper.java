@@ -46,7 +46,7 @@ public class CombinedTankWrapper implements IFluidHandler {
 	}
 
 	@Override
-	public int getTankCapacity(int tank) {
+	public long getTankCapacity(int tank) {
 		int index = getIndexForSlot(tank);
 		IFluidHandler handler = getHandlerFromIndex(index);
 		int localSlot = getSlotFromIndex(tank, index);
@@ -62,7 +62,7 @@ public class CombinedTankWrapper implements IFluidHandler {
 	}
 
 	@Override
-	public int fill(FluidStack resource, FluidAction action) {
+	public long fill(FluidStack resource, FluidAction action) {
 		if (resource.isEmpty())
 			return 0;
 
@@ -80,7 +80,7 @@ public class CombinedTankWrapper implements IFluidHandler {
 				if (searchPass && !fittingHandlerFound)
 					continue;
 
-				int filledIntoCurrent = iFluidHandler.fill(resource, action);
+				long filledIntoCurrent = iFluidHandler.fill(resource, action);
 				resource.shrink(filledIntoCurrent);
 				filled += filledIntoCurrent;
 
@@ -104,7 +104,7 @@ public class CombinedTankWrapper implements IFluidHandler {
 
 		for (IFluidHandler iFluidHandler : itemHandler) {
 			FluidStack drainedFromCurrent = iFluidHandler.drain(resource, action);
-			int amount = drainedFromCurrent.getAmount();
+			long amount = drainedFromCurrent.getAmount();
 			resource.shrink(amount);
 
 			if (!drainedFromCurrent.isEmpty() && (drained.isEmpty() || FluidStack.isSameFluidSameComponents(drainedFromCurrent, drained)))
@@ -118,12 +118,12 @@ public class CombinedTankWrapper implements IFluidHandler {
 	}
 
 	@Override
-	public FluidStack drain(int maxDrain, FluidAction action) {
+	public FluidStack drain(long maxDrain, FluidAction action) {
 		FluidStack drained = FluidStack.EMPTY;
 
 		for (IFluidHandler iFluidHandler : itemHandler) {
 			FluidStack drainedFromCurrent = iFluidHandler.drain(maxDrain, action);
-			int amount = drainedFromCurrent.getAmount();
+			long amount = drainedFromCurrent.getAmount();
 			maxDrain -= amount;
 
 			if (!drainedFromCurrent.isEmpty() && (drained.isEmpty() || FluidStack.isSameFluidSameComponents(drainedFromCurrent, drained)))

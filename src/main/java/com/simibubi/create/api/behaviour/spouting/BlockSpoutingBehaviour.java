@@ -60,5 +60,5 @@ public interface BlockSpoutingBehaviour {
 	 * @param simulate       Whether the spout is testing or actually performing this behaviour
 	 * @return The amount filled into the block, 0 to idle/cancel
 	 */
-	int fillBlock(Level level, BlockPos pos, SpoutBlockEntity spout, FluidStack availableFluid, boolean simulate);
+	long fillBlock(Level level, BlockPos pos, SpoutBlockEntity spout, FluidStack availableFluid, boolean simulate);
 }

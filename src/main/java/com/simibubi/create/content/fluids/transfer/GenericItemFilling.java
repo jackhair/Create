@@ -69,7 +69,7 @@ public class GenericItemFilling {
 		return false;
 	}
 
-	public static int getRequiredAmountForItem(Level world, ItemStack stack, FluidStack availableFluid) {
+	public static long getRequiredAmountForItem(Level world, ItemStack stack, FluidStack availableFluid) {
 		if (stack.getItem() == Items.GLASS_BOTTLE && canFillGlassBottleInternally(availableFluid))
 			return PotionFluidHandler.getRequiredAmountForFilledBottle(stack, availableFluid);
 		if (stack.getItem() == Items.BUCKET && canFillBucketInternally(availableFluid))
@@ -89,7 +89,7 @@ public class GenericItemFilling {
 			return 1000;
 		}
 
-		int filled = capability.fill(availableFluid, FluidAction.SIMULATE);
+		long filled = capability.fill(availableFluid, FluidAction.SIMULATE);
 		return filled == 0 ? -1 : filled;
 	}
 

@@ -18,14 +18,14 @@ public class HosePulleyFluidHandler implements IFluidHandler {
 	// The dynamic interface
 
 	@Override
-	public int fill(FluidStack resource, FluidAction action) {
+	public long fill(FluidStack resource, FluidAction action) {
 		if (!internalTank.isEmpty() && !FluidStack.isSameFluidSameComponents(resource, internalTank.getFluid()))
 			return 0;
 		if (resource.isEmpty() || !FluidHelper.hasBlockState(resource.getFluid()))
 			return 0;
 
-		int diff = resource.getAmount();
-		int totalAmountAfterFill = diff + internalTank.getFluidAmount();
+		long diff = resource.getAmount();
+		long totalAmountAfterFill = diff + internalTank.getFluidAmount();
 		FluidStack remaining = resource.copy();
 		boolean deposited = false;
 
@@ -61,11 +61,11 @@ public class HosePulleyFluidHandler implements IFluidHandler {
 	}
 
 	@Override
-	public FluidStack drain(int maxDrain, FluidAction action) {
+	public FluidStack drain(long maxDrain, FluidAction action) {
 		return drainInternal(maxDrain, null, action);
 	}
 
-	private FluidStack drainInternal(int maxDrain, @Nullable FluidStack resource, FluidAction action) {
+	private FluidStack drainInternal(long maxDrain, @Nullable FluidStack resource, FluidAction action) {
 		if (resource != null && !internalTank.isEmpty() && !FluidStack.isSameFluidSameComponents(resource, internalTank.getFluid()))
 			return FluidStack.EMPTY;
 		if (internalTank.getFluidAmount() >= 1000)
@@ -77,7 +77,7 @@ public class HosePulleyFluidHandler implements IFluidHandler {
 
 		filler.counterpartActed();
 		FluidStack leftover = returned.copy();
-		int available = 1000 + internalTank.getFluidAmount();
+		long available = 1000 + internalTank.getFluidAmount();
 		int drained;
 
 		if (!internalTank.isEmpty() && !FluidStack.isSameFluidSameComponents(internalTank.getFluid(), returned)
@@ -118,7 +118,7 @@ public class HosePulleyFluidHandler implements IFluidHandler {
 	}
 
 	@Override
-	public int getTankCapacity(int tank) {
+	public long getTankCapacity(int tank) {
 		return internalTank.getTankCapacity(tank);
 	}
 

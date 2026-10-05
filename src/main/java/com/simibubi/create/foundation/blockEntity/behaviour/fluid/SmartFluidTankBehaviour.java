@@ -198,13 +198,13 @@ public class SmartFluidTankBehaviour extends BlockEntityBehaviour {
 		}
 
 		@Override
-		public int fill(FluidStack resource, FluidAction action) {
+		public long fill(FluidStack resource, FluidAction action) {
 			if (!insertionAllowed)
 				return 0;
 			return super.fill(resource, action);
 		}
 
-		public int forceFill(FluidStack resource, FluidAction action) {
+		public long forceFill(FluidStack resource, FluidAction action) {
 			return super.fill(resource, action);
 		}
 
@@ -216,7 +216,7 @@ public class SmartFluidTankBehaviour extends BlockEntityBehaviour {
 		}
 
 		@Override
-		public FluidStack drain(int maxDrain, FluidAction action) {
+		public FluidStack drain(long maxDrain, FluidAction action) {
 			if (!extractionAllowed)
 				return FluidStack.EMPTY;
 			return super.drain(maxDrain, action);

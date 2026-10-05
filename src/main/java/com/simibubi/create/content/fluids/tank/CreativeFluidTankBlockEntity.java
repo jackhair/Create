@@ -50,7 +50,7 @@ public class CreativeFluidTankBlockEntity extends FluidTankBlockEntity {
 	public static class CreativeSmartFluidTank extends SmartFluidTank {
 		public static final Codec<CreativeSmartFluidTank> CODEC = RecordCodecBuilder.create(i -> i.group(
 			FluidStack.OPTIONAL_CODEC.fieldOf("fluid").forGetter(FluidTank::getFluid),
-			ExtraCodecs.NON_NEGATIVE_INT.fieldOf("capacity").forGetter(FluidTank::getCapacity)
+			com.mojang.serialization.Codec.LONG.fieldOf("capacity").forGetter(FluidTank::getCapacity) /* fabric: droplets (PORTING.md D3) */
 		).apply(i, (fluid, capacity) -> {
 			CreativeSmartFluidTank tank = new CreativeSmartFluidTank(capacity, $ -> {
 			});
@@ -63,7 +63,7 @@ public class CreativeFluidTankBlockEntity extends FluidTankBlockEntity {
 		}
 
 		@Override
-		public int getFluidAmount() {
+		public long getFluidAmount() {
 			return getFluid().isEmpty() ? 0 : getTankCapacity(0);
 		}
 
@@ -75,7 +75,7 @@ public class CreativeFluidTankBlockEntity extends FluidTankBlockEntity {
 		}
 
 		@Override
-		public int fill(FluidStack resource, FluidAction action) {
+		public long fill(FluidStack resource, FluidAction action) {
 			return resource.getAmount();
 		}
 
@@ -85,7 +85,7 @@ public class CreativeFluidTankBlockEntity extends FluidTankBlockEntity {
 		}
 
 		@Override
-		public FluidStack drain(int maxDrain, FluidAction action) {
+		public FluidStack drain(long maxDrain, FluidAction action) {
 			return super.drain(maxDrain, FluidAction.SIMULATE);
 		}
 

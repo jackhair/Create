@@ -26,18 +26,18 @@ import com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.capab
 
 public class FluidTankMountedStorage extends WrapperMountedFluidStorage<Handler> implements SyncedMountedStorage {
 	public static final MapCodec<FluidTankMountedStorage> CODEC = RecordCodecBuilder.mapCodec(i -> i.group(
-		ExtraCodecs.NON_NEGATIVE_INT.fieldOf("capacity").forGetter(FluidTankMountedStorage::getCapacity),
+		com.mojang.serialization.Codec.LONG.fieldOf("capacity").forGetter(FluidTankMountedStorage::getCapacity) /* fabric: droplets (PORTING.md D3) */,
 		FluidStack.OPTIONAL_CODEC.fieldOf("fluid").forGetter(FluidTankMountedStorage::getFluid)
 	).apply(i, FluidTankMountedStorage::new));
 
 	private boolean dirty;
 
-	protected FluidTankMountedStorage(MountedFluidStorageType<?> type, int capacity, FluidStack stack) {
+	protected FluidTankMountedStorage(MountedFluidStorageType<?> type, long capacity, FluidStack stack) {
 		super(type, new Handler(capacity, stack));
 		this.wrapped.onChange = () -> this.dirty = true;
 	}
 
-	protected FluidTankMountedStorage(int capacity, FluidStack stack) {
+	protected FluidTankMountedStorage(long capacity, FluidStack stack) {
 		this(AllMountedStorageTypes.FLUID_TANK.get(), capacity, stack);
 	}
 
@@ -54,7 +54,7 @@ public class FluidTankMountedStorage extends WrapperMountedFluidStorage<Handler>
 		return this.wrapped.getFluid();
 	}
 
-	public int getCapacity() {
+	public long getCapacity() {
 		return this.wrapped.getCapacity();
 	}
 
@@ -90,7 +90,7 @@ public class FluidTankMountedStorage extends WrapperMountedFluidStorage<Handler>
 	}
 
 	public static FluidTankMountedStorage fromLegacy(HolderLookup.Provider registries, CompoundTag nbt) {
-		int capacity = nbt.getInt("Capacity");
+		long capacity = com.simibubi.create.infrastructure.fabric.neoforged.neoforge.fluids.FluidAmounts.fromMillibuckets(nbt.getInt("Capacity")); // fabric: legacy NBT is mB
 		FluidStack fluid = FluidStack.parseOptional(registries, nbt);
 		return new FluidTankMountedStorage(capacity, fluid);
 	}

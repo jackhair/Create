@@ -168,7 +168,7 @@ public abstract class CreateRecipeCategory<T extends Recipe<?>> implements IReci
 
 	@SuppressWarnings("removal") // see below
 	public static IRecipeSlotBuilder addFluidSlot(IRecipeLayoutBuilder builder, int x, int y, SizedFluidIngredient ingredient) {
-		int amount = ingredient.amount();
+		long amount = ingredient.amount();
 		return builder.addSlot(RecipeIngredientRole.INPUT, x, y)
 			.setBackground(getRenderedSlot(), -1, -1)
 			.addIngredients(JeiFluids.FLUID_STACK, JeiFluids.of(ingredient.getFluids())) // fabric

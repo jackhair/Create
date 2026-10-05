@@ -228,7 +228,7 @@ public class FluidTankBlockEntity extends SmartBlockEntity implements IHaveGoggl
 
 	public void applyFluidTankSize(int blocks) {
 		tankInventory.setCapacity(blocks * getCapacityMultiplier());
-		int overflow = tankInventory.getFluidAmount() - tankInventory.getCapacity();
+		long overflow = tankInventory.getFluidAmount() - tankInventory.getCapacity();
 		if (overflow > 0)
 			tankInventory.drain(overflow, FluidAction.EXECUTE);
 		forceFluidLevelUpdate = true;

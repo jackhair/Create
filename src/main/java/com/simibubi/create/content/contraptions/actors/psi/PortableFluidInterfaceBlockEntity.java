@@ -71,7 +71,7 @@ public class PortableFluidInterfaceBlockEntity extends PortableStorageInterfaceB
 		}
 
 		@Override
-		public int getTankCapacity(int tank) {
+		public long getTankCapacity(int tank) {
 			return wrapped.getTankCapacity(tank);
 		}
 
@@ -81,10 +81,10 @@ public class PortableFluidInterfaceBlockEntity extends PortableStorageInterfaceB
 		}
 
 		@Override
-		public int fill(FluidStack resource, FluidAction action) {
+		public long fill(FluidStack resource, FluidAction action) {
 			if (!isConnected())
 				return 0;
-			int fill = wrapped.fill(resource, action);
+			long fill = wrapped.fill(resource, action);
 			if (fill > 0 && action.execute())
 				keepAlive();
 			return fill;
@@ -101,7 +101,7 @@ public class PortableFluidInterfaceBlockEntity extends PortableStorageInterfaceB
 		}
 
 		@Override
-		public FluidStack drain(int maxDrain, FluidAction action) {
+		public FluidStack drain(long maxDrain, FluidAction action) {
 			if (!canTransfer())
 				return FluidStack.EMPTY;
 			FluidStack drain = wrapped.drain(maxDrain, action);
