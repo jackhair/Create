@@ -2,7 +2,7 @@
 
 Branch: `mc26.3/fabric/dev` (fork: `jackhair/Create`)
 Base: upstream `Creators-of-Create/Create` `mc1.21.1/dev` @ `a92700863` (Create 6.0.11, NeoForge 21.1.219, MC 1.21.1)
-Status: **Phase 1a build switch done — starting 1b**. Last updated 2026-10-04.
+Status: **Phase 1b in progress (shim layer)**. Last updated 2026-10-04.
 
 ## Goal
 
@@ -68,7 +68,7 @@ Ship Create for **Fabric on Minecraft 26.3**, built from the official Create cod
 | D4 | Datagen | Phase 1: ship upstream's generated resources, run through a script that rewrites `neoforge:` keys. Phase 1d: port datagen to Fabric and verify parity. Required before Phase 2, because the 26.x data formats change. | proposed |
 | D5 | Compat | Compile against the Fabric builds of JEI, CC:T, Sodium, FD, FTB, JourneyMap, Xaero from the start, since compat code is woven into core (CC:T is referenced from 60 core files, JEI from 42), but don't load them at runtime until each is ported. NeoForge-only integrations are excluded from the source set and their call sites removed. Original plan: gate every compat module off at first. Re-enable after the core works: JEI/REI, CC:T, Sodium/Iris, FD, JourneyMap/Xaero. Drop Curios at 26.x unless Trinkets or Accessories gets ported. Drop NeoForge-only mods (TConstruct, FramedBlocks, DynamicTrees, StorageDrawers, etc.). | proposed |
 | D6 | Mod id / distribution | Mod id stays `create`, private builds only. Assets are All Rights Reserved; a public release needs the Create team's permission. | proposed |
-| D7 | NeoForge API shim layer | For the NeoForge **API types** Create uses most (FluidStack 97 files, IItemHandler 71, Capabilities 62, ItemStackHandler 54, DeferredHolder 26, ModelData 28, …), provide Create-owned re-implementations with the same class shapes under `com.simibubi.create.infrastructure.fabric.neoforge.*`, backed by Fabric API (Transfer API, BlockApiLookup, FRAPI). A script rewrites imports, so most call sites stay identical to upstream. NeoForge **extension methods** (`IBlockExtension`, `IItemExtension`, …) become shim interfaces added to vanilla classes via Loom interface injection, plus mixins that call them. **Not shimmed:** events, mod lifecycle and datagen entry points; those are rewritten at the call site onto Fabric callbacks. Fluid amounts become long droplets per D3, so fluid-literal call sites still change. | proposed (proceeding) |
+| D7 | NeoForge API shim layer | Create-owned copies of the NeoForge APIs Create uses, under `com.simibubi.create.infrastructure.fabric.neoforged.*` in `neoforge-shim/` (mirroring NeoForge packages). A script rewrites imports, so call sites stay identical to upstream. Plain-Java NeoForge classes are **vendored** (LGPL-2.1, kept in their own folder): item handlers, datagen model builders, registries. Loader-facing pieces are **re-implemented** on Fabric API: registries on Fabric attributes and DynamicRegistries; capabilities on BlockApiLookup, bridged to the Transfer API. Both NeoForge **event buses** are emulated: `SimpleEventBus` with NeoForge dispatch semantics; `@EventBusSubscriber` classes come from a build-time index, and each game event gets a small adapter that fires it from a Fabric callback or mixin. NeoForge **extension methods** become shim interfaces injected into vanilla classes (Loom interface injection) plus mixins. Fluid amounts are long droplets (D3), so fluid call sites still change, and compile errors flag each one. | **in progress** (bus, FML and registry shims done) |
 
 ## Phases
 
@@ -109,7 +109,19 @@ Exit criteria:
 - Dependencies: Fabric API, Flywheel/Vanillin fabric-1.21.1, Ponder/Catnip fabric, Forge Config API Port 21.1.x.
 - Run `scripts/fabric/convert_onlyin.py` and `convert_generated_resources.py`, then hand-convert the 20 flagged `Dist` files; `compat/Mods.java` → `FabricLoader.isModLoaded`; `FMLEnvironment`/`FMLPaths`/`ModList` replacements.
 
-**1b. Core platform layer** (`infrastructure/fabric`)
+**1b. Core platform layer** (`neoforge-shim/`, per D7)
+- [x] Tooling: `scripts/fabric/shim.py` (vendor / imports / missing), `scripts/fabric/javac_check.sh` (fast error summary)
+- [x] Item handlers, datagen model builders, utils (vendored)
+- [x] Event buses (`SimpleEventBus`), FML environment, `ModList`/`ModContainer` (configs via Forge Config API Port), lifecycle events
+- [x] Registries: `DeferredHolder`/`DeferredRegister`/`RegisterEvent` (vendored), `RegistryBuilder`, `NewRegistryEvent`, `DataPackRegistryEvent`, `RegistrationPhase` (NeoForge's order)
+- [ ] Capabilities on `BlockApiLookup`/`ItemApiLookup`/`EntityApiLookup`, bridged both ways to `ItemStorage.SIDED`/`FluidStorage` (1c)
+- [ ] Fluids: `FluidStack`/`IFluidHandler`/`FluidTank` with long droplets, `FluidType` on `FluidVariantAttributes` (1c)
+- [ ] `ModelData`/`BakedModelWrapper`, client extensions (1d)
+- [ ] Game-event adapters for the 73 event types; `@EventBusSubscriber` index (Gradle task)
+- [ ] Extension-method interfaces + interface injection (`ILevelExtension#getCapability` and others)
+- [ ] Port Registrate onto the shims; Fabric entrypoints (`CreateFabric`, client) running `RegistrationPhase` and lifecycle events
+
+Original plan text:
 - **Registration (D2):**
   - Vendored Registrate.
   - `DeferredRegister` (14 files) → `Registry.register`.
