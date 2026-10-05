@@ -1,0 +1,8 @@
+# Compile progress
+
+`./gradlew compileJava` on `mc26.3/fabric/dev`, `-Xmaxerrs 10000`. Counts are lower bounds while imports are unresolved,
+because javac reports attribution errors only once symbol resolution succeeds.
+
+| Date | Commit | Errors | Files with errors | Note |
+|---|---|---|---|---|
+| 2026-10-05 | `dd4826ccf` | 3,021 | 591 | First Fabric compile after the Loom switch |
